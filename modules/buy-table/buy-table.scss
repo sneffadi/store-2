@@ -1,0 +1,110 @@
+#buytable {
+    text-align: center;
+    font-weight: $font-weight-bold;
+    margin: 0 0 rem-calc(20) 0;
+
+    option {
+        font-size: rem-calc(16);
+    }
+
+    .buy-wrap {
+        padding-top: rem-calc(12);
+        border: 1px solid $white-smoke;
+        border-radius: 0 0 rem-calc(3) rem-calc(3);
+        margin-bottom: rem-calc(20);
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: rem-calc(24);
+        text-align: center;
+        background: $iron;
+        color: $white;
+        padding: rem-calc(4) 0;
+        border-radius: rem-calc(3) rem-calc(3) 0 0;
+    }
+
+    .even {
+        background-color: $primary-color;
+    }
+
+    .quantity {
+        font-size: rem-calc(24);
+        line-height: 1;
+        margin: rem-calc(10) 0 rem-calc(6) 0;
+    }
+
+    .description {
+        font-size: rem-calc(16);
+        font-weight: $font-weight-normal;
+        line-height: 1;
+        margin: 0 0 rem-calc(6) 0;
+    }
+
+    .add-to-cart {
+        width: 100%;
+        font-size: rem-calc(24);
+        padding: rem-calc(6);
+        text-transform: uppercase;
+        border-radius: rem-calc(2);
+        font-weight: $font-weight-bold;
+        margin: 0 0 rem-calc(14) 0;
+    }
+
+    .out-of-stock {
+        width: 100%;
+        font-size: rem-calc(18);
+    }
+
+    .savings {
+        margin: 0 0 em-calc(12) 0;
+        color: $success-color;
+
+        span:nth-child(2) {
+            margin: 0 rem-calc(5) 0 0;
+        }
+
+        span:nth-child(3) {
+            margin: 0 0 0 rem-calc(5);
+        }
+    }
+
+    .retail {
+        font-size: rem-calc(18);
+        color: $jumbo;
+        margin: 0 0 rem-calc(4) 0;
+    }
+
+    .price {
+        font-size: rem-calc(32);
+        line-height: 1;
+        text-transform: uppercase;
+        font-family: $font-family-sans-serif-heading;
+    }
+
+    .shipping {
+        padding: rem-calc(5) 0;
+        border-top: rem-calc(2) solid $white-smoke;
+        border-bottom: rem-calc(2) solid $white-smoke;
+        margin: 0 0 rem-calc(12) 0;
+    }
+
+    .buy-image {
+        margin: 0 0 rem-calc(8) 0;
+        vertical-align: bottom;
+        padding-top: rem-calc(12);
+
+        img {
+            max-height: rem-calc(180);
+        }
+    }
+
+    .payment {
+        font-size: rem-calc(30);
+        color: $charcoal;
+
+        i {
+            margin: 0 0 0 rem-calc(6);
+        }
+    }
+}

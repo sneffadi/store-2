@@ -1,0 +1,151 @@
+// Start Rating
+.star-positioner {
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+
+    @include clearfix;
+
+    .stars {
+        background: $gainsboro;
+        display: inline-block;
+
+        //visibility: hidden;
+
+        .colorbar {
+            background: $rating-bg-color;
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .star_holder {
+            position: relative;
+            z-index: 1;
+
+            .star {
+                background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAjBJREFUeNrE2E1IFGEcx/FZX9ZCIkqoBA9GJHgR6hB5LSiiQwdP4cWTt7p48hbdungTuogomicpIqJzSGamYUhl5GEpUilsxdY01hm/f/wLyzgv6/PMzj7w2R3m5Xl+OzPP88xsxvO8nOM4Jx3zkoFncfxGHR9NaHSqV+pq+ChaVCBn4BH+WNRRrLH8FZ/xAFM2ldiGeIJtjFYrxAbGdPklvlQjxFPkdHkLI2mHkBtyyLduXM9OaiGm8ca37juepRliGG7Iei+NECuYDNkmXfVdpUO4ei+EDU67GMT/I437zB1yM8nwvamVbOqvXVOyvKoNr2MehYg663EJZ3Bav8+iWZ3DCWR1unAdQhTwA504DicFWVzELP7Jiry3X6ZxIaUQpzCp7eZLQ0j5issVDtCKqZI2D4WQ8hPXKhSgHR997QWGkLKOroQDXMVyQFuhIaTsoDehALfwK6SdyBAHpd8ywF3tgZ5NCCn3DAPchBtTd77cEbPecI5p0Adh62FbhuoZwxBvy5neywkhQ/WiYYjf+JREiA+mDyt6FheSCDEfs/285fFWIWSGHMB7TKA1ZL85nZ0jHhaju+g22gK6Xg+++fZdQx+O+fZt1FnaeJxYQkNJhR14EdPvZ3DdF+S5zTgxix19CHmI17gdc8wVvMJjtJRcEqPLISPdfdzAgmdWcujGHRTDzoQ83v2NeCuXd832BN68F7We2oBthUzM/xNZfWt3Lf+/yOplDXyd3BNgAAUPP2sc1WSGAAAAAElFTkSuQmCC");
+                background-size: contain;
+                display: inline-block;
+                float: left;
+                vertical-align: baseline;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+                width: rem-calc(19);
+                height: rem-calc(19);
+
+                @media #{$small-only} {
+                    height: rem-calc(16);
+                    width: rem-calc(16);
+                }
+            }
+        }
+    }
+}
+
+.top-product {
+    font-size: $rating-font-size;
+    margin: 0 0 rem-calc(20) 0;
+
+    .upsell-title {
+        font-size: rem-calc(18);
+        margin: 0 0 rem-calc(10) 0;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    .star-col {
+        padding: 0;
+        text-align: center;
+    }
+
+    .criterion {
+        padding: 0;
+        font-weight: $font-weight-bold;
+        font-weight: $font-weight-semibold;
+    }
+
+    .table {
+        background: $white;
+        border: 1px solid $gainsboro;
+        margin: 0 0 rem-calc(8) 0;
+        padding: rem-calc(5) rem-calc(7) !important;
+        border-radius: $global-radius;
+    }
+
+    .out-of {
+        padding: 0;
+        text-align: right;
+    }
+
+    .criterion-row {
+        vertical-align: middle;
+        float: left !important;
+        width: 100%;
+        padding: 0;
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+
+    .product-details {
+        padding: 0 0 0 rem-calc(10);
+
+        div {
+            margin: 0 0 rem-calc(2) 0;
+        }
+
+        .retail {
+            span {
+                font-weight: $font-weight-semibold;
+            }
+        }
+
+        .lowest-price {
+            span {
+                font-weight: $font-weight-semibold;
+            }
+        }
+
+        .guarantee {
+            span {
+                font-weight: $font-weight-semibold;
+            }
+        }
+
+        .lowest-price-link {
+            font-weight: $font-weight-semibold;
+        }
+    }
+
+    .button.success {
+        margin: 0 0 0 rem-calc(7.5);
+        width: 100%;
+    }
+
+    .button.secondary {
+        margin: 0 rem-calc(7.5) 0 0;
+        width: 100%;
+    }
+
+    .button.success.review-button {
+        margin: 0;
+        width: 100%;
+        padding: rem-calc(7) 0;
+    }
+}
+
+.reference {
+    a {
+        color: inherit;
+        text-decoration: none;
+        font-size: rem-calc(12);
+    }
+}
