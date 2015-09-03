@@ -20,15 +20,9 @@ get_header(); ?>
             <div class="row collapse">
                 <div class="small-24 columns">
 
-                <?php 
-                if (has_post_thumbnail($post->ID) && !in_category('recommended')) {
-                    the_post_thumbnail( 'review-product-image' );
-                }            
-                ?>
-
-
                     <?php the_content(); ?>
-                </div> <!-- / .small-12 -->
+
+                </div> <!-- / .small-24 -->
             </div> <!-- / .row -->
             <?php do_action( 'after_product_content' ); ?>
 

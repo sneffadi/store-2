@@ -31,14 +31,15 @@ jQuery(document).ready(function($) {
         columnCount.val(i);
         j=1;
         html = '<div data-column="' + i + '"><h4>Column ' + i + '</h4>';
-        html += '<div data-row="' + j + '">';
 
         html += '<label>Column Title:</label><input type="text" name="title_c'+i+'" value="">';
+        html += '<label>Column Sub Title:</label><input type="text" name="sub_title_c'+i+'" value="">';
         html += '<label>Price:</label><input type="text" name="price_c'+i+'" value="">';
-        html += '<label>Total Bottles:</label><input type="text" name="bottles_c'+i+'" value="">';
+        html += '<label>Quantity:</label><input type="number" name="qty_c'+i+'" value="">';
         html += '<label>Bonus:</label><input type="text" name="bonus_c'+i+'" value="">';
         html += '<label>Shipping:</label><input type="text" name="shipping_c'+i+'" value="">';
 
+        html += '<div data-row="' + j + '">';
         html += '<p><strong>Variation ' + j + '</strong></p>';
         html += '<label>Name:</label><input type="text" name="name_c' + i + '_r' + j + '" value="">';
         html += '<label>Item ID:</label><input type="text" name="itemId_c' + i + '_r' + j + '" value="">';

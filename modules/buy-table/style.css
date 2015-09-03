@@ -17,7 +17,7 @@
 }
 
 #product_meta p > label:after {
-    content: ":"
+    content: ":";
 }
 
 #product_meta label {
@@ -46,7 +46,7 @@
     top: 20px;
     border: 1px solid #ccc;
     border-radius: 1px;
-    background: #eee
+    background: #eee;
 }
 
 #product_meta button.image-button:after {
@@ -56,10 +56,11 @@
     font-size: 24px;
     display: inline;
 }
-#product_meta h4{
+
+#product_meta h4 {
     font-size: 16px;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 #product_meta [class*='col-'] {
@@ -92,48 +93,56 @@
     text-transform: uppercase;
     text-align: center;
 }
-#product_meta div[data-column]{
-    width:33%;
-    float:left;
+
+#product_meta div[data-column] {
+    width: 33%;
+    float: left;
 }
-#product_meta div[data-column]:nth-child(3n+3){
-    width:33%;
-    clear:right;
+
+#product_meta div[data-column]:nth-child(3n+3) {
+    width: 33%;
+    clear: right;
 }
+
 #product_meta div[data-row] {
-    border:1px solid #eee;
-    background: #f8f8f8;
-    padding: 20px;
+    background: #f7f7f7;
 }
-#product_meta input[name^=shipping]{
-    margin:0 0 15px 0;
+
+#product_meta input[name^=shipping] {
+    margin: 0 0 15px 0;
 }
+
 #product_meta a.addColumn {
     width: 200px;
-    height:25px;
+    height: 25px;
     display: block;
     background: #555;
     color: #fff;
     text-align: center;
     text-decoration: none;
-    margin:10px auto 0 auto;
+    margin: 10px auto 0 auto;
     line-height: 25px;
 }
+
 .clear {
-    clear:both;
+    clear: both;
 }
+
 .clear:before,
 .clear:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
+
 .clear:after {
     clear: both;
 }
+
 @media only screen and (max-width: 480px) {
     #product_meta .col-1-3 {
         width: 100%;
     }
+
     #product_meta input[type=number],
     input[type=text] {
         width: 100%;
