@@ -60,6 +60,8 @@ $yellow-green: #B9E679;
 $conifer: #9CD846;
 $atlantis: #91D33B;
 $sushi: #8DD137;
+$minty: #28937e;
+$orangy: #f68a32;
 
 /*=============================================
 =     Background Color and Font Color       =
@@ -67,9 +69,10 @@ $sushi: #8DD137;
 
 $body-bg: $white;
 $body-font-color: $jet;
+$secondary-font-color: $minty;
 $anchor-font-color: $cerulean; //link color
-$success-color: $sushi;
-$primary-color: $curious-blue; //color for a lot of elements
+$success-color: $orangy;
+$primary-color: $minty; //color for a lot of elements
 $secondary-color: $mercury; //color of read review button
 $upsell-bg: $link-water; //sidebar upsell bg;
 $upsell-border-color: $curious-blue; //sidebar upsell border color;
