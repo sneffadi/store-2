@@ -7,14 +7,14 @@ $(window).load(function() {
 });
 
 $(function() {
-    // if ($("#buytable .buy-image")) {
-    //     var heights = [];
-    //     $('#buytable .buy-image').each(function() {
-    //         $this = $(this);
-    //         var $height = $this.height();
-    //         heights.push($height);
-    //     });
-    //     var maxHeight = Math.max.apply(Math, heights);
-    //     $('#buytable .buy-image').height(maxHeight);
-    // };
+    if ($("#buytable .buy-image")) {
+        var heights = [];
+        $('#buytable .buy-image').each(function() {
+            $this = $(this);
+            var $height = $this.height();
+            heights.push($height);
+        });
+        var maxHeight = Math.max.apply(Math, heights);
+        $('#buytable .buy-image').height(maxHeight);
+    };
 });
