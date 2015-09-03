@@ -32,7 +32,7 @@ function top_products_cb() {
                 <div class="small-24 columns top-product">
                     <div class="row">
                         <h3 class="upsell-title"><a href="<?php echo get_the_permalink($id); ?>" ><?php echo "#{$i} " . get_the_title($id); ?></a></h3>
-                        <div class="small-8 medium-5 small-columns product-image">[image]
+                        <div class="small-8 medium-5 small-columns product-image">
                             <?php if (has_post_thumbnail($id)) {
                                 echo "<a href=\"" . get_the_permalink($id) . "\">";
                                 echo get_the_post_thumbnail($id, 'upsell-image');
