@@ -29,25 +29,13 @@ function product_meta_callback($post) {
         
         $html.= "<label>Column Title:</label><input type=\"text\" name=\"title_c{$i}\" value=\"" . (isset($cf_value["title_c{$i}"]) ? $cf_value["title_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Column Sub Title:</label><input type=\"text\" name=\"sub_title_c{$i}\" value=\"" . (isset($cf_value["sub_title_c{$i}"]) ? $cf_value["sub_title_c{$i}"][0] : '') . "\" />";
+        $html.= "<label>Retail:</label><input type=\"text\" name=\"retail_c{$i}\" value=\"" . (isset($cf_value["retail_c{$i}"]) ? $cf_value["retail_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Price:</label><input type=\"text\" name=\"price_c{$i}\" value=\"" . (isset($cf_value["price_c{$i}"]) ? $cf_value["price_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Quantity:</label><input type=\"number\" name=\"qty_c{$i}\" value=\"" . (isset($cf_value["qty_c{$i}"]) ? $cf_value["qty_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Bonus:</label><input type=\"text\" name=\"bonus_c{$i}\" value=\"" . (isset($cf_value["bonus_c{$i}"]) ? $cf_value["bonus_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Shipping:</label><input type=\"text\" name=\"shipping_c{$i}\" value=\"" . (isset($cf_value["shipping_c{$i}"]) ? $cf_value["shipping_c{$i}"][0] : '') . "\" />";
-        
-        $j = 1;
-        while (!empty($cf_value["name_c{$i}_r{$j}"][0]) && $cf_value["name_c{$i}_r{$j}"][0] != '' || $j == 1) {
-            $html.= "<div data-row={$j}>";
-            $html.= "<p><strong>Variation {$j}</strong></p>";
-            $html.= "<label>Name:</label><input type=\"text\" name=\"name_c{$i}_r{$j}\" value=\"" . (isset($cf_value["name_c{$i}_r{$j}"]) ? $cf_value["name_c{$i}_r{$j}"][0] : '') . "\" />";
-            $html.= "<label>Item ID:</label><input type=\"text\" name=\"itemId_c{$i}_r{$j}\" value=\"" . (isset($cf_value["itemId_c{$i}_r{$j}"]) ? $cf_value["itemId_c{$i}_r{$j}"][0] : '') . "\" />";
-            $html.= "<label>Quantity:</label><input type=\"text\" name=\"quantity_c{$i}_r{$j}\" value=\"" . (isset($cf_value["quantity_c{$i}_r{$j}"]) ? $cf_value["quantity_c{$i}_r{$j}"][0] : '') . "\" />";
-            $html.= "<label>Retail:</label><input type=\"text\" name=\"retail_c{$i}_r{$j}\" value=\"" . (isset($cf_value["retail_c{$i}_r{$j}"]) ? $cf_value["retail_c{$i}_r{$j}"][0] : '') . "\" />";
-            $html.= "<label>Product Image:</label><input type=\"text\" name=\"image_c{$i}_r{$j}\" value=\"" . (isset($cf_value["image_c{$i}_r{$j}"]) ? $cf_value["image_c{$i}_r{$j}"][0] : '') . "\" />";
-            $html.= "</div>";
-            $j++;
-        }
-        $html.= '<div><a href="#" class="addRow">Add Row [+]</a></div>';
-        $html.= '<input type="hidden" name="rowCount' . $i . '" value="' . ($j - 1) . '" />';
+        $html.= "<label>Item ID:</label><input type=\"text\" name=\"itemId_c{$i}\" value=\"" . (isset($cf_value["itemId_c{$i}"]) ? $cf_value["itemId_c{$i}"][0] : '') . "\" />";
+        $html.= "<label>Product Image:</label><input type=\"text\" name=\"image_c{$i}\" value=\"" . (isset($cf_value["image_c{$i}"]) ? $cf_value["image_c{$i}"][0] : '') . "\" />";
         $html.= "</div><!--/data-column-->";
         $i++;
     }
@@ -79,6 +67,18 @@ function product_meta_save($post_id) {
         else {
             delete_post_meta($post_id, "title_c{$i}");
         }
+        if (isset($_POST['sub_title_c' . $i])) {
+            update_post_meta($post_id, 'sub_title_c' . $i, sanitize_text_field($_POST['sub_title_c' . $i]));
+        } 
+        else {
+            delete_post_meta($post_id, "sub_title_c{$i}");
+        }
+        if (isset($_POST['retail_c' . $i])) {
+            update_post_meta($post_id, 'retail_c' . $i, sanitize_text_field($_POST['retail_c' . $i]));
+        } 
+        else {
+            delete_post_meta($post_id, "retail_c{$i}");
+        }
         if (isset($_POST['price_c' . $i])) {
             update_post_meta($post_id, 'price_c' . $i, sanitize_text_field($_POST['price_c' . $i]));
         } 
@@ -86,12 +86,6 @@ function product_meta_save($post_id) {
             delete_post_meta($post_id, "price_c{$i}");
         }
         
-        if (isset($_POST['sub_title_c' . $i])) {
-            update_post_meta($post_id, 'sub_title_c' . $i, sanitize_text_field($_POST['sub_title_c' . $i]));
-        } 
-        else {
-            delete_post_meta($post_id, "sub_title_c{$i}");
-        }
         if (isset($_POST['qty_c' . $i])) {
             update_post_meta($post_id, 'qty_c' . $i, sanitize_text_field($_POST['qty_c' . $i]));
         } 
@@ -110,53 +104,23 @@ function product_meta_save($post_id) {
         else {
             delete_post_meta($post_id, "shipping_c{$i}");
         }
+        if (isset($_POST['itemId_c' . $i])) {
+            update_post_meta($post_id, 'itemId_c' . $i, sanitize_text_field($_POST['itemId_c' . $i]));
+        } 
+        else {
+            delete_post_meta($post_id, "itemId_c{$i}");
+        }
+        if (isset($_POST['image_c' . $i])) {
+            update_post_meta($post_id, 'image_c' . $i, sanitize_text_field($_POST['image_c' . $i]));
+        } 
+        else {
+            delete_post_meta($post_id, "shipping_c{$i}");
+        }
         if (isset($_POST['columnCount'])) {
             update_post_meta($post_id, 'columnCount', sanitize_text_field($_POST['columnCount']));
         } 
         else {
             update_post_meta($post_id, 'columnCount', 1);
-        }
-        $j = 1;
-        while (isset($_POST["name_c{$i}_r{$j}"])) {
-            
-            if (isset($_POST["name_c{$i}_r{$j}"])) {
-                update_post_meta($post_id, "name_c{$i}_r{$j}", sanitize_text_field($_POST["name_c{$i}_r{$j}"]));
-            } 
-            else {
-                delete_post_meta($post_id, "name_c{$i}_r{$j}");
-            }
-            
-            if (isset($_POST["itemId_c{$i}_r{$j}"])) {
-                update_post_meta($post_id, "itemId_c{$i}_r{$j}", sanitize_text_field($_POST["itemId_c{$i}_r{$j}"]));
-            } 
-            else {
-                delete_post_meta($post_id, "itemId_c{$i}_r{$j}");
-            }
-            if (isset($_POST["quantity_c{$i}_r{$j}"])) {
-                update_post_meta($post_id, "quantity_c{$i}_r{$j}", sanitize_text_field($_POST["quantity_c{$i}_r{$j}"]));
-            } 
-            else {
-                delete_post_meta($post_id, "quantity_c{$i}_r{$j}");
-            }
-            if (isset($_POST["retail_c{$i}_r{$j}"])) {
-                update_post_meta($post_id, "retail_c{$i}_r{$j}", sanitize_text_field($_POST["retail_c{$i}_r{$j}"]));
-            } 
-            else {
-                delete_post_meta($post_id, "retail_c{$i}_r{$j}");
-            }
-            if (isset($_POST["image_c{$i}_r{$j}"])) {
-                update_post_meta($post_id, "image_c{$i}_r{$j}", sanitize_text_field($_POST["image_c{$i}_r{$j}"]));
-            } 
-            else {
-                delete_post_meta($post_id, "image_c{$i}_r{$j}");
-            }
-            if (isset($_POST["rowCount{$i}"])) {
-                update_post_meta($post_id, "rowCount{$i}", sanitize_text_field($_POST["rowCount{$i}"]));
-            } 
-            else {
-                delete_post_meta($post_id, "rowCount{$i}");
-            }
-            $j++;
         }
         $i++;
     }
@@ -203,18 +167,14 @@ function buy_table_cb() {
         echo "<div class=\"row\">";
         $i = 1;
         while (get_post_meta($post->ID, "title_c{$i}", true) != '') {            
-            $quantity = get_post_meta($post->ID, "quantity_c{$i}_r1", true);
+            $quantity = get_post_meta($post->ID, "quantity_c{$i}", true);
             $price = get_post_meta($post->ID, "price_c{$i}", true);
-            $retail = get_post_meta($post->ID, "retail_c{$i}_r1", true);
+            $retail = get_post_meta($post->ID, "retail_c{$i}", true);
             $quantity = array_map('floatval', explode(',', $quantity));
-            $retail = array_map('floatval', explode(',', $retail));
             $total_retail = 0;            
             $percent_off = 0;
-            for ($k=0; $k < count($quantity); $k++) { 
-                $total_retail += $quantity[$k] * $retail[$k];
-            }
-            $savings = $total_retail - $price;
-            $percent_off = $savings / $total_retail;
+            $savings = $retail - $price;
+            $percent_off = $savings / $retail;
                         
             echo "<div class='small-24 medium-8 large-8 columns'>";
             echo "<form action=\"". do_shortcode('[cart_url]') . "\" " . "method=\"get\" id=\"buy{$i}\" class=\"buy-form\">";
@@ -232,7 +192,7 @@ function buy_table_cb() {
             echo "</div>";
             echo "<div class='description'>" . get_post_meta($post->ID, "description" . "_" . $i, true) . "</div>";
             
-            echo "<div class=\"buy-image\">" . "<img src=\"" . do_shortcode('[upload_dir]') . get_post_meta($post->ID, "image_c{$i}_r1", true) . "\"  />" . "</div>";            
+            echo "<div class=\"buy-image\">" . "<img src=\"" . do_shortcode('[upload_dir]') . get_post_meta($post->ID, "image_c{$i}", true) . "\"  />" . "</div>";            
 
             $shipping = strtolower(get_post_meta($post->ID, "shipping_c{$i}", true));
 
@@ -243,7 +203,7 @@ function buy_table_cb() {
                 echo "<div class=\"shipping\" >Flat-Rate Shipping: $" . do_shortcode("[shipping_cost]") . "</div>";
             } 
 
-            echo "<div class='retail'>Retail $" . "<span>" .number_format($total_retail, 2, '.', '') . "</span>" . "</div>";
+            echo "<div class='retail'>Retail $" . "<span>" .number_format($retail, 2, '.', '') . "</span>" . "</div>";
             
             echo "<div class=\"price\">Price $" . "<span>" . $price . "</span>" . "</div>";
             if ($savings > 0) {
@@ -252,7 +212,7 @@ function buy_table_cb() {
             else {
                 echo "<div class=\"savings no-savings\"></div>";
             }            
-            echo "<a href=\"" . do_shortcode('[cart_url]') . "?add=" . $cf_value["itemId_c{$i}_r1"][0] . "\" class=\"button add-to-cart\" >" . "Add to Cart" . "</a>";
+            echo "<a href=\"" . do_shortcode('[cart_url]') . "?add=" . $cf_value["itemId_c{$i}"][0] . "\" class=\"button add-to-cart\" >" . "Add to Cart" . "</a>";
 
             
             echo "<div class=\"hiddenInputs\">";

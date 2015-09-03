@@ -48,20 +48,11 @@ function rating_meta_callback( $post ) {
             <input type="number" step="any" name="ratings-long-term-results" value="<?php if ( isset ( $cf['ratings-long-term-results'] ) ) echo $cf['ratings-long-term-results'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "100"; ?>
         </p>
         <p>
-            <label for="ratings-msrp">MSRP</label>
-            <input type="number" step="any" name="ratings-msrp" value="<?php if ( isset ( $cf['ratings-msrp'] ) ) echo $cf['ratings-msrp'][0]; ?>" />
-        </p>
-        <p>
-            <label for="ratings-lowest-price">Lowest Price</label>
-            <input type="number" step="any" name="ratings-lowest-price" value="<?php if ( isset ( $cf['ratings-lowest-price'] ) ) echo $cf['ratings-lowest-price'][0]; ?>" />
-        </p>
-        <p>
             <label for="ratings-guarantee">Guarantee</label>
             <input type="text" name="ratings-guarantee" value="<?php if ( isset ( $cf['ratings-guarantee'] ) ) echo $cf['ratings-guarantee'][0]; ?>" />
         </p>
-
         <p>
-            <label for="review-blurb">Review Blurb - Wrap links in [a][/a]</label>
+            <label for="review-blurb">Blurb - Wrap links in [a][/a]</label>
             <textarea type="text" name="review-blurb"><?php if ( isset ( $cf['review-blurb'] ) ) echo $cf['review-blurb'][0]; ?></textarea>
         </p>
             
@@ -105,17 +96,8 @@ function rating_meta_save( $post_id ) {
     if( isset( $_POST[ 'ratings-long-term-results' ] ) ) {
         update_post_meta( $post_id, 'ratings-long-term-results', sanitize_text_field( $_POST[ 'ratings-long-term-results' ] ) );
     }
-    if( isset( $_POST[ 'ratings-msrp' ] ) ) {
-        update_post_meta( $post_id, 'ratings-msrp', sanitize_text_field( $_POST[ 'ratings-msrp' ] ) );
-    }
-    if( isset( $_POST[ 'ratings-lowest-price' ] ) ) {
-        update_post_meta( $post_id, 'ratings-lowest-price', sanitize_text_field( $_POST[ 'ratings-lowest-price' ] ) );
-    }
     if( isset( $_POST[ 'ratings-guarantee' ] ) ) {
         update_post_meta( $post_id, 'ratings-guarantee', sanitize_text_field( $_POST[ 'ratings-guarantee' ] ) );
-    }
-    if( isset( $_POST[ 'ratings-affiliate-link' ] ) ) {
-        update_post_meta( $post_id, 'ratings-affiliate-link', sanitize_text_field( $_POST[ 'ratings-affiliate-link' ] ) );
     }
     if( isset( $_POST[ 'review-blurb' ] ) ) {
         update_post_meta( $post_id, 'review-blurb', $_POST[ 'review-blurb' ] );

@@ -190,13 +190,28 @@ function top_products_cb() {
                                             MSRP:
                                         </div>
                                         <div class="small-10 medium-14 columns">
-                                            <?php echo "$" . number_format( get_post_meta($id, "ratings-msrp", true), 2 ); ?>
+                                            <?php echo "$" . number_format( get_post_meta($id, "retail_c3", true), 2 ); ?>
                                         </div>
                                         <div class="small-14 medium-10 columns criterion">
                                             Our Price:
                                         </div>
                                         <div class="small-10 medium-14 columns">
-                                            <?php echo "<a href=\"" . get_the_permalink($id) . "\">" . "$" . number_format( get_post_meta($id, "ratings-lowest-price", true), 2 ) . "</a>"; ?>
+                                            <?php
+                                                $pricing = array();                                        
+                                                $p1 = ( get_post_meta($id, "price_c1", true) / get_post_meta($id, "qty_c1", true)  );
+                                                $p2 = ( get_post_meta($id, "price_c2", true) / get_post_meta($id, "qty_c2", true)  );
+                                                $p3 = ( get_post_meta($id, "price_c3", true) / get_post_meta($id, "qty_c3", true)  );
+                                                array_push($pricing, $p1, $p2, $p3 );
+                                                $low = min($pricing);
+                                                $high = max($pricing);
+                                                $epsilon = 0.00001;
+                                                if(abs($low-$high) < $epsilon) {
+                                                    echo "<a href=\"" . get_the_permalink($id) . "\">" . "$" . number_format( $low, 2) . "</a>"; 
+                                                } else {
+                                                    echo "<a href=\"" . get_the_permalink($id) . "\">" . "$" . number_format( $low, 2) . "-" . number_format( $high, 2) .  "</a>"; 
+                                                }
+                                                
+                                            ?>
                                         </div>
                                         <div class="small-14 medium-10 columns criterion">
                                             Guarantee:

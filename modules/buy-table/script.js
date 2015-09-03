@@ -12,14 +12,6 @@ jQuery(document).ready(function($) {
         i = $(this).closest("div[data-column]").attr("data-column");
         i = parseInt(i);
         rowCount.val(j);
-        html = '<div data-row="' + j + '">';
-        html +='<p><strong>Variation ' + j + '</strong></p>';
-        html +='<label>Name:</label><input type="text" name="name_c' + i + '_r' + j + '" value="">';
-        html +='<label>Item ID:</label><input type="text" name="itemId_c' + i + '_r' + j + '" value="">';
-        html +='<label>Quantity:</label><input type="text" name="quantity_c' + i + '_r' + j + '" value="">';
-        html +='<label>Retail:</label><input type="text" name="retail_c' + i + '_r' + j + '" value="">';
-        html +='<label>Product Image:</label><input type="text" name="image_c' + i + '_r' + j + '" value="">';
-        html +='</div>';
         $(this).closest('div').before(html);
     });
     $('section#product_meta').on('click', '.addColumn', function(e) {
@@ -34,22 +26,14 @@ jQuery(document).ready(function($) {
 
         html += '<label>Column Title:</label><input type="text" name="title_c'+i+'" value="">';
         html += '<label>Column Sub Title:</label><input type="text" name="sub_title_c'+i+'" value="">';
+        html += '<label>Retail:</label><input type="text" name="retail_c'+i+'" value="">';
         html += '<label>Price:</label><input type="text" name="price_c'+i+'" value="">';
         html += '<label>Quantity:</label><input type="number" name="qty_c'+i+'" value="">';
         html += '<label>Bonus:</label><input type="text" name="bonus_c'+i+'" value="">';
         html += '<label>Shipping:</label><input type="text" name="shipping_c'+i+'" value="">';
+        html += '<label>Item ID:</label><input type="text" name="itemId_c' + i + '" value="">';
+        html += '<label>Product Image:</label><input type="text" name="image_c' + i + '" value="">';
 
-        html += '<div data-row="' + j + '">';
-        html += '<p><strong>Variation ' + j + '</strong></p>';
-        html += '<label>Name:</label><input type="text" name="name_c' + i + '_r' + j + '" value="">';
-        html += '<label>Item ID:</label><input type="text" name="itemId_c' + i + '_r' + j + '" value="">';
-        html += '<label>Quantity:</label><input type="text" name="quantity_c' + i + '_r' + j + '" value="">';
-        html += '<label>Retail:</label><input type="text" name="retail_c' + i + '_r' + j + '" value="">';
-        html += '<label>Product Image:</label><input type="text" name="image_c' + i + '_r' + j + '" value="">';
-        html += '</div>';
-        html += '<div><a href="#" class="addRow">Add Row [+]</a></div>';
-        html += '<input type="hidden" name="rowCount' + i + '" value="' + j + '" />';
-        html += '</div>';
         $(this).closest("div").before(html);
     });
 
