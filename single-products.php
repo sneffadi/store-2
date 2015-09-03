@@ -8,7 +8,7 @@
  */
 get_header(); ?>
 
-<div class="row collapse">
+<div class="row medium-collapse">
 
     <div id="content" class="small-24 columns" role="main">
 

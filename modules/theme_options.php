@@ -151,28 +151,27 @@ class MySettingsPage
             'theme-setting-admin', 
             'ratings'
         );  
-        // add_settings_field(
-        //     'typekit', 
-        //     'Typekit ID', 
-        //     array( $this, 'typekit_callback' ), 
-        //     'theme-setting-admin', 
-        //     'ctas'
-        // );
-        // add_settings_field(
-        //     'typekit', 
-        //     'Typekit ID', 
-        //     array( $this, 'typekit_callback' ), 
-        //     'theme-setting-admin', 
-        //     'ctas'
-        // );
-        // add_settings_field(
-        //     'typekit', 
-        //     'Typekit ID', 
-        //     array( $this, 'typekit_callback' ), 
-        //     'theme-setting-admin', 
-        //     'ctas'
-        // );
-
+         // section two  
+        add_settings_section(
+            'company', // ID
+            'Company', // Title
+            null,
+            'theme-setting-admin' // Page
+        );
+        add_settings_field(
+            'phone', 
+            'Phone Number', 
+            array( $this, 'phone_callback' ), 
+            'theme-setting-admin', 
+            'company'
+        );
+        add_settings_field(
+            'cart-url', 
+            'Cart URL', 
+            array( $this, 'cart_callback' ), 
+            'theme-setting-admin', 
+            'company'
+        ); 
     }
 
     /**
@@ -201,6 +200,12 @@ class MySettingsPage
 
         if( isset( $input['ratings'] ) )
             $new_input['ratings'] = sanitize_text_field( $input['ratings'] );
+        
+        if( isset( $input['phone'] ) )
+            $new_input['phone'] = sanitize_text_field( $input['phone'] );
+
+        if( isset( $input['cart-url'] ) )
+            $new_input['cart-url'] = sanitize_text_field( $input['cart-url'] );
 
         return $new_input;
     }
@@ -263,6 +268,20 @@ class MySettingsPage
         printf(
             'Out of / <input type="number" step="any" id="ratings" name="theme_options[ratings]" value="%s" />',
             isset( $this->options['ratings'] ) ? esc_attr( $this->options['ratings']) : ''
+        );
+    }
+    public function phone_callback()
+    {
+        printf(
+            '<input type="text" name="theme_options[phone]" value="%s" />',
+            isset( $this->options['phone'] ) ? esc_attr( $this->options['phone']) : ''
+        );
+    }
+    public function cart_callback()
+    {
+        printf(
+            '<input type="text" name="theme_options[cart-url]" value="%s" />',
+            isset( $this->options['cart-url'] ) ? esc_attr( $this->options['cart-url']) : ''
         );
     }
 

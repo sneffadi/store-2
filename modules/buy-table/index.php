@@ -28,8 +28,9 @@ function product_meta_callback($post) {
         $html.= "<div><h4>Column " . $i . "</h4></div>";
         
         $html.= "<label>Column Title:</label><input type=\"text\" name=\"title_c{$i}\" value=\"" . (isset($cf_value["title_c{$i}"]) ? $cf_value["title_c{$i}"][0] : '') . "\" />";
+        $html.= "<label>Column Sub Title:</label><input type=\"text\" name=\"sub_title_c{$i}\" value=\"" . (isset($cf_value["sub_title_c{$i}"]) ? $cf_value["sub_title_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Price:</label><input type=\"text\" name=\"price_c{$i}\" value=\"" . (isset($cf_value["price_c{$i}"]) ? $cf_value["price_c{$i}"][0] : '') . "\" />";
-        $html.= "<label>Total Bottles:</label><input type=\"number\" name=\"bottles_c{$i}\" value=\"" . (isset($cf_value["bottles_c{$i}"]) ? $cf_value["bottles_c{$i}"][0] : '') . "\" />";
+        $html.= "<label>Quantity:</label><input type=\"number\" name=\"qty_c{$i}\" value=\"" . (isset($cf_value["qty_c{$i}"]) ? $cf_value["qty_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Bonus:</label><input type=\"text\" name=\"bonus_c{$i}\" value=\"" . (isset($cf_value["bonus_c{$i}"]) ? $cf_value["bonus_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Shipping:</label><input type=\"text\" name=\"shipping_c{$i}\" value=\"" . (isset($cf_value["shipping_c{$i}"]) ? $cf_value["shipping_c{$i}"][0] : '') . "\" />";
         
@@ -82,13 +83,20 @@ function product_meta_save($post_id) {
             update_post_meta($post_id, 'price_c' . $i, sanitize_text_field($_POST['price_c' . $i]));
         } 
         else {
-            delete_post_meta($post_id, "bottles_c{$i}");
+            delete_post_meta($post_id, "price_c{$i}");
         }
-        if (isset($_POST['bottles_c' . $i])) {
-            update_post_meta($post_id, 'bottles_c' . $i, sanitize_text_field($_POST['bottles_c' . $i]));
+        
+        if (isset($_POST['sub_title_c' . $i])) {
+            update_post_meta($post_id, 'sub_title_c' . $i, sanitize_text_field($_POST['sub_title_c' . $i]));
         } 
         else {
-            delete_post_meta($post_id, "bottles_c{$i}");
+            delete_post_meta($post_id, "sub_title_c{$i}");
+        }
+        if (isset($_POST['qty_c' . $i])) {
+            update_post_meta($post_id, 'qty_c' . $i, sanitize_text_field($_POST['qty_c' . $i]));
+        } 
+        else {
+            delete_post_meta($post_id, "qty_c{$i}");
         }
         if (isset($_POST['bonus_c' . $i])) {
             update_post_meta($post_id, 'bonus_c' . $i, sanitize_text_field($_POST['bonus_c' . $i]));
@@ -219,10 +227,8 @@ function buy_table_cb() {
             }
             echo "<div class=\"title {$class}\">" . get_post_meta($post->ID, "title_c{$i}", true) . "</div>";
             echo "<div class=\"small-24 columns buy-wrap\">";
-            echo "<div class='quantity'>" . get_post_meta($post->ID, "bottles_c{$i}", true);
-
-            echo (get_post_meta($post->ID, "bottles_c{$i}", true) == 1 ? ' Bottle' : ' Bottles');
-            
+            echo "<div class='quantity'>";
+            echo get_post_meta($post->ID, "sub_title_c{$i}", true);
             echo "</div>";
             echo "<div class='description'>" . get_post_meta($post->ID, "description" . "_" . $i, true) . "</div>";
             
@@ -263,7 +269,6 @@ function buy_table_cb() {
         echo "<i class=\"fa fa-cc-mastercard\"></i>";
         echo "<i class=\"fa fa-cc-discover\"></i>";
         echo "<i class=\"fa fa-cc-paypal\"></i>";
-        echo "<i class=\"fa fa-amazon amazon-payments\"></i>";
         echo "</div><!--/.payment-->";
         echo "</div><!--/#buytable-->";
         echo "</div><!--/.row-->";

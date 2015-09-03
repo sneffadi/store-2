@@ -12,13 +12,20 @@
 </section>
 <footer>
 	<?php do_action( 'foundationpress_before_footer' ); ?>
-	<div class="row">
-		<div class="small-16 medium-8 columns">
-			<div class="logo">
-				<a href="<?php echo get_home_url(); ?>">
-					<img src="<?php echo do_shortcode("[upload_dir]") . "header-logo.png" ?>" />
-				</a>
-			</div>
+	<div class="row medium-collapse">
+		<div class="small-16 medium-8 columns">			
+				
+				<?php
+					$options = get_option('theme_options');
+					if (!empty($options['logo'])) {
+						echo "<div class=\"logo\">";
+						echo "<a href=\"" . get_home_url() . "\">";
+						echo "<img src=\"" . do_shortcode("[upload_dir]") . $options['logo'] . "\" />";
+						echo "</a>";
+						echo "</div>";
+					}
+				?>									
+			
 		</div> <!-- / .small-16 -->
 		<div class="small-8 medium-16 columns">
 		</div><!--/.small-8-->
@@ -67,7 +74,7 @@
 	<div class="row">
 		<div class="small-24 medium-24 columns end">
 			<p>The statements made on this website have not been evaluated by the FDA. The products sold on this website are not intended to diagnose, treat, cure, or prevent any disease.</p>
-			<p>&copy; 2013-<?php echo date('Y');?></p>
+			<p>&copy; 2013-<?php echo date('Y');?>, <?php echo get_bloginfo('name'); ?></p>
 		</div> <!-- / .small-12 -->
 	</div> <!-- / .row -->
 	<?php do_action( 'foundationpress_after_footer' ); ?>

@@ -88,9 +88,11 @@ $off-canvas-link-color: $monsoon;
 $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -10%);
 $off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, 0.2), 4px 0 4px rgba($black, 0.2);
 
-$logo-height: rem-calc(36);
+$logo-height: rem-calc(46);
+$logo-width: rem-calc(461);
+$logo-max-width: none;
 $logo-section-height: auto;
-$logo-section-padding: rem-calc(12) 0;
+$logo-section-padding: rem-calc(15) 0;
 
 $rating-bg-color: linear-gradient(to bottom, $yellow-green 0%, $conifer 50%, $atlantis 51%, $sushi 100%); //backgorund of rating bar
 $rating-border-color: $aluminum; //border of rating bar
