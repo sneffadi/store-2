@@ -32,3 +32,55 @@
         padding: 0;
     }
 }
+
+@mixin fluid-ratio($large-size, $small-size) {
+    $width-large: nth($large-size, 1);
+    $width-small: nth($small-size, 1);
+    $height-large: nth($large-size, 2);
+    $height-small: nth($small-size, 2);
+    $slope: ($height-large - $height-small) / ($width-large - $width-small);
+    $height: $height-small - $width-small * $slope;
+
+    padding-top: $slope * 100%;
+    height: $height;
+    background-size: contain;
+    -moz-background-size: contain; /* Firefox 3.6 */
+    background-position: center; /* Internet Explorer 7/8 */
+    background-repeat: no-repeat;
+}
+
+#banner-viviscal {
+    @include fluid-ratio(800px 466px, 400px 233px);
+
+    background-image: url(#{$imgPath}/viviscal-banner.png);
+}
+
+#banner-lipogaine {
+    @include fluid-ratio(800px 466px, 400px 233px);
+
+    background-image: url(#{$imgPath}/lipogaine-banner.png);
+}
+
+#banner-regenepure {
+    @include fluid-ratio(800px 465px, 400px 233px);
+
+    background-image: url(#{$imgPath}/regenepure-banner.png);
+}
+
+#banner-hair-rush {
+    @include fluid-ratio(800px 501px, 400px 250px);
+
+    background-image: url(#{$imgPath}/hair-rush-banner.png);
+}
+
+#banner-dasgro {
+    @include fluid-ratio(800px 466px, 400px 233px);
+
+    background-image: url(#{$imgPath}/dasgr-banner.png);
+}
+
+.single-products {
+    .top-bar-container {
+        margin: 0;
+    }
+}
