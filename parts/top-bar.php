@@ -29,7 +29,6 @@
                     ?>
         </div> <!-- / .small-12 -->
         <div class="small-3 columns">
-            mcafee 
         </div> <!-- / .small-12 -->
     </div> <!-- / .row -->
     </nav>

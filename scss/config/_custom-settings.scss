@@ -97,7 +97,7 @@ $logo-max-width: none;
 $logo-section-height: auto;
 $logo-section-padding: rem-calc(15) 0;
 
-$rating-bg-color: linear-gradient(to bottom, $yellow-green 0%, $conifer 50%, $atlantis 51%, $sushi 100%); //backgorund of rating bar
+$rating-bg-color: $minty; //backgorund of rating bar
 $rating-border-color: $aluminum; //border of rating bar
 
 $topbar-dropdown-link-bg: $charcoal;
