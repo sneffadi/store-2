@@ -24,27 +24,25 @@ get_header(); ?>
 
 	<?php if ( have_posts() ) : ?>
 		<?php 
-		echo "<h4>All Reviews</h4>";	
-		echo "<ul id=\"product_list\">"; ?>
+		echo "<h4>All Products</h4>";	
+		echo "<div id=\"product_list\">"; ?>
 		<?php query_posts($query_string . '&orderby=title&order=ASC'); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
+
 			<?php
-			$alphas = range('a', 'z');
-			foreach ($alphas as $alpha) {
-				if (stripos($post->post_title, $alpha) === 0) {
-        			echo "<div>" . $alpha . "</div>";
-    			}
-			}
-				echo "<li>";
 				echo "<a href=\"" . get_permalink($post->ID) . "\">";
 				echo $post->post_title;
+				echo "<figure>";
+                echo "<a href=\"" . get_the_permalink($post->ID) . "\">";
+                echo get_the_post_thumbnail($post->ID);
+                echo "</a>";
+                echo "</figure>";
 				echo "</a>";
-				echo "</li>";
 			?>
 
 		<?php endwhile; ?>
-		<?php echo "</ul>"; ?>
+		<?php echo "</div>"; ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
