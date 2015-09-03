@@ -1,24 +1,24 @@
 <?php
 /*=============================================
-=          Create Review Post Type           =
+=          Create Product Post Type           =
 =============================================*/
-function review_post_type() {
+function product_post_type() {
 	register_taxonomy_for_object_type('category', 'Products');
 	register_post_type('Products',
 		array(
 			'labels' => array(
 				'name'               => __('Products', 'Products'),
-				'singular_name'      => __('Review', 'Products'),
+				'singular_name'      => __('Product', 'Products'),
 				'add_new'            => __('Add New', 'Products'),
-				'add_new_item'       => __('Add New Review', 'Products'),
+				'add_new_item'       => __('Add New Product', 'Products'),
 				'edit'               => __('Edit', 'Products'),
-				'edit_item'          => __('Edit Review', 'Products'),
-				'new_item'           => __('New Review', 'Products'),
-				'view'               => __('View Review', 'Products'),
-				'view_item'          => __('View Review', 'Products'),
-				'search_items'       => __('Search Review', 'Products'),
-				'not_found'          => __('No Review Posts found', 'Products'),
-				'not_found_in_trash' => __('No Review Posts found in Trash', 'Products'),
+				'edit_item'          => __('Edit Product', 'Products'),
+				'new_item'           => __('New Product', 'Products'),
+				'view'               => __('View Product', 'Products'),
+				'view_item'          => __('View Product', 'Products'),
+				'search_items'       => __('Search Product', 'Products'),
+				'not_found'          => __('No Product Posts found', 'Products'),
+				'not_found_in_trash' => __('No Product Posts found in Trash', 'Products'),
 			),
 			'public'       => true,
 			'hierarchical' => true,
@@ -37,4 +37,4 @@ function review_post_type() {
 			'show_in_nav_menus' => true,
 		));
 }
-add_action('init', 'review_post_type');
+add_action('init', 'product_post_type');

@@ -1,7 +1,11 @@
 // Start Rating
 .product-image {
     figure {
-        padding: rem-calc(15);
+        padding: rem-calc(5) rem-calc(20) 0 0;
+
+        img {
+            max-height: rem-calc(215);
+        }
     }
 }
 
