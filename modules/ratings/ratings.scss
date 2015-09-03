@@ -1,4 +1,10 @@
 // Start Rating
+.product-image {
+    figure {
+        padding: rem-calc(15);
+    }
+}
+
 .star-positioner {
     position: relative;
     display: inline-block;
@@ -139,13 +145,5 @@
         margin: 0;
         width: 100%;
         padding: rem-calc(7) 0;
-    }
-}
-
-.reference {
-    a {
-        color: inherit;
-        text-decoration: none;
-        font-size: rem-calc(12);
     }
 }
