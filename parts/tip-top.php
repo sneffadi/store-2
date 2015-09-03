@@ -34,7 +34,7 @@
         <div class="small-12 columns tip-top-r">
             <span class="cart">
                 <a href="">
-                    <i class="fa fa-shopping-cart"></i>1 Item - $xx.xx
+                    <i class="fa fa-shopping-cart"></i>
                 </a>
             </span><!--/.cart-->
         </div> <!-- / .small-12 -->
