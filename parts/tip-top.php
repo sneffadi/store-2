@@ -17,11 +17,13 @@
             <span class="phone">
             <?php echo $options['phone']; ?>
             </span>
-            <?php endif; ?>                        
+            <?php endif; ?>               
+            <a href="http://www.buyhairlosstreatments.com/contact/">         
             <i class="fa fa-envelope"></i>
             <span class="email">
                 Email us
             </span><!--/.email-->
+            </a>
             
             <a href="javascript:void(0);" onclick="olark('api.box.expand')">
                 <i class="fa fa-comment"></i>
