@@ -190,7 +190,7 @@ function top_products_cb() {
                                             MSRP:
                                         </div>
                                         <div class="small-10 medium-14 columns">
-                                            <?php echo "$" . number_format( get_post_meta($id, "retail_c3", true), 2 ); ?>
+                                            <?php echo "$" . number_format( get_post_meta($id, "retail_c1", true), 2 ); ?>
                                         </div>
                                         <div class="small-14 medium-10 columns criterion">
                                             Our Price:
