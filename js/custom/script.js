@@ -6,7 +6,7 @@ $(window).load(function() {
     };
 });
 
-$(function() {
+$( document ).ready(function() {
     if ($("#buytable .buy-image")) {
         var heights = [];
         $('#buytable .buy-image').each(function() {
