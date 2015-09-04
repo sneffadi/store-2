@@ -65,7 +65,7 @@ function product_link($atts, $content = null) {
 }
 function cart_url() {
     //$hostname = get_bloginfo('name');
-    $hostname = "forevermints.com";
+    $hostname = "buyhairlosstreatments.com";
     return 'http://secure.' . $hostname . '/secure-checkout/';
 }
 function shipping_cost() {
