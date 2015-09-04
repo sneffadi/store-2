@@ -35,7 +35,7 @@
         </div> <!-- / .small-12 -->
         <div class="small-12 columns tip-top-r">
             <span class="cart">
-                <a href="">
+                <a href="<?php do_shortcode('[cart_url]');?>">
                     <i class="fa fa-shopping-cart"></i>
                 </a>
             </span><!--/.cart-->
