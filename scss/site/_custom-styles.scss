@@ -33,6 +33,10 @@
     }
 }
 
+.front-page-image {
+    padding: rem-calc(12);
+}
+
 @mixin fluid-ratio($large-size, $small-size) {
     $width-large: nth($large-size, 1);
     $width-small: nth($small-size, 1);
