@@ -64,9 +64,9 @@ function product_link($atts, $content = null) {
     return $link;
 }
 function cart_url() {
-    //$hostname = get_bloginfo('name');
-    $hostname = "buyhairlosstreatments.com";
-    return 'http://secure.' . $hostname . '/secure-checkout/';
+    $options = get_option('theme_options');
+    $carturl = $options['cart-url'];
+    return $carturl;
 }
 function shipping_cost() {
     return '4.95';
