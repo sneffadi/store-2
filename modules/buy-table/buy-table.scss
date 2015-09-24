@@ -43,7 +43,7 @@
 
     .add-to-cart {
         width: 100%;
-        font-size: rem-calc(24);
+        font-size: rem-calc(20);
         padding: rem-calc(6);
         text-transform: uppercase;
         border-radius: rem-calc(2);
@@ -76,7 +76,7 @@
     }
 
     .price {
-        font-size: rem-calc(32);
+        font-size: rem-calc(28);
         line-height: 1;
         text-transform: uppercase;
         font-family: $font-family-sans-serif-heading;
@@ -87,6 +87,7 @@
         border-top: rem-calc(2) solid $white-smoke;
         border-bottom: rem-calc(2) solid $white-smoke;
         margin: 0 0 rem-calc(12) 0;
+        font-size:rem-calc(15);
     }
 
     .buy-image {

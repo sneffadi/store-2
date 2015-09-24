@@ -1,12 +1,19 @@
 #hero {
-    #banner {
-        background: url(#{$imgPath}/banner.png) no-repeat;
-        width: 100%;
-        height: rem-calc(183);
-        padding: rem-calc(20) rem-calc(25);
-        margin-bottom: rem-calc(30);
+    .columns {
+        padding-left:0;
+        padding-right:0;
     }
-
+    p.large {
+        font-size:rem-calc(18);
+    }
+    h1 {
+        text-transform:uppercase;
+    }
+    h2 {
+        font-family:$font-family-serif;
+        font-weight:$font-weight-normal;
+        font-size:rem-calc(18);
+    }
     counter-reset: section;
 
     ul {
@@ -37,4 +44,7 @@
             content: counter(section) ". ";
         }
     }
+}
+.color-head {
+    color:$secondary-font-color;
 }

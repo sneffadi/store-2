@@ -10,9 +10,9 @@ $imgPath: "/wp-content/uploads";
 $total-columns: 24;
 
 // Typography
-$font-family-sans-serif: "Source Sans Pro", Helvetica, Arial, sans-serif;
-$font-family-sans-serif-heading: "Source Sans Pro", Helvetica, Arial, sans-serif;
-$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-sans-serif: "raleway", sans-serif;
+$font-family-sans-serif-heading: "raleway", sans-serif;
+$font-family-serif: "merriweather", serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 $h1-font-size: rem-calc(30);
@@ -29,6 +29,7 @@ $font-weight-bold: bold !default;
 $header-line-height: 1.1;
 $subheader-line-height: 1.2;
 $paragraph-line-height: 1.45;
+$paragraph-font-size:rem-calc(14);
 
 // Foundation color naming conventions
 $white: #FFFFFF;
@@ -62,18 +63,24 @@ $atlantis: #91D33B;
 $sushi: #8DD137;
 $minty: #28937e;
 $orangy: #f68a32;
+$emperor: #545454;
+$porcelain: #f7f9f9;
+$bermuda-gray: #6891AE;
+$flame-pea: #DA5E33;
+$zigurrat: #C2D8E2;
+$nevada: #67727B;
 
 /*=============================================
 =     Background Color and Font Color       =
 =============================================*/
 
 $body-bg: $white;
-$body-font-color: $jet;
-$secondary-font-color: $minty;
-$anchor-font-color: $cerulean; //link color
-$success-color: $orangy;
+$body-font-color: $emperor;
+$secondary-font-color: $bermuda-gray;
+$anchor-font-color: $bermuda-gray; //link color
+$success-color: $flame-pea;
 $primary-color: $minty; //color for a lot of elements
-$secondary-color: $mercury; //color of read review button
+$secondary-color: $bermuda-gray; //color of read review button
 $upsell-bg: $link-water; //sidebar upsell bg;
 $upsell-border-color: $curious-blue; //sidebar upsell border color;
 $topbar-bg: $white; // desktop nav bg
@@ -81,7 +88,8 @@ $topbar-bg-color: $white;
 $topbar-dropdown-bg: $white;
 $topbar-border-bottom: none;
 $topbar-bg-hover: none;
-$tabbar-bg: $aluminum; // small/medium nav bg
+$tabbar-bg: $white; // small/medium nav bg
+$tabbar-menu-icon-color: $aluminum; // color of hamburger thing
 $tabbar-left-section-border: solid 1px scale-color($tabbar-bg, $lightness: -10%);
 
 $off-canvas-bg: $white-smoke; //mobile slide out nav bg color
@@ -91,13 +99,13 @@ $off-canvas-link-color: $monsoon;
 $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -10%);
 $off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, 0.2), 4px 0 4px rgba($black, 0.2);
 
-$logo-height: rem-calc(46);
-$logo-width: rem-calc(461);
+$logo-height: rem-calc(39); 
+$logo-width: rem-calc(321);
 $logo-max-width: none;
 $logo-section-height: auto;
 $logo-section-padding: rem-calc(15) 0;
 
-$rating-bg-color: $minty; //backgorund of rating bar
+$rating-bg-color: $flame-pea; //backgorund of rating bar
 $rating-border-color: $aluminum; //border of rating bar
 
 $topbar-dropdown-link-bg: $charcoal;
@@ -109,7 +117,7 @@ $topbar-link-color-active-hover: inherit;
 /*=====  Background Color and Font Color   ======*/
 
 // We use these to control various global styles
-$body-font-family: $font-family-sans-serif;
+$body-font-family: $font-family-serif;
 $body-font-weight: $font-weight-normal;
 $header-font-family: $font-family-sans-serif-heading;
 $body-font-style: normal;
@@ -127,9 +135,9 @@ $topbar-link-font-size: rem-calc(14);
 $tabbar-margin-top: rem-calc(10); // vertically center logo
 
 $tip-top-bg-color: $oil;
-$tip-top-color: $white;
+$tip-top-color: $porcelain;
 $tip-top-height: rem-calc(32);
-$tip-top-font-size: rem-calc(14);
+$tip-top-font-size: rem-calc(10);
 $tip-top-link-color: inherit;
 
 // We use these to build padding for buttons

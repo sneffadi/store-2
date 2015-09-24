@@ -165,6 +165,7 @@ function buy_table_cb() {
         echo "<div class=\"row collapse\">";
         echo "<div id=\"buytable\" data-magellan-destination=\"buytable\"> <a name=\"buytable\"></a>";
         echo "<div class=\"row\">";
+        echo "<h2>Order ".get_the_title()." Today!</h2>";
         $i = 1;
         while (get_post_meta($post->ID, "title_c{$i}", true) != '') {            
             $quantity = get_post_meta($post->ID, "quantity_c{$i}", true);
@@ -196,9 +197,12 @@ function buy_table_cb() {
 
             $shipping = strtolower(get_post_meta($post->ID, "shipping_c{$i}", true));
 
-            if ($shipping==0 || $shipping=='free' || $shipping=='free shipping') {
+            if ($shipping=='free' || $shipping=='free shipping') {
                 echo "<div class=\"shipping\">" . "Free Shipping!" . "</div>";
             } 
+            elseif (is_numeric($shipping)) {
+                echo "<div class=\"shipping\" >Flat-Rate Shipping: $" . $shipping . "</div>";
+            }
             else {
                 echo "<div class=\"shipping\" >Flat-Rate Shipping: $" . do_shortcode("[shipping_cost]") . "</div>";
             } 

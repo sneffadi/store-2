@@ -9,7 +9,11 @@
 ?>
 <div class="tip-top">
     <div class="row medium-collapse">
-        <div class="small-12 columns tip-top-l">                        
+        <div class="small-12 columns tip-top-l"> 
+        <?php  $url = home_url(); ?>
+            <a href="<?php echo $url ?>">
+                <img src="<?php echo do_shortcode('[upload_dir]'); ?>/top-logo.png">
+            </a>
             <?php
             $options = get_option('theme_options');
             if (!empty($options['phone'])): ?>

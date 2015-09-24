@@ -100,3 +100,6 @@
 #hero textarea {
     min-height: 200px;
 }
+.color-head {
+    color:$secondary-font-color;
+}

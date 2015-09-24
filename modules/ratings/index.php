@@ -48,6 +48,10 @@ function rating_meta_callback( $post ) {
             <input type="number" step="any" name="ratings-long-term-results" value="<?php if ( isset ( $cf['ratings-long-term-results'] ) ) echo $cf['ratings-long-term-results'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "100"; ?>
         </p>
         <p>
+            <label for="ratings-side-effects">Side Effects</label>
+            <input type="text" name="ratings-side-effects" value="<?php if ( isset ( $cf['ratings-side-effects'] ) ) echo $cf['ratings-side-effects'][0]; ?>" />
+        </p>
+        <p>
             <label for="ratings-guarantee">Guarantee</label>
             <input type="text" name="ratings-guarantee" value="<?php if ( isset ( $cf['ratings-guarantee'] ) ) echo $cf['ratings-guarantee'][0]; ?>" />
         </p>
@@ -95,6 +99,9 @@ function rating_meta_save( $post_id ) {
     }
     if( isset( $_POST[ 'ratings-long-term-results' ] ) ) {
         update_post_meta( $post_id, 'ratings-long-term-results', sanitize_text_field( $_POST[ 'ratings-long-term-results' ] ) );
+    }
+    if( isset( $_POST[ 'ratings-side-effects' ] ) ) {
+        update_post_meta( $post_id, 'ratings-side-effects', sanitize_text_field( $_POST[ 'ratings-side-effects' ] ) );
     }
     if( isset( $_POST[ 'ratings-guarantee' ] ) ) {
         update_post_meta( $post_id, 'ratings-guarantee', sanitize_text_field( $_POST[ 'ratings-guarantee' ] ) );
