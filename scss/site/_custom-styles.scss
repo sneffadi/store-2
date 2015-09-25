@@ -101,7 +101,7 @@
 }
 /* SomnaMax */
 #somnamax-banner{
-    background:url(http://localhost/esleepingpills.com/wp-content/uploads/somnamax-banner.png)no-repeat;
+    background:url(#{$imgPath}/somnamax-banner.png)no-repeat;
     height:rem-calc(417);
     padding:rem-calc(25) rem-calc(20);
     .right {
@@ -147,7 +147,7 @@
 }
 /* Ambitropin styles */
 #ambitropin-banner {
-    background:url(http://localhost/esleepingpills.com/wp-content/uploads/ambitropin-banner.png)no-repeat;
+    background:url(#{$imgPath}/ambitropin-banner.png)no-repeat;
     min-height:rem-calc(428);
     padding:rem-calc(42) rem-calc(32);
     h1 {
@@ -179,7 +179,7 @@
 }
 /* Best Sellers Pack Styles */
 #tsk-banner {
-    background:url(http://localhost/esleepingpills.com/wp-content/uploads/tsk-banner.png)no-repeat;
+    background:url(#{$imgPath}/tsk-banner.png)no-repeat;
     background-size: 100%; 
     -webkit-background-size: 100%; 
     -moz-background-size: 100%; 
@@ -199,7 +199,7 @@
 }
 /* AmbeSleep Styles */
 #ambesleep-banner {
-     background:url(http://localhost/esleepingpills.com/wp-content/uploads/ambesleep-banner.png)no-repeat;
+     background:url(#{$imgPath}/ambesleep-banner.png)no-repeat;
     height:rem-calc(417);
     padding:rem-calc(25) rem-calc(20);
     .right {
@@ -241,7 +241,7 @@
 }
 /* Somnavox Styles */
 #somnavox-banner {
-     background:url(http://localhost/esleepingpills.com/wp-content/uploads/somnavox-banner.png)no-repeat;
+     background:url(#{$imgPath}/somnavox-banner.png)no-repeat;
     height:rem-calc(428);
     padding:rem-calc(25) rem-calc(5);
     .right {
@@ -283,7 +283,7 @@
 }
 /* Sleep Rx Styles */
 #sleeprx-banner {
-     background:url(http://localhost/esleepingpills.com/wp-content/uploads/sleeprx-banner.png)no-repeat;
+     background:url(#{$imgPath}/sleeprx-banner.png)no-repeat;
     height:rem-calc(434);
     padding:rem-calc(25) rem-calc(5);
     .right {
@@ -325,7 +325,7 @@
 }
 /* Sleep Rx Styles */
 #sleep1-banner {
-     background:url(http://localhost/esleepingpills.com/wp-content/uploads/sleep1-banner.png)no-repeat;
+     background:url(#{$imgPath}/sleep1-banner.png)no-repeat;
     height:rem-calc(422);
     padding:rem-calc(25) rem-calc(5);
     .right {
@@ -367,7 +367,7 @@
 }
 /* 44 Sleep styles */
 #blue-sleep-banner {
-    background:url(http://localhost/esleepingpills.com/wp-content/uploads/44sleep-banner.png)no-repeat;
+    background:url(#{$imgPath}/44sleep-banner.png)no-repeat;
     min-height:rem-calc(440);
     padding:rem-calc(42) rem-calc(32);
     h1 {
@@ -396,7 +396,7 @@
 }
 /* Sleep styles */
 #sleep-banner {
-    background:url(http://localhost/esleepingpills.com/wp-content/uploads/sleep-banner.png)no-repeat;
+    background:url(#{$imgPath}/sleep-banner.png)no-repeat;
     min-height:rem-calc(424);
     padding:rem-calc(42) rem-calc(32);
     h1 {
@@ -428,7 +428,7 @@
 }
 /* Happy Dreams Styles */
 #happy-banner {
-     background:url(http://localhost/esleepingpills.com/wp-content/uploads/happy-banner.png)no-repeat;
+     background:url(#{$imgPath}/happy-banner.png)no-repeat;
     height:rem-calc(434);
     padding:rem-calc(25) rem-calc(5);
     .right {
