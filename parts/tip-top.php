@@ -11,9 +11,6 @@
     <div class="row medium-collapse">
         <div class="small-12 columns tip-top-l"> 
         <?php  $url = home_url(); ?>
-            <a href="<?php echo $url ?>">
-                <img src="<?php echo do_shortcode('[upload_dir]'); ?>/top-logo.png">
-            </a>
             <?php
             $options = get_option('theme_options');
             if (!empty($options['phone'])): ?>
@@ -40,6 +37,9 @@
         <div class="small-12 columns tip-top-r">
             <span class="cart">
                 <a href="<?php echo do_shortcode('[cart_url]');?>">
+                    <span class="cart">
+                    Cart
+                    </span>
                     <i class="fa fa-shopping-cart"></i>
                 </a>
             </span><!--/.cart-->
