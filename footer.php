@@ -73,8 +73,11 @@
 	</div> <!-- / .row -->
 	<div class="row">
 		<div class="small-24 medium-24 columns end">
-			<p>The statements made on this website have not been evaluated by the FDA. The products sold on this website are not intended to diagnose, treat, cure, or prevent any disease.</p>
-			<p>&copy; 2013-<?php echo date('Y');?>, <?php echo get_bloginfo('name'); ?></p>
+			<p>The information on this site has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Results in description and Testimonials may not be typical results and individual results may vary. All orders placed through this website are subject to acceptance, in its sole discretion.</p>
+			<ul class="footer-bar">
+			<li>&copy; 2013-<?php echo date('Y');?>, <?php echo get_bloginfo('name'); ?></li>
+			 <li><a href="javascript:safePop('privacy.php')">Privacy Policy</a></li>
+			 <li><a href="javascript:safePop('terms.php')">Terms and Conditions</a></li>
 		</div> <!-- / .small-12 -->
 	</div> <!-- / .row -->
 	<?php do_action( 'foundationpress_after_footer' ); ?>
