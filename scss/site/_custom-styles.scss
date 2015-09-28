@@ -88,11 +88,17 @@
         margin: 0;
     }
 }
+@media #{$large-up} {
+  .right-for-large-only {
+    float: right;
+  }
+}
 
 /* Product-Specific Styles */
 .banner {
     width:100%;
     margin-bottom:rem-calc(30);
+    background-size:cover;
     h1 {
       text-transform:uppercase;  
       line-height:1;
@@ -136,6 +142,9 @@
             display:block;
             margin:rem-calc(30) auto 0;
             width:76%;
+            @media #{$small-only}{
+                font-size:rem-calc(19);
+            }
         }
     }
 }
@@ -154,6 +163,10 @@
        color:#4e8c8f;
        font-size:rem-calc(55);
        line-height:0.8;
+       @media #{$small-only}{
+                width:100%;
+                font-size:rem-calc(19);
+            }
     }
     h2 {
         text-align:center;
@@ -175,6 +188,10 @@
             border-radius:rem-calc(5);
             display:block;
             width:76%;
+            @media #{$small-only}{
+                width:100%;
+                font-size:rem-calc(19);
+            }
         }
 }
 /* Best Sellers Pack Styles */
@@ -207,6 +224,9 @@
           font-size:rem-calc(55);
           color:#2c3487;
           text-align:right;
+          @media #{$small-only}{
+                text-align:left;
+            }
         }
         h2 {
             margin-top:0;
@@ -214,6 +234,9 @@
             font-size:rem-calc(30);
             color:#2c3487;
             text-align:right;
+            @media #{$small-only}{
+                text-align:left;
+            }
         }
         ul {
             font-family:"raleway",sans-serif;
@@ -236,6 +259,11 @@
             display:block;
             margin:rem-calc(30) auto 0;
             width:95%;
+            @media #{$small-only}{
+                width:100%;
+                font-size:rem-calc(19);
+                padding:rem-calc(10) rem-calc(30);
+            }
         }
     }
 }
@@ -249,6 +277,9 @@
           font-size:rem-calc(55);
           color:#10499d;
           text-align:right;
+          @media #{$small-only}{
+                text-align:left;
+            }
         }
         h2 {
             margin-top:0;
@@ -257,6 +288,9 @@
             color:#10499d;
             text-align:center;
             font-weight:400;
+            @media #{$small-only}{
+                text-align:left;
+            }
         }
         ul {
             font-family:"raleway",sans-serif;
@@ -278,6 +312,11 @@
             display:block;
             margin:rem-calc(30) auto 0;
             width:85%;
+            @media #{$small-only}{
+                width:100%;
+                font-size:rem-calc(19);
+                padding:rem-calc(10) rem-calc(30);
+            }
         }
     }
 }
@@ -320,6 +359,7 @@
             display:block;
             margin:rem-calc(30) auto 0;
             width:90%;
+
         }
     }
 }
@@ -362,6 +402,11 @@
             display:block;
             margin:rem-calc(30) auto 0;
             width:90%;
+             @media #{$small-only}{
+                width:66%;
+                font-size:rem-calc(19);
+                padding:rem-calc(10) rem-calc(30);
+            }
         }
     }
 }
@@ -370,11 +415,18 @@
     background:url(#{$imgPath}/44sleep-banner.png)no-repeat;
     min-height:rem-calc(440);
     padding:rem-calc(42) rem-calc(32);
+    @media #{$small-only} {
+        min-height:rem-calc(277);
+       }
     h1 {
        color:#1320be;
        font-size:rem-calc(55);
        line-height:0.8;
        text-align:center;
+       @media #{$small-only} {
+        text-align:left;
+        font-size:rem-calc(40);
+       }
     }
 
     ul {
@@ -392,6 +444,11 @@
             background:#FEB300;
             display:block;
             width:76%;
+            @media #{$small-only}{
+                width:100%;
+                font-size:rem-calc(19);
+                padding:rem-calc(10) rem-calc(30);
+            }
         }
 }
 /* Sleep styles */
@@ -399,11 +456,17 @@
     background:url(#{$imgPath}/sleep-banner.png)no-repeat;
     min-height:rem-calc(424);
     padding:rem-calc(42) rem-calc(32);
+    @media #{$small-only} {
+        min-height:rem-calc(313);
+    }
     h1 {
        color:#19191a;
-       font-size:rem-calc(55);
+       font-size:rem-calc(52);
        line-height:0.8;
        text-align:center;
+       @media #{$small-only} {
+        text-align:left;
+       }
     }
 
     ul {
@@ -423,7 +486,11 @@
             background:#D31B1E;
             display:block;
             width:76%;
-
+            @media #{$small-only}{
+                width:100%;
+                font-size:rem-calc(19);
+                padding:rem-calc(10) rem-calc(30);
+            }
         }
 }
 /* Happy Dreams Styles */
@@ -436,6 +503,9 @@
           font-size:rem-calc(60);
           color:#134ba1;
           text-align:center;
+          @media #{$small-only} {
+            text-align:left;
+          }
         }
         h2 {
             margin-top:0;
@@ -444,6 +514,9 @@
             color:#134ba1;
             text-align:center;
             font-weight:400;
+            @media #{$small-only} {
+            text-align:left;
+          }
         }
         ul {
             font-family:"raleway",sans-serif;
@@ -465,6 +538,11 @@
             display:block;
             margin:rem-calc(30) auto 0;
             width:90%;
+            @media #{$small-only}{
+                width:100%;
+                font-size:rem-calc(19);
+                padding:rem-calc(10) rem-calc(30);
+            }
         }
     }
 }
