@@ -631,3 +631,14 @@
         }
     }
 }
+/* Guarantee Styles */
+.row.guarantee {
+    border:1px solid $nevada;
+    background:$zigurrat;
+    margin:rem-calc(20) 0 rem-calc(30);
+    padding:rem-calc(10) 0;
+    p {
+        font-size:rem-calc(16);
+        margin-top:rem-calc(30);
+    }
+}

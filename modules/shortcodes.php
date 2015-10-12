@@ -8,6 +8,7 @@ add_shortcode('ref', 'ref');
 add_shortcode( 'ingredients', 'ingredients' );
 add_shortcode('cart_url', 'cart_url');
 add_shortcode('shipping_cost', 'shipping_cost');
+add_shortcode('guarantee', 'guarantee');
 
 function niche() {
     $options = get_option('theme_options');
@@ -70,4 +71,16 @@ function cart_url() {
 }
 function shipping_cost() {
     return '4.95';
+}
+function guarantee () {
+    $guarantee = "<div class=\"row guarantee\">";
+    $guarantee .= "<div class=\"small-24 medium-8 columns\">";
+    $guarantee .= "<img src=\"#{$imgPath}/prod-guarantee-seal.png\" />";
+    //$guarantee .= "<img src=\"http://localhost/esleepingpills.com/wp-content/uploads/prod-guarantee-seal.png\" />";
+    $guarantee .= "</div><!-- end .small-24.medium-8 -->";
+    $guarantee .= "<div class=\"small-24 medium-16 columns\">";
+    $guarantee .= "<p>You can feel confident in your purchase because this product is backed by our <b>100% Money Back Guarantee!</b> If you are not fully satisfied with your results, contact our customer service team and they'll get you started!</p>";
+    $guarantee .= "</div><!-- end .medium-16.columns -->";
+    $guarantee .= "</div><!-- end .row.guarantee -->";
+    return $guarantee;
 }
