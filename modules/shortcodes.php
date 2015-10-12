@@ -75,7 +75,7 @@ function shipping_cost() {
 function guarantee () {
     $guarantee = "<div class=\"row guarantee\">";
     $guarantee .= "<div class=\"small-24 medium-8 columns\">";
-    $guarantee .= "<img src=\"#{$imgPath}/prod-guarantee-seal.png\" />";
+    $guarantee .= "<img src=\"/wp-content/uploads/prod-guarantee-seal.png\" />";
     //$guarantee .= "<img src=\"http://localhost/esleepingpills.com/wp-content/uploads/prod-guarantee-seal.png\" />";
     $guarantee .= "</div><!-- end .small-24.medium-8 -->";
     $guarantee .= "<div class=\"small-24 medium-16 columns\">";
