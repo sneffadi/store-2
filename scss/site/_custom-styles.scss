@@ -79,11 +79,11 @@
 }
 /* Veralyze Styles */
 .veralyze-banner {
-    background:url(http://localhost/darkeyecirclecreams.com/wp-content/uploads/banner.png)no-repeat;
+    background:url(#{$imgPath}/banner.png)no-repeat;
     min-height:rem-calc(440);
     padding-top:rem-calc(20);
     @media #{$small-only} {
-        background:url(http://localhost/darkeyecirclecreams.com/wp-content/uploads/veralyze-mobile.png);
+        background:url(#{$imgPath}/veralyze-mobile.png);
         background-size:cover;
         padding-bottom:rem-calc(30);
     }
@@ -143,11 +143,11 @@
 }
 /* Oxytoxin Styles */
 .oxytoxin-banner {
-    background:url(http://localhost/darkeyecirclecreams.com/wp-content/uploads/oxytoxin-banner.png)no-repeat;
+    background:url(#{$imgPath}/oxytoxin-banner.png)no-repeat;
     min-height:rem-calc(440);
     padding-top:rem-calc(20);
     @media #{$small-only} {
-        background:url(http://localhost/darkeyecirclecreams.com/wp-content/uploads/oxytoxin-mobile.png);
+        background:url(#{$imgPath}/oxytoxin-mobile.png);
         background-size:cover;
         padding-bottom:rem-calc(30);
     }
@@ -232,10 +232,10 @@
 
 /*Best Sellers Kit Styles */
 .tsk-banner {
-    background:url(http://localhost/darkeyecirclecreams.com/wp-content/uploads/tsk-banner.png) no-repeat;
+    background:url(#{$imgPath}/tsk-banner.png) no-repeat;
     min-height:rem-calc(533);
     @media #{$small-only} {
-        background:url(http://localhost/darkeyecirclecreams.com/wp-content/uploads/tsk-mobile.png)no-repeat;
+        background:url(#{$imgPath}/tsk-mobile.png)no-repeat;
         background-size:cover;
         padding-bottom:rem-calc(30);
         min-height:rem-calc(575);
@@ -253,11 +253,11 @@
 
 /* Dermatopin Styles */
 .dermatopin-banner {
-    background:url(http://localhost/darkeyecirclecreams.com/wp-content/uploads/dermatopin-banner.png)no-repeat;
+    background:url(#{$imgPath}/dermatopin-banner.png)no-repeat;
     min-height:rem-calc(435);
     padding-top:rem-calc(20);
     @media #{$small-only} {
-        background:url(http://localhost/darkeyecirclecreams.com/wp-content/uploads/dermatopin-mobile.png);
+        background:url(#{$imgPath}/dermatopin-mobile.png);
         background-size:cover;
         padding-bottom:rem-calc(30);
     }
@@ -328,11 +328,11 @@
 
 /* Oz Naturals Styles */
 .oz-banner {
-    background:url(http://localhost/darkeyecirclecreams.com/wp-content/uploads/oz-banner.png)no-repeat;
+    background:url(#{$imgPath}/oz-banner.png)no-repeat;
     min-height:rem-calc(435);
     padding-top:rem-calc(40);
     @media #{$small-only} {
-        background:url(http://localhost/darkeyecirclecreams.com/wp-content/uploads/oz-mobile.png);
+        background:url(#{$imgPath}/oz-mobile.png);
         background-size:cover;
         padding-bottom:rem-calc(30);
     }
