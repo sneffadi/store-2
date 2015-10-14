@@ -63,23 +63,26 @@ $atlantis: #91D33B;
 $sushi: #8DD137;
 $minty: #28937e;
 $orangy: #f68a32;
-$emperor: #545454;
+$bastille: #231D26;
 $porcelain: #f7f9f9;
 $bermuda-gray: #6891AE;
 $flame-pea: #DA5E33;
-$zigurrat: #C2D8E2;
+$amour: #FAF0F4;
 $nevada: #67727B;
+$cadillac: #af5474;
+$eastern-blue: #2BB2B2;
+$alto: #d3d3d3;
 
 /*=============================================
 =     Background Color and Font Color       =
 =============================================*/
 
 $body-bg: $white;
-$body-font-color: $emperor;
-$secondary-font-color: $bermuda-gray;
-$anchor-font-color: $bermuda-gray; //link color
-$success-color: $flame-pea;
-$primary-color: $minty; //color for a lot of elements
+$body-font-color: $bastille;
+$secondary-font-color: $cadillac;
+$anchor-font-color: $cadillac; //link color
+$success-color: $cadillac;
+$primary-color: $eastern-blue; //color for a lot of elements
 $secondary-color: $bermuda-gray; //color of read review button
 $upsell-bg: $link-water; //sidebar upsell bg;
 $upsell-border-color: $curious-blue; //sidebar upsell border color;
@@ -99,13 +102,13 @@ $off-canvas-link-color: $monsoon;
 $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -10%);
 $off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, 0.2), 4px 0 4px rgba($black, 0.2);
 
-$logo-height: rem-calc(39); 
-$logo-width: rem-calc(321);
+$logo-height: rem-calc(43); 
+$logo-width: rem-calc(442);
 $logo-max-width: none;
 $logo-section-height: auto;
 $logo-section-padding: rem-calc(15) 0;
 
-$rating-bg-color: $flame-pea; //backgorund of rating bar
+$rating-bg-color: $eastern-blue; //backgorund of rating bar
 $rating-border-color: $aluminum; //border of rating bar
 
 $topbar-dropdown-link-bg: $charcoal;
