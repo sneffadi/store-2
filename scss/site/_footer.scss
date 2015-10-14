@@ -53,4 +53,10 @@ footer {
             text-decoration: underline;
         }
     }
+    .footer-bar{
+    li{
+        float: left;
+        margin-left: rem-calc(15);
+    }
+}
 }
