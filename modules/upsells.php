@@ -32,7 +32,7 @@ function top_products_cb() {
                 <div class="small-24 columns top-product">
                     <div class="row">
                         
-                        <div class="small-8 small-columns product-image">
+                        <div class="small-5 medium-8 small-columns product-image">
                             <?php if (has_post_thumbnail($id)) {
                                 echo "<figure>";
                                 echo "<a href=\"" . get_the_permalink($id) . "\">";
@@ -41,7 +41,7 @@ function top_products_cb() {
                                 echo "</figure>";
                             }?>
                         </div><!--/small-4 medium-2 columns-->
-                        <div class="small-16 small-columns">
+                        <div class="small-19 medium-16 small-columns">
                             <div class="row collapse">
                             <h3 class="upsell-title"><a href="<?php echo get_the_permalink($id); ?>" ><?php echo "#{$i} " . get_the_title($id); ?></a></h3>
                                 <?php if (strlen(get_post_meta($post->ID, $id . "_custom_content", true)) > 0) {
@@ -54,7 +54,7 @@ function top_products_cb() {
                                 ?>
                                 <div class="small-24 columns table">
                                     <div class="criterion-row row">
-                                        <div class="small-12 medium-7 columns criterion">
+                                        <div class="small-16 medium-7 columns criterion">
                                             Overall Value:
                                         </div>
                                         <div class="small-5 columns star-col hide-for-small">
@@ -72,10 +72,10 @@ function top_products_cb() {
                                                 </div> <!-- / .stars -->
                                             </div> <!-- / .star-positioner -->
                                         </div><!--/medium-5 columns hide-for-small-->
-                                        <div class="small-12 columns show-for-small">
+                                        <div class="small-5 columns show-for-small">
                                             <?php echo number_format ( get_post_meta($id, "ratings-overall-value", true), 1 ). "/" . $num; ?>
                                         </div><!--/ small-3 medium-2 columns out-of -->
-                                        <div class="small-12 medium-7 columns criterion">
+                                        <div class="small-16 medium-7 columns criterion">
                                             Long-Term Results:
                                         </div>
                                         <div class="small-5 columns star-col hide-for-small">
@@ -93,12 +93,12 @@ function top_products_cb() {
                                                 </div> <!-- / .stars -->
                                             </div> <!-- / .star-positioner -->
                                         </div>
-                                        <div class="small-12 columns show-for-small">
+                                        <div class="small-8 medium-12 columns show-for-small">
                                             <?php echo number_format ( get_post_meta($id, "ratings-long-term-results", true), 1 ). "/" . $num; ?>
                                         </div><!--/ small-6 columns show-for-small -->
                                     </div><!--/ criterion-row row -->
                                     <div class="criterion-row row">
-                                        <div class="small-12 medium-7 columns criterion">
+                                        <div class="small-16 medium-7 columns criterion">
                                             Effectiveness:
                                         </div>
                                         <div class="small-5 columns star-col hide-for-small">
@@ -119,10 +119,10 @@ function top_products_cb() {
                                             <div class="ratings" style="width:<?php echo get_post_meta($id, 'ratings-effectiveness', true); ?>%">
                                             </div>
                                         </div>
-                                        <div class="small-12 columns show-for-small">
+                                        <div class="small-5 columns show-for-small">
                                             <?php echo number_format ( get_post_meta($id, "ratings-effectiveness", true), 1 ). "/" . $num; ?>
                                         </div><!--/ small-6 columns show-for-small -->
-                                        <div class="small-12 medium-7 columns criterion">
+                                        <div class="small-16 medium-7 columns criterion">
                                             Ingredients:
                                         </div>
                                         <div class="small-5 columns star-col hide-for-small">
@@ -140,12 +140,12 @@ function top_products_cb() {
                                                 </div> <!-- / .stars -->
                                             </div> <!-- / .star-positioner -->
                                         </div>
-                                        <div class="small-12 columns show-for-small">
+                                        <div class="small-8 columns show-for-small">
                                             <?php echo number_format ( get_post_meta($id, "ratings-ingredient-quality", true), 1 ). "/" . $num; ?>
                                         </div><!--/ small-6 columns show-for-small -->
                                     </div><!--/ criterion-row row -->
                                     <div class="criterion-row row">
-                                        <div class="small-12 medium-7 columns criterion">
+                                        <div class="small-16 medium-7 columns criterion">
                                             Speed of Results:
                                         </div>
                                         <div class="small-5 columns star-col hide-for-small">
@@ -163,10 +163,10 @@ function top_products_cb() {
                                                 </div> <!-- / .stars -->
                                             </div> <!-- / .star-positioner -->
                                         </div>
-                                        <div class="small-12 columns show-for-small">
+                                        <div class="small-5 columns show-for-small">
                                             <?php echo number_format ( get_post_meta($id, "ratings-speed-of-results", true), 1 ). "/" . $num; ?>
                                         </div><!--/ small-6 columns show-for-small -->
-                                        <div class="small-12 medium-7 columns criterion">
+                                        <div class="small-16 medium-7 columns criterion">
                                             Product Safety:
                                         </div>
                                         <div class="small-5 columns star-col hide-for-small">
@@ -184,28 +184,28 @@ function top_products_cb() {
                                                 </div> <!-- / .stars -->
                                             </div> <!-- / .star-positioner -->
                                         </div>
-                                        <div class="small-12 columns show-for-small">
+                                        <div class="small-8 columns show-for-small">
                                             <?php echo number_format ( get_post_meta($id, "ratings-product-safety", true), 1 ). "/" . $num; ?>
                                         </div><!--/ small-6 columns show-for-small -->
                                     </div><!--/ criterion-row row -->
                                     
                                     <div class="criterion-row row ratings-break">
-                                        <div class="small-14 medium-4 columns criterion">
+                                        <div class="small-16 medium-4 columns criterion">
                                             MSRP:
                                         </div>
-                                        <div class="small-10 medium-8 columns">
+                                        <div class="small-7 medium-8 columns">
                                             <?php echo "$" . number_format( get_post_meta($id, "retail_c1", true), 2 ); ?>
                                         </div>
-                                        <div class="small-14 medium-4 columns criterion">
+                                        <div class="small-16 medium-4 columns criterion">
                                             Side Effects:
                                         </div>
-                                        <div class="small-10 medium-8 columns">
+                                        <div class="small-5 medium-8 columns">
                                             <?php echo get_post_meta($id, "ratings-side-effects", true); ?>
                                         </div>
-                                        <div class="small-14 medium-4 columns criterion">
+                                        <div class="small-16 medium-4 columns criterion">
                                             Our Price:
                                         </div>
-                                        <div class="small-10 medium-8 columns">
+                                        <div class="small-5 medium-8 columns">
                                             <?php
                                                 $pricing = array();                                        
                                                 $p1 = get_post_meta($id, "price_c1", true) / get_post_meta($id, "qty_c1", true);
@@ -228,19 +228,19 @@ function top_products_cb() {
                                                 
                                             ?>
                                         </div>
-                                        <div class="small-14 medium-4 columns criterion">
+                                        <div class="small-16 medium-4 columns criterion">
                                             Guarantee:
                                         </div>
-                                        <div class="small-10 medium-8 columns">
+                                        <div class="small-8 medium-8 columns">
                                             <?php echo get_post_meta($id, "ratings-guarantee", true); ?>
                                         </div>
                                     </div><!-- / .criterion-row -->
                                 </div> <!--/small-12 columns table -->
                                 <div class="row collapse">
-                                <div class="small-12 columns">
+                                <div class="small-24 medium-12 columns">
                                     <a href="<?php echo get_permalink($id) ?>" class="tiny button secondary radius"><?php echo $readMore ?></a>
                                 </div><!--/.small-6 columns-->
-                                <div class="small-12 columns">
+                                <div class="small-24 medium-12 columns">
                                     <a href="<?php echo get_permalink($id) ?>/#buytable" class="tiny button success radius"><?php echo $seePricing; ?></a>                        
                                 </div><!--/.columns-->
                             </div><!--/.row collapse-->
