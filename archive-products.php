@@ -84,7 +84,7 @@ if (have_posts()): ?>
 				        <?php echo "<div class=\"rating\">" . number_format(get_post_meta($id, "ratings-overall-value", true), 1) . "/" . $num . "</div>"; ?>
 			        </div> <!-- / .ratings-container -->
 				    <div class="msrp">
-				        	Retail: $<?php echo (get_post_meta($id, "retail_c1_r1", true)); ?>
+				        	Retail: $<?php echo (get_post_meta($id, "retail_c1", true)); ?>
 				    </div>
 				    <div class="our-price">
 				        	Our Price: <a href="<?php echo $link; ?>">$<?php echo get_post_meta($id, "price_c1", true); ?></a>
