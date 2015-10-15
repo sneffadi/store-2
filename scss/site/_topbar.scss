@@ -91,6 +91,7 @@
 .tab-bar {
     .logo img {
         margin: $tabbar-margin-top auto 0 auto;
+        max-height:rem-calc(32);
     }
 }
 

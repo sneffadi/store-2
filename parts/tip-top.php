@@ -9,7 +9,7 @@
 ?>
 <div class="tip-top">
     <div class="row medium-collapse">
-        <div class="small-12 columns tip-top-l"> 
+        <div class="small-16 medium-12 columns tip-top-l"> 
         <?php  $url = home_url(); ?>
             <?php
             $options = get_option('theme_options');
@@ -34,7 +34,7 @@
             </a>
            
         </div> <!-- / .small-12 -->
-        <div class="small-12 columns tip-top-r">
+        <div class="small-8 medium-12 columns tip-top-r">
             <span class="cart">
                 <a href="<?php echo do_shortcode('[cart_url]');?>">
                     <span class="cart">
