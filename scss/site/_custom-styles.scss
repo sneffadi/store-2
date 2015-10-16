@@ -121,6 +121,10 @@
     }
 }
 .veralyze-wrap {
+    padding:0 rem-calc(15);
+    @media #{$large-only} {
+      padding:0;  
+    }
     a#displayText {
         color:#9f9f9f;
         font-size:rem-calc(12);
@@ -129,20 +133,29 @@
         display:none;
     }
     .ingredient {
-        border-bottom:1px dotted #949494;
+        border-bottom:1px solid #E4E4E4;
         margin-bottom:rem-calc(20);
-        &:last-child{
-            border-bottom:none;
+        .columns {
+            padding-left:0!important;
+            padding-right:0!important;
+        }
+        .two-graphs {
+            img {
+                
+                @media #{$small-only} {
+                   float:left;
+                   width:50%;
+                }
+                &:last-child {
+                    margin-top:rem-calc(75);
+                    @media #{$small-only} {
+                     margin-top:0;  
+                    }
+                }
+            }
         }
     }
-    .ing-small {
-        border-top:1px dotted #949494;
-        padding:rem-calc(15) 0;
-        p {
-            font-size:rem-calc(11);
-        }
-    }
-
+    
 }
 /* Oxytoxin Styles */
 .oxytoxin-banner {
