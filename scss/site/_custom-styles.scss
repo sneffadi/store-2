@@ -104,6 +104,10 @@
         max-width:60%;
     }
     ul {
+        margin-left:rem-calc(100);
+        @media #{$small-only} {
+            margin-left:rem-calc(65);
+        }
         li {
             font-size:rem-calc(18);
             line-height:1.5;
