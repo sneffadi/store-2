@@ -274,8 +274,9 @@
     a.button.radius {
         margin:0 auto rem-calc(30);
         display:block;
-        @media #{$large-only} {
-            width:55%;
+        width:55%;
+        @media #{$small-only} {
+            width:100%;
         }
     }
 }

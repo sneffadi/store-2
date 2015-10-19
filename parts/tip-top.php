@@ -26,9 +26,9 @@
             </span><!--/.email-->
             </a>
             
-            <a href="javascript:void(0);" onclick="olark('api.box.expand')">
-                <i class="fa fa-comment"></i>
-                <span class="chat">
+            <a href="javascript:void(0);" onclick="olark('api.box.expand')" >
+                <i class="fa fa-comment hide-for-small"></i>
+                <span class="chat hide-for-small">
                     Chat
                 </span><!--/.chat-->
             </a>
