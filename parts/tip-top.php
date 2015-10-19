@@ -9,7 +9,8 @@
 ?>
 <div class="tip-top">
     <div class="row medium-collapse">
-        <div class="small-12 columns tip-top-l">                        
+        <div class="small-16 medium-12 columns tip-top-l"> 
+        <?php  $url = home_url(); ?>
             <?php
             $options = get_option('theme_options');
             if (!empty($options['phone'])): ?>
@@ -18,7 +19,7 @@
             <?php echo $options['phone']; ?>
             </span>
             <?php endif; ?>               
-            <a href="http://www.buyhairlosstreatments.com/contact/">         
+            <a href="<?php echo site_url(); ?>/contact/">         
             <i class="fa fa-envelope"></i>
             <span class="email">
                 Email us
@@ -26,16 +27,19 @@
             </a>
             
             <a href="javascript:void(0);" onclick="olark('api.box.expand')">
-                <i class="fa fa-comment"></i>
-                <span class="chat">
+                <i class="fa fa-comment hide-for-small"></i>
+                <span class="chat hide-for-small">
                     Chat
                 </span><!--/.chat-->
             </a>
            
         </div> <!-- / .small-12 -->
-        <div class="small-12 columns tip-top-r">
+        <div class="small-8 medium-12 columns tip-top-r">
             <span class="cart">
                 <a href="<?php echo do_shortcode('[cart_url]');?>">
+                    <span class="cart">
+                    Cart
+                    </span>
                     <i class="fa fa-shopping-cart"></i>
                 </a>
             </span><!--/.cart-->
