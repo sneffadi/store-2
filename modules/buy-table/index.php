@@ -177,8 +177,14 @@ function buy_table_cb() {
             $percent_off = 0;
             $savings = $retail - $price;
             $percent_off = $savings / $retail;
-                        
-            echo "<div class='small-24 medium-8 large-8 columns'>";
+            $third = get_post_meta($post->ID, "price_c3", true);
+            
+            if ($third == '') {
+               echo "<div class='small-24 medium-12 large-12 columns'>"; 
+            }
+            else {
+               echo "<div class='small-24 medium-8 large-8 columns'>"; 
+            }            
             echo "<form action=\"". do_shortcode('[cart_url]') . "\" " . "method=\"get\" id=\"buy{$i}\" class=\"buy-form\">";
             
             if ($i % 2 == 0) {
@@ -228,6 +234,8 @@ function buy_table_cb() {
             echo "</div><!--end row -->";
             $i++;
         }
+        echo "</div><!--/.row-->";
+        echo "<div class=\"row\">";
         echo "<div class=\"payment\">";
         echo "<i class=\"fa fa-cc-visa\"></i>";
         echo "<i class=\"fa fa-cc-amex\"></i>";
