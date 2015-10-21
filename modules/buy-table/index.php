@@ -180,7 +180,7 @@ function buy_table_cb() {
             $third = get_post_meta($post->ID, "price_c3", true);
             
             if ($third == '') {
-               echo "<div class='small-24 medium-12 large-12 columns'>"; 
+               echo "<div class='small-24 medium-8 large-8 columns twoCol-buy'>"; 
             }
             else {
                echo "<div class='small-24 medium-8 large-8 columns'>"; 

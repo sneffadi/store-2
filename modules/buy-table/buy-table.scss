@@ -108,4 +108,13 @@
             margin: 0 0 0 rem-calc(6);
         }
     }
+    .twoCol-buy {
+        @media #{$medium-up}{
+            margin-left:15%;
+            &:last-child {
+                margin-left:0;
+                margin-right:15%;
+            }
+        } 
+    }
 }
