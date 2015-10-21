@@ -41,6 +41,7 @@ $smoke: #EEEEEE;
 $gainsboro: #DDDDDD;
 $iron: #CCCCCC;
 $base: #AAAAAA;
+$silver: #BBBBBB;
 $aluminum: #999999;
 $jumbo: #888888;
 $monsoon: #777777;
@@ -72,6 +73,7 @@ $nevada: #67727B;
 $cadillac: #af5474;
 $eastern-blue: #2BB2B2;
 $alto: #d3d3d3;
+$dusty-gray: #969696;
 
 /*=============================================
 =     Background Color and Font Color       =
@@ -83,7 +85,7 @@ $secondary-font-color: $cadillac;
 $anchor-font-color: $cadillac; //link color
 $success-color: $cadillac;
 $primary-color: $eastern-blue; //color for a lot of elements
-$secondary-color: $bermuda-gray; //color of read review button
+$secondary-color: $dusty-gray; //color of read review button
 $upsell-bg: $link-water; //sidebar upsell bg;
 $upsell-border-color: $curious-blue; //sidebar upsell border color;
 $topbar-bg: $white; // desktop nav bg
@@ -164,6 +166,10 @@ $button-bg-hover: scale-color($success-color, $lightness: -10%);
 //Ratings
 $rating-font-size: rem-calc(13);
 $inline-list-bottom-margin: rem-calc(0);
+$front-ratings-bg: $alto; //background for empty stars on front page
+$ratings-table-bg: $amour;
+$ratings-border: $nevada;
+$all-prods-ratings-bg: $gainsboro;
 
 //sidebar
 $sidebar-text-margin: 0 0 rem-calc(8) 0;

@@ -23,6 +23,10 @@ function product_meta_callback($post) {
     echo '<section id="product_meta">';
     $i = 1;
     $html = '';
+    $check = isset( $cf_value[ 'out-of-stock' ] ) ? esc_attr( $cf_value[ 'out-of-stock' ][0] ) : '';
+    $html .= '<p>';
+    $html .= '<label for="'.'out-of-stock' . '">Out of Stock</label>';
+    $html .= '<input type="checkbox" name='.'"out-of-stock" '. checked( $check, 'yes', false ) .' /></p>';
     while (!empty($cf_value["title_c{$i}"][0]) && $cf_value["title_c{$i}"][0] != '' || $i == 1) {
         $html.= "<div data-column={$i}>";
         $html.= "<div><h4>Column " . $i . "</h4></div>";
@@ -31,7 +35,6 @@ function product_meta_callback($post) {
         $html.= "<label>Column Sub Title:</label><input type=\"text\" name=\"sub_title_c{$i}\" value=\"" . (isset($cf_value["sub_title_c{$i}"]) ? $cf_value["sub_title_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Retail:</label><input type=\"text\" name=\"retail_c{$i}\" value=\"" . (isset($cf_value["retail_c{$i}"]) ? $cf_value["retail_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Price:</label><input type=\"text\" name=\"price_c{$i}\" value=\"" . (isset($cf_value["price_c{$i}"]) ? $cf_value["price_c{$i}"][0] : '') . "\" />";
-        $html.= "<label>Quantity:</label><input type=\"number\" name=\"qty_c{$i}\" value=\"" . (isset($cf_value["qty_c{$i}"]) ? $cf_value["qty_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Bonus:</label><input type=\"text\" name=\"bonus_c{$i}\" value=\"" . (isset($cf_value["bonus_c{$i}"]) ? $cf_value["bonus_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Shipping:</label><input type=\"text\" name=\"shipping_c{$i}\" value=\"" . (isset($cf_value["shipping_c{$i}"]) ? $cf_value["shipping_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Item ID:</label><input type=\"text\" name=\"itemId_c{$i}\" value=\"" . (isset($cf_value["itemId_c{$i}"]) ? $cf_value["itemId_c{$i}"][0] : '') . "\" />";
@@ -59,6 +62,10 @@ function product_meta_save($post_id) {
     
     // Checks for input and sanitizes/saves if needed
     $cf_value = get_post_meta($post_id);
+
+    $chk = isset( $_POST['out-of-stock' ] ) && $_POST['out-of-stock' ] ? 'yes' : 'no';
+    update_post_meta( $post_id, 'out-of-stock', $chk );
+    
     $i = 1;
     while (isset($_POST['title_c' . $i])) {
         if (isset($_POST['title_c' . $i])) {
@@ -67,6 +74,7 @@ function product_meta_save($post_id) {
         else {
             delete_post_meta($post_id, "title_c{$i}");
         }
+
         if (isset($_POST['sub_title_c' . $i])) {
             update_post_meta($post_id, 'sub_title_c' . $i, sanitize_text_field($_POST['sub_title_c' . $i]));
         } 
@@ -84,13 +92,6 @@ function product_meta_save($post_id) {
         } 
         else {
             delete_post_meta($post_id, "price_c{$i}");
-        }
-        
-        if (isset($_POST['qty_c' . $i])) {
-            update_post_meta($post_id, 'qty_c' . $i, sanitize_text_field($_POST['qty_c' . $i]));
-        } 
-        else {
-            delete_post_meta($post_id, "qty_c{$i}");
         }
         if (isset($_POST['bonus_c' . $i])) {
             update_post_meta($post_id, 'bonus_c' . $i, sanitize_text_field($_POST['bonus_c' . $i]));

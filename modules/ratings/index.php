@@ -24,28 +24,28 @@ function rating_meta_callback( $post ) {
     <div id="ratings">
         <p>
             <label for="ratings-overall-value">Overall Value</label>
-            <input type="number" step="any" name="ratings-overall-value" value="<?php if ( isset ( $cf['ratings-overall-value'] ) ) echo $cf['ratings-overall-value'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "100"; ?>
+            <input type="number" step="any" name="ratings-overall-value" value="<?php if ( isset ( $cf['ratings-overall-value'] ) ) echo $cf['ratings-overall-value'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "5"; ?>
         </p>
         <p>
             <label for="ratings-effectiveness">Effectiveness</label>
-            <input type="number" step="any" name="ratings-effectiveness" value="<?php if ( isset ( $cf['ratings-effectiveness'] ) ) echo $cf['ratings-effectiveness'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "100"; ?>
+            <input type="number" step="any" name="ratings-effectiveness" value="<?php if ( isset ( $cf['ratings-effectiveness'] ) ) echo $cf['ratings-effectiveness'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "5"; ?>
         </p>
         <p>
             <label for="ratings-speed-of-results">Speed of Results</label>
-            <input type="number" step="any" name="ratings-speed-of-results" value="<?php if ( isset ( $cf['ratings-speed-of-results'] ) ) echo $cf['ratings-speed-of-results'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "100"; ?>
+            <input type="number" step="any" name="ratings-speed-of-results" value="<?php if ( isset ( $cf['ratings-speed-of-results'] ) ) echo $cf['ratings-speed-of-results'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "5"; ?>
         </p>
         <p>
             <label for="ratings-product-safety">Product Safety</label>
-            <input type="number" step="any" name="ratings-product-safety" value="<?php if ( isset ( $cf['ratings-product-safety'] ) ) echo $cf['ratings-product-safety'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "100"; ?>
+            <input type="number" step="any" name="ratings-product-safety" value="<?php if ( isset ( $cf['ratings-product-safety'] ) ) echo $cf['ratings-product-safety'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "5"; ?>
         </p>
         <p>
             <label for="ratings-ingredient-quality">Ingredient</label>
-            <input type="number" step="any" name="ratings-ingredient-quality" value="<?php if ( isset ( $cf['ratings-ingredient-quality'] ) ) echo $cf['ratings-ingredient-quality'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "100"; ?>
+            <input type="number" step="any" name="ratings-ingredient-quality" value="<?php if ( isset ( $cf['ratings-ingredient-quality'] ) ) echo $cf['ratings-ingredient-quality'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "5"; ?>
         </p>
 
         <p>
             <label for="ratings-long-term-results">Long-Term Results</label>
-            <input type="number" step="any" name="ratings-long-term-results" value="<?php if ( isset ( $cf['ratings-long-term-results'] ) ) echo $cf['ratings-long-term-results'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "100"; ?>
+            <input type="number" step="any" name="ratings-long-term-results" value="<?php if ( isset ( $cf['ratings-long-term-results'] ) ) echo $cf['ratings-long-term-results'][0]; ?>" /> / <?php echo !empty($options['ratings']) ? $options['ratings'] : "5"; ?>
         </p>
         <p>
             <label for="ratings-side-effects">Side Effects</label>

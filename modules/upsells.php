@@ -9,7 +9,7 @@ and the review overviews on recommended products
 function top_products_cb() {
     global $post, $sc_id;
     $options = get_option('theme_options');
-    $num = !empty($options['ratings']) ? $options['ratings'] : "100";
+    $num = !empty($options['ratings']) ? $options['ratings'] : "5";
     $niche = !empty($options['nichename']) ? $options['nichename'] : "";
     $ids = explode(",", get_post_meta($post->ID, "top-products-list", true));
     $idsCount = count($ids);

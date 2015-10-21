@@ -20,7 +20,7 @@
     @include clearfix;
 
     .stars {
-        background: $white;
+        background: $front-ratings-bg;
         display: inline-block;
 
         //visibility: hidden;
@@ -87,8 +87,8 @@
     }
 
     .table {
-        background: $amour;
-        border: 1px solid $nevada;
+        background: $ratings-table-bg;
+        border: 1px solid $ratings-border;
         margin: 0 0 rem-calc(8) 0;
         padding: rem-calc(5) rem-calc(7) !important;
         border-radius: $global-radius;

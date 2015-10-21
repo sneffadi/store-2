@@ -6,6 +6,7 @@ require_once ('archive-menu-support.php');
 require_once ('top-products-page/index.php');
 require_once ('ratings/index.php');
 require_once ('references/index.php');
+require_once ('add-css/add-css-js.php');
 require_once ('custom_fields.php');
 require_once ('contact/index.php');
 require_once ('buy-table/index.php');
@@ -65,7 +66,7 @@ function create_front_page() {
     if (!get_page_by_title('Front Page')) {
         $postID = wp_insert_post(array('post_type' => 'page', 'post_title' => 'Front Page', 'post_content' => '', 'post_name' => 'front-page', 'post_status' => 'publish'));
         if ($postID !== 0) {
-            add_post_meta($postID, 'custom_hero_html_custom_hero_html', '<div id="banner"><h1>Headline Goes Here</h1><h2>Sub headline goes here</h2><a class="button radius tiny success" href="#top-rated-list">See [year]\'s Best [niche]</a></div><h2>Sub-sub headline goes here.</h2><p>There are hundreds of different products on the market today, and finding one that\'s worth your time and money can seem impossible. Going in without help just leads to losing money, without any results to show for it.</p><p>That\'s where we come in to help.</p><p>We\'ve taken the guesswork out of finding a [niche] by providing you with the most <strong>comprehensive database of unbiased product reviews</strong> available. We\'ve tested, examined, and researched more than 100 [niche]s and rated the best with <b>9 criteria:</b></p><ul><li>Overall Value</li><li>Effectiveness</li><li>Speed of Results</li><li>Product Safety</li><li>Ingredient Quality</li><li>Long-Term Results</li><li>Customer Reviews</li><li>Guarantee</li><li>Company Reputation</li></ul><p>But we didn\'t stop with simple ratings. We scoured hundreds of stores to find the best prices and special offers to make sure you can pick the absolute best deal.</p><p>Keep reading to discover the [niche]s of [year]!</p>');
+            add_post_meta($postID, 'custom_hero_html_custom_hero_html', '<div class="row"><div class="medium-14 small-24 columns"><h1>HEADLINE GOES <span class="color-head">HERE</span></h1><h2>Sub headline goes here</h2><a href="" class="tiny button radius">Go to #1 Product</a><h2>Sub-sub headline goes here.</h2><p>There are hundreds of different products on the market today, and finding one that\'s worth your time and money can seem impossible. Going in without help just leads to losing money, without any results to show for it.</p></div><div class="medium-9 columns seal-img hide-for-small">image goes here</div></div><div class="row"><div class="small-24 columns"><ul><li>Overall Value</li><li>Patented Ingredients</li><li>Ingredient Quality</li><li>Formulation Power</li><li>Manufacturing Practices</li><li>Customer Reviews</li><li>Safety & Side Effects</li><li>Money Back Guarantee</li><li>Price</li></ul><h2>Best [niche]s At The Best Prices Or Your Money Back!</h2><p>But we didn\'t stop with simple ratings. We scoured hundreds of stores to find the best prices and special offers to make sure you can pick the absolute best deal.</p><p>Keep reading to discover the [niche]s of [year]!</p></div></div>');
         }
     }
 }
@@ -98,3 +99,30 @@ add_action('after_switch_theme', 'set_front_page');
 //     }
 // }
 // add_action('after_switch_theme', 'set_order');
+
+// Add page slug to body class, love this - Credit: Starkers Wordpress Theme
+function add_slug_to_body_class($classes)
+{
+    global $post;
+    if (is_home()) {
+        $key = array_search('blog', $classes);
+        if ($key > -1) {
+            unset($classes[$key]);
+        }
+    } elseif (is_page()) {
+        $classes[] = sanitize_html_class($post->post_name);
+    } elseif (is_singular()) {
+        $classes[] = sanitize_html_class($post->post_name);
+    }
+
+    return $classes;
+}
+add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class (Starkers build)
+add_filter('body_class','out_of_stock_class');
+function out_of_stock_class( $classes ) {
+    global $post;
+    if ( is_singular('products') && ( get_post_meta( $post->ID, 'out-of-stock', true ) == 'yes' ) ) {
+        $classes[] = 'out-of-stock';
+    }
+    return $classes;
+}

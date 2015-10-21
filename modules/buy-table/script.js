@@ -69,3 +69,4 @@ jQuery(document).ready(function($) {
         meta_image_frame.open();
     });
 });
+

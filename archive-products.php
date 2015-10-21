@@ -27,7 +27,7 @@ get_header(); ?>
 if (have_posts()): ?>
 		<?php
     $options = get_option('theme_options');
-    $num = !empty($options['ratings']) ? $options['ratings'] : "100";
+    $num = !empty($options['ratings']) ? $options['ratings'] : "5";
     echo "<h1>All Products</h1>";
     echo "<div id=\"product_list\">"; ?>
     	<div class="row collapse">

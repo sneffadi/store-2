@@ -1,4 +1,6 @@
-# WP-AFFILIATE
+# WP-STORE - 2
+
+This is the store theme with a colored ratings box that appears below the content (as opposed to the TME-type theme)
 
 ## Requirements
 
