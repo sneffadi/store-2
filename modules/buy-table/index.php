@@ -167,7 +167,12 @@ function buy_table_cb() {
         echo "<div id=\"buytable\" data-magellan-destination=\"buytable\"> <a name=\"buytable\"></a>";
         echo "<div class=\"row\">";
         echo "<h2>Order ".get_the_title()." Today!</h2>";
+        $itemCount = 1;
+        while (get_post_meta($post->ID, "title_c{$itemCount}", true) != '') {
+            $itemCount++;
+        }
         $i = 1;
+        $itemCount = $itemCount - 1;
         while (get_post_meta($post->ID, "title_c{$i}", true) != '') {            
             $quantity = get_post_meta($post->ID, "quantity_c{$i}", true);
             $price = get_post_meta($post->ID, "price_c{$i}", true);
@@ -179,12 +184,13 @@ function buy_table_cb() {
             $percent_off = $savings / $retail;
             $third = get_post_meta($post->ID, "price_c3", true);
             
-            if ($third == '') {
-               echo "<div class='small-24 medium-8 large-8 columns twoCol-buy'>"; 
-            }
-            else {
-               echo "<div class='small-24 medium-8 large-8 columns'>"; 
-            }            
+            if ($itemCount === 3) {
+                echo "<div class='small-24 medium-8 columns'>";
+            } elseif ($itemCount === 2 && $i % 3 == 1) {
+                echo "<div class='small-24 medium-8 medium-offset-4 columns'>";
+            } elseif ($itemCount === 2 && $i % 3 == 2) {
+                echo "<div class='small-24 medium-8 medium-pull-4 columns'>";
+            }           
             echo "<form action=\"". do_shortcode('[cart_url]') . "\" " . "method=\"get\" id=\"buy{$i}\" class=\"buy-form\">";
             
             if ($i % 2 == 0) {
