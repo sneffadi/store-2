@@ -236,7 +236,7 @@ function top_products_cb() {
                                         </div>
                                     </div><!-- / .criterion-row -->
                                 </div> <!--/small-12 columns table -->
-                                <div class="row collapse">
+                                <div class="row collapse noBorder">
                                 <div class="small-24 medium-12 columns">
                                     <a href="<?php echo get_permalink($id) ?>" class="tiny button secondary radius"><?php echo $readMore ?></a>
                                 </div><!--/.small-6 columns-->
