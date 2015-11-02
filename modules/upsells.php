@@ -21,16 +21,16 @@ function top_products_cb() {
     $seePricing = 'See Pricing';
     $i = 1;
     if ($is_page && $idsCount > 1) { ?>
-        <div class="row upsell collapse" id="top-rated-list">
-            <div class="row collapse">
+        <div class="row upsell collapse noBorder" id="top-rated-list">
+            <div class="row collapse noBorder">
                 <div class="small-24 columns">    
                     <h2 class="top-list">Top <?php echo $idsCount;?> <span class="color-head"><?php echo $niche; ?>s</span> of <?php echo $year; ?></h2>
                 </div><!--/small-12 columns-->
             </div><!--/row collapse-->
-            <div class="row collapse">
+            <div class="row collapse noBorder">
             <?php foreach ($ids as $id) { ?>
                 <div class="small-24 columns top-product">
-                    <div class="row">
+                    <div class="row noBorder">
                         
                         <div class="small-5 medium-8 small-columns product-image">
                             <?php if (has_post_thumbnail($id)) {
@@ -42,7 +42,7 @@ function top_products_cb() {
                             }?>
                         </div><!--/small-4 medium-2 columns-->
                         <div class="small-19 medium-16 small-columns">
-                            <div class="row collapse">
+                            <div class="row collapse noBorder">
                             <h3 class="upsell-title"><a href="<?php echo get_the_permalink($id); ?>" ><?php echo "#{$i} " . get_the_title($id); ?></a></h3>
                                 <?php if (strlen(get_post_meta($post->ID, $id . "_custom_content", true)) > 0) {
                                 $sc_id = $id;
@@ -52,7 +52,7 @@ function top_products_cb() {
                                     echo do_shortcode("<p>" . get_post_meta($id, 'review-blurb', true) . " [a]Read more...[/a]" . "</p>");
                                 }
                                 ?>
-                                <div class="small-24 columns table">
+                                <div class="small-24 columns table ratings-box">
                                     <div class="criterion-row row">
                                         <div class="small-16 medium-7 columns criterion">
                                             Overall Value:
@@ -208,10 +208,10 @@ function top_products_cb() {
                                         <div class="small-5 medium-8 columns">
                                             <?php
                                                 $pricing = array();                                        
-                                                $p1 = get_post_meta($id, "price_c1", true) / get_post_meta($id, "qty_c1", true);
-                                                $p2 = get_post_meta($id, "price_c2", true) / get_post_meta($id, "qty_c2", true);
+                                                $p1 = get_post_meta($id, "price_c1", true) / 1;
+                                                $p2 = get_post_meta($id, "price_c2", true) / 2;
                                                 if (get_post_meta($id, "qty_c3", true) > 2) {
-                                                $p3 = get_post_meta($id, "price_c3", true) / get_post_meta($id, "qty_c3", true);
+                                                $p3 = get_post_meta($id, "price_c3", true) / 3;
                                                 array_push($pricing, $p1, $p2, $p3 );
                                                 }
                                                 else {

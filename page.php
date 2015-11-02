@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-<div class="row medium-collapse">
+<div class="row">
 	<div id="content" class="small-24 columns" role="main">
 
 	<?php do_action( 'before_page_content' ); ?>

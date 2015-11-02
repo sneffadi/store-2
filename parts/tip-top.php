@@ -8,7 +8,7 @@
 */
 ?>
 <div class="tip-top">
-    <div class="row medium-collapse">
+    <div class="row">
         <div class="small-16 medium-12 columns tip-top-l"> 
         <?php  $url = home_url(); ?>
             <?php

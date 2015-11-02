@@ -4,14 +4,14 @@
 */
 
 // Set site width
-$row-width: rem-calc(800);
+$row-width: rem-calc(780);
 $column-gutter: rem-calc(30);
 $imgPath: "/wp-content/uploads";
 $total-columns: 24;
 
 // Typography
-$font-family-sans-serif: "raleway", sans-serif;
-$font-family-sans-serif-heading: "raleway", sans-serif;
+$font-family-sans-serif: "Source Sans Pro", sans-serif;
+$font-family-sans-serif-heading: "Source Sans Pro", sans-serif;
 $font-family-serif: "merriweather", serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
@@ -29,7 +29,7 @@ $font-weight-bold: bold !default;
 $header-line-height: 1.1;
 $subheader-line-height: 1.2;
 $paragraph-line-height: 1.45;
-$paragraph-font-size:rem-calc(14);
+$paragraph-font-size:rem-calc(16);
 
 // Foundation color naming conventions
 $white: #FFFFFF;
@@ -74,21 +74,27 @@ $cadillac: #af5474;
 $eastern-blue: #2BB2B2;
 $alto: #d3d3d3;
 $dusty-gray: #969696;
+$fun-green: #009F17;
+$bombay: #AAABAD;
+$monza: #DE0006;
+$mine-shaft: #363636;
+$concrete: #F2F2F2;
+$endeavour: #014F9C;
 
 /*=============================================
 =     Background Color and Font Color       =
 =============================================*/
 
-$body-bg: $white;
+$body-bg: $concrete;
 $body-font-color: $bastille;
-$secondary-font-color: $cadillac;
-$anchor-font-color: $cadillac; //link color
-$success-color: $cadillac;
-$primary-color: $eastern-blue; //color for a lot of elements
+$secondary-font-color: $monza;
+$anchor-font-color: blue; //link color
+$success-color: $monza;
+$primary-color: $endeavour; //color for a lot of elements
 $secondary-color: $dusty-gray; //color of read review button
 $upsell-bg: $link-water; //sidebar upsell bg;
 $upsell-border-color: $curious-blue; //sidebar upsell border color;
-$topbar-bg: $white; // desktop nav bg
+$topbar-bg: $body-bg; // desktop nav bg
 $topbar-bg-color: $white;
 $topbar-dropdown-bg: $white;
 $topbar-border-bottom: none;
@@ -104,14 +110,14 @@ $off-canvas-link-color: $monsoon;
 $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -10%);
 $off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, 0.2), 4px 0 4px rgba($black, 0.2);
 
-$logo-height: rem-calc(43); 
-$logo-width: rem-calc(442);
+$logo-height: rem-calc(81); 
+$logo-width: rem-calc(438);
 $logo-max-width: none;
 $logo-section-height: auto;
-$logo-section-padding: rem-calc(15) 0;
+$logo-section-padding: rem-calc(0) 0;
 
-$rating-bg-color: $eastern-blue; //backgorund of rating bar
-$rating-border-color: $aluminum; //border of rating bar
+$rating-bg-color: $fun-green; //backgorund of rating bar
+$rating-border-color: $bombay; //border of rating bar
 
 $topbar-dropdown-link-bg: $charcoal;
 $topbar-link-color: inherit;
@@ -122,7 +128,7 @@ $topbar-link-color-active-hover: inherit;
 /*=====  Background Color and Font Color   ======*/
 
 // We use these to control various global styles
-$body-font-family: $font-family-serif;
+$body-font-family: $font-family-sans-serif;
 $body-font-weight: $font-weight-normal;
 $header-font-family: $font-family-sans-serif-heading;
 $body-font-style: normal;
@@ -130,6 +136,7 @@ $header-font-weight: $font-weight-bold;
 $header-text-rendering: optimizeLegibility;
 $anchor-text-decoration: underline;
 $anchor-text-decoration-hover: underline;
+$body-border-color: #D7D7D7;
 
 //Topbar
 $topbar-height: rem-calc(40); //height of header
@@ -139,8 +146,8 @@ $topbar-link-weight: $font-weight-normal;
 $topbar-link-font-size: rem-calc(14);
 $tabbar-margin-top: rem-calc(10); // vertically center logo
 
-$tip-top-bg-color: $oil;
-$tip-top-color: $porcelain;
+$tip-top-bg-color: $white;
+$tip-top-color: $mine-shaft;
 $tip-top-height: rem-calc(32);
 $tip-top-font-size: rem-calc(14);
 $tip-top-link-color: inherit;
@@ -167,7 +174,7 @@ $button-bg-hover: scale-color($success-color, $lightness: -10%);
 $rating-font-size: rem-calc(13);
 $inline-list-bottom-margin: rem-calc(0);
 $front-ratings-bg: $alto; //background for empty stars on front page
-$ratings-table-bg: $amour;
+$ratings-table-bg: $white;
 $ratings-border: $nevada;
 $all-prods-ratings-bg: $gainsboro;
 

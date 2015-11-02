@@ -163,9 +163,9 @@ function buy_table_cb() {
     if (is_singular('products')) {
         global $post;
         $cf_value = get_post_meta($post->ID);
-        echo "<div class=\"row collapse\">";
+        echo "<div class=\"row collapse noBorder\">";
         echo "<div id=\"buytable\" data-magellan-destination=\"buytable\"> <a name=\"buytable\"></a>";
-        echo "<div class=\"row\">";
+        echo "<div class=\"row noBorder\">";
         echo "<h2>Order ".get_the_title()." Today!</h2>";
         $itemCount = 1;
         while (get_post_meta($post->ID, "title_c{$itemCount}", true) != '') {
