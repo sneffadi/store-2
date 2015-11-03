@@ -76,8 +76,12 @@
 			<p>The information on this site has not been evaluated by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. Results in description and Testimonials may not be typical results and individual results may vary. All orders placed through this website are subject to acceptance, in its sole discretion.</p>
 			<ul class="footer-bar">
 			<li>&copy; 2013-<?php echo date('Y');?>, <?php echo get_bloginfo('name'); ?></li>
-			 <li><a href="javascript:safePop('http://www.darkeyecirclecreams.com/privacy.php')">Privacy Policy</a></li>
-			 <li><a href="javascript:safePop('http://www.darkeyecirclecreams.com/terms.php')">Terms and Conditions</a></li>
+			<li>|</li>
+			 <li><a href="javascript:safePop('http://www.male-enhancements.com/privacy.php')">Privacy Policy</a></li>
+			 <li>|</li>
+			 <li><a href="javascript:safePop('http://www.male-enhancements.com/terms.php')">Terms and Conditions</a></li>
+			 <li>|</li>
+			 <li><a href="javascript:safePop('http://www.male-enhancements.com/testimonial-disclaimer.html')">Testimonial Disclaimer</a></li>
 		</div> <!-- / .small-12 -->
 	</div> <!-- / .row -->
 	<?php do_action( 'foundationpress_after_footer' ); ?>
