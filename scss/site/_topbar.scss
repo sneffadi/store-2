@@ -92,6 +92,7 @@
 
 .top-bar.nav {
     @media #{$large-only} {
+        overflow:hidden;
        border-width: rem-calc(1) rem-calc(1); 
        background-image: linear-gradient(white, $porcelain);
     }
@@ -100,11 +101,14 @@
     border-style: solid;
     
 }
-
+nav.tab-bar {
+    border-bottom:1px solid #E6E6E6;
+}
 .tab-bar {
+
     .logo img {
         margin: $tabbar-margin-top auto 0 auto;
-        max-height:rem-calc(32);
+        max-height:rem-calc(44);
     }
 }
 
