@@ -46,10 +46,10 @@ function top_products_cb() {
                             <h3 class="upsell-title"><a href="<?php echo get_the_permalink($id); ?>" ><?php echo "#{$i} " . get_the_title($id); ?></a></h3>
                                 <?php if (strlen(get_post_meta($post->ID, $id . "_custom_content", true)) > 0) {
                                 $sc_id = $id;
-                                echo do_shortcode("<p>" . get_post_meta($post->ID, $id . "_custom_content", true) . ' [a]Read more...[/a]' . "</p>");
+                                echo do_shortcode("<p>" . get_post_meta($post->ID, $id . "_custom_content", true) . ' [a]Read more...[/a]' . "</p> <p>*Individual results may vary</p>");
                                 } else {
                                     $sc_id = $id;
-                                    echo do_shortcode("<p>" . get_post_meta($id, 'review-blurb', true) . " [a]Read more...[/a]" . "</p>");
+                                    echo do_shortcode("<p>" . get_post_meta($id, 'review-blurb', true) . " [a]Read more...[/a]" . "</p> <p>*Individual results may vary</p>");
                                 }
                                 ?>
                                 <div class="small-24 columns table ratings-box">
