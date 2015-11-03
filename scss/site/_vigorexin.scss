@@ -6,14 +6,17 @@
 	#vigorexin-head{
 		display: inline-block;
 		background:url(http://www.male-enhancements.com/wp-content/uploads/2014/06/vigorexin-head2.png) no-repeat;
+		height: 427px;
 		@media #{$small-only} { 
+			background: #EEEAE9;
+			padding: 0 rem-calc(15);
+			height: auto;
 		}
 		#vigorexin-header{
-			margin: rem-calc(55) 0;
-			float: none;
+			margin-top: rem-calc(35);
+			margin-left: rem-calc(25);
 			@media #{$small-only}{
-				margin-left: rem-calc(17);
-  				margin-bottom: rem-calc(165);
+				margin: rem-calc(15) 0 0;
 			}
 			h1{
 			    font-weight: 900;
@@ -22,7 +25,8 @@
 			    color: #efb415;
 			    text-align: center;
 			    @media #{$small-only}{
-			    	text-align: right
+			    	text-align: left;
+			    	font-size: rem-calc(23);
 			    }
 			}
 			p{
@@ -31,9 +35,11 @@
 			line-height: rem-calc(32);
 			color: #1f1d20;
 			text-align: center;
-			margin: rem-calc(35) 0px;
+			margin: rem-calc(20) 0px;
 			@media #{$small-only}{
-				text-align: right;
+				text-align: left;
+				font-size: rem-calc(22);
+				margin-top: rem-calc(10);
 			}
 			br{
 				@media #{$small-only}{
@@ -156,7 +162,7 @@
 	.guarantee{
 		width: 100%;
 		border-radius: 10px;
-		height: 195px;
+		height: 234px;
 		background: #f9f9f9;
 		padding: 0 20px 0 0;
 		border-top-left-radius: 20em;
@@ -180,7 +186,7 @@
 		}
 		img{
 			float: left;
-			margin: 0 10px 0 0;
+			margin: rem-calc(16) rem-calc(10) 0 0;
 			@media #{$small-only}{
 				float: none;
 				margin-top:rem-calc(20);
@@ -196,7 +202,6 @@
 			}
 		}
 		p{
-			font-size: .8em;
 			line-height: 1.3em;
 			margin-bottom: 10px;
 			padding-right: 30px;
@@ -241,18 +246,6 @@
 		text-align: left;
 		}
 	}
-	/*#buytable{
-		.shipping{
-			border-bottom: none;
-			margin-bottom: 0;
-		}
-		.bonus{
-			border-bottom: 0.125rem solid #f5f5f5;
-		}
-		.bonus-empty{
-			height: rem-calc(26);
-		}
-	}*/
 	.ques{
 		font-weight: bold !important;
 		margin-bottom: rem-calc(5) !important;
