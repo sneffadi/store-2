@@ -149,7 +149,7 @@
 		@media #{$small-only}{
 			height: 0;
 			background-size: 100%;
-			padding-bottom: 36%;
+			padding-bottom: 71%;
 			width: 100%;
 		}
 	}
@@ -217,6 +217,7 @@
 	  box-shadow: 0 0 12px 0 rgba(0,0,0,.33);
 	  padding: 0 rem-calc(15);
 	  margin: rem-calc(40) 0 rem-calc(35) 0;
+	  display: inline-block;
 	  @media #{$small-only}{
 	  	text-align: center;
 	  	padding: rem-calc(15) rem-calc(15) rem-calc(15);
