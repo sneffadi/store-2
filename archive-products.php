@@ -19,7 +19,7 @@
 
 get_header(); ?>
 
-<div class="row collapse">
+<div class="row">
 <!-- Row for main content area -->
 	<div class="small-24 medium-24 columns" role="main">
 

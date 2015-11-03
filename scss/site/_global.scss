@@ -69,6 +69,21 @@ img.alignright {
 .padding {
     padding:0 rem-calc(10);
 }
+.noPadding {
+    padding:0;
+}
 .row.product-page .row {
     border:none;
+}
+.row.criteria {
+    border:none;
+    .row {
+        border:none;
+        margin:0;
+    }
+}
+#product_list {
+    .row {
+        border:none;
+    }
 }

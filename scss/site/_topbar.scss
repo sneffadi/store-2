@@ -57,6 +57,14 @@
 .top-bar-section ul li {
     background: none;
     color: inherit;
+    padding:0 rem-calc(20);
+    &:hover {
+        background:#707070;
+        color:$white;
+    }
+}
+.top-bar-section ul li.divider {
+    display:none;
 }
 
 .top-bar-section li.active:not(.has-form) a:not(.button) {
@@ -147,7 +155,7 @@
     font-family:$font-family-sans-serif;
     text-transform:uppercase;
     font-weight:600;
-    font-size:rem-calc(12);
+    font-size:rem-calc(14);
 }
 
 // Add some whitespace between top bar and content
