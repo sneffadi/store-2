@@ -80,6 +80,7 @@ $monza: #DE0006;
 $mine-shaft: #363636;
 $concrete: #F2F2F2;
 $endeavour: #014F9C;
+$seashell: #F1F1F1;
 
 /*=============================================
 =     Background Color and Font Color       =
@@ -174,7 +175,7 @@ $button-bg-hover: scale-color($success-color, $lightness: -10%);
 $rating-font-size: rem-calc(13);
 $inline-list-bottom-margin: rem-calc(0);
 $front-ratings-bg: $alto; //background for empty stars on front page
-$ratings-table-bg: $white;
+$ratings-table-bg: $seashell;
 $ratings-border: $nevada;
 $all-prods-ratings-bg: $gainsboro;
 
