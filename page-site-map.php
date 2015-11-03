@@ -2,7 +2,7 @@
 #sitemap-content {padding: 30px 20px;}
 #sitemap-content ul#sitemap li {list-style: none; margin-bottom: 3px;}
 #sitemap-content ul#sitemap li a {text-decoration:none; color: #3a3a3a; font-weight:bold;  font-size: 16px}
-#sitemap-content ul#sitemap .product-list li {background: url("<?php bloginfo( 'template_directory' );?>/images/arrow-main.png") no-repeat scroll 0 -3px transparent; text-decoration:none; color: #3a3a3a; font-weight:normal; font-size: 14px; padding: 0 0 5px 15px;}
+#sitemap-content ul#sitemap .product-list li {background: url("http://www.male-enhancements.com/wp-content/themes/male-enhancements.com/images/arrow-main.png") no-repeat scroll 0 1px transparent; text-decoration:none; color: #3a3a3a; font-weight:normal; font-size: 14px; padding: 0 0 5px 15px;}
 #sitemap-content ul#sitemap .product-list li a {text-decoration:none; color: #3a3a3a; font-weight:normal; font-size: 14px;}
 #sitemap-content ul#sitemap .product-list li a:hover {color: blue;}
 </style>
