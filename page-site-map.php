@@ -65,11 +65,8 @@ get_header(); ?>
 						<a href="<?php echo site_url(); ?>/the-10-top-rated-male-enhancements/">The 10 Top Rated Male Enhancements</a>
 					</li>			
 					<li>
-						<a href="<?php echo site_url(); ?>/all-male-enhancements/">All Male Enhancements</a>
-					</li>			
-					<li>
-						<a href="<?php echo site_url(); ?>/special-limited-time-offer/">Special Limited Time Offer</a>
-					</li>			
+						<a href="<?php echo site_url(); ?>/products/">All Male Enhancements</a>
+					</li>						
 
 				</div>
 				
