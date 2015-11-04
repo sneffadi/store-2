@@ -39,7 +39,6 @@
 			text-align: center;
 				@media #{$small-only}{
 					text-align: left;
-					margin-bottom: 
 				}
 				br{
 					@media #{$small-only}{
@@ -121,7 +120,8 @@
 	}
 	.q{
 		font-weight: bold; 
-		margin-bottom: 5pxfont-weight: bold !important;
+		margin-bottom: 5px;
+		font-weight: bold !important;
 		margin-bottom: rem-calc(5) !important;		
 	}
 }
