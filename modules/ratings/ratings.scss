@@ -141,8 +141,8 @@
     }
 
     .button.success {
-        margin: 0 0 0 rem-calc(7.5);
-        width: 100%;
+        margin: 0 0 0 1%;
+        width: 99%;
         @media #{$small-only} {
           margin: rem-calc(15) 0;
                 }
@@ -150,8 +150,8 @@
     }
 
     .button.secondary {
-        margin: 0 rem-calc(7.5) 0 0;
-        width: 100%;
+        margin: 0 0 0 0;
+        width: 99%;
          @media #{$small-only} {
           margin: rem-calc(15) 0 0;
                 }
