@@ -137,7 +137,7 @@
 		@media #{$small-only}{
 			height: 0;
 			background-size: 100%;
-  			padding-bottom: 36%;
+  			padding-bottom: 38%;
 		}
 	}
 	#graph {
@@ -149,7 +149,7 @@
 		@media #{$small-only}{
 			height: 0;
 			background-size: 100%;
-			padding-bottom: 36%;
+			padding-bottom: 71%;
 			width: 100%;
 		}
 	}
@@ -210,44 +210,26 @@
 			}
 		}
 	}
-	#bonus {
-	  width: 100%;
-	  min-height: 209px;
-	  -webkit-box-shadow: 0 0 12px 0 rgba(0,0,0,.33);
-	  box-shadow: 0 0 12px 0 rgba(0,0,0,.33);
-	  padding: 0 rem-calc(15);
-	  margin: rem-calc(40) 0 rem-calc(35) 0;
-	  @media #{$small-only}{
-	  	text-align: center;
-	  	padding: rem-calc(15) rem-calc(15) rem-calc(15);
-	  }
-	  img{
-	  	float: left;
-	  	margin-left: rem-calc(-15);
-	  	margin-right: rem-calc(20);
-	  	@media #{$small-only}{
-	  		float: none;
-	  		margin-left: auto;
-	  		margin-right: auto;
-	  	}
-	  }
-	  	  	.guar-warpper{
-	  		position: relative;
-	  		top:rem-calc(25);
-	  	}
-	  p{
-	  	text-align: left;
-	  }
-  	h3{
-		margin: rem-calc(10) 0;
-		padding: 0;
-		font-weight: bold;
-		font-size: 1.5em;
-		text-align: left;
+	.bonus{
+		border: 1px solid #E4E4E4 !important;
+  		box-shadow: 0.375rem 0 1.6875rem 0.0625rem #E4E4E4;
+  		margin-bottom: rem-calc(30);
+  		margin-left: rem-calc(17) !important;
+  		margin-right: rem-calc(0) !important;
+		margin-top: rem-calc(22);
+		width: 95%;
+		padding-top: rem-calc(15);
+		@media #{$small-only}{
+			text-align: center;
+		}
+
+		img{
+			margin-bottom: rem-calc(20);
 		}
 	}
 	.ques{
 		font-weight: bold !important;
 		margin-bottom: rem-calc(5) !important;
 	}
+	
 }
