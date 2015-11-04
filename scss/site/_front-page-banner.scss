@@ -1,10 +1,4 @@
 #hero {
-    .columns {
-        @media #{$large-only}{
-            padding-left:0;
-            padding-right:0;
-        }
-    }
     .row {
         border:none;
     }
