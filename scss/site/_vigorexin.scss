@@ -81,7 +81,7 @@
 		margin: 0 auto;
 		padding: rem-calc(30);
 		@media #{$small-only}{
-			padding: rem-calc(30) 0;
+			padding: rem-calc(30) rem-calc(15);
 		}
 		h2{
 		font-weight: 900;
@@ -233,7 +233,7 @@
 			text-align: center;
 			width: 100%;
 			margin-left:0 !important;
-			border: none;
+			border: none !important;
 			box-shadow: none;
 		}
 
