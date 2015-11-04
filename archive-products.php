@@ -19,7 +19,7 @@
 
 get_header(); ?>
 
-<div class="row">
+<div class="row archive-page">
 <!-- Row for main content area -->
 	<div class="small-24 medium-24 columns" role="main">
 
@@ -53,8 +53,15 @@ if (have_posts()): ?>
 						} elseif ( $i % 3 == 2 ) {
 							$colCount = 'two';
 						}
+
+						if ($i < 4) {
+							$topRow = 'top-row';
+						}
+						else {
+							$topRow = '';
+						}
 					?>
-					<div class="product-item <?php echo $colCount; ?>">
+					<div class="product-item <?php echo $colCount ?> <?php echo $topRow ?>" >
 					<?php
 				        echo "<div class=\"product-name\">";
 				        echo "<a href=\"" . get_permalink($post->ID) . "\">";
