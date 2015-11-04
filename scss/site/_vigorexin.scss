@@ -96,6 +96,7 @@
   background: url(http://www.male-enhancements.com/wp-content/uploads/2014/06/vigorexin-darkbg.png) repeat;
   width: 100%;
   height: auto;
+  display: inline-block;
   @media #{$small-only}{
   	display: inline-block;
   }
@@ -230,7 +231,7 @@
 		padding-top: rem-calc(15);
 		@media #{$small-only}{
 			text-align: center;
-			width: 100%
+			width: 100%;
 			margin-left:0 !important;
 			border: none;
 			box-shadow: none;
