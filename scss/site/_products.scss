@@ -107,14 +107,14 @@
 	    }
 	    .product-item {
 	        padding:rem-calc(16);
-	        border-right:1px solid $rating-border-color;
-	        border-bottom:1px solid $rating-border-color;
+	        border-right:1px solid $gainsboro;
+	        border-bottom:1px solid $gainsboro;
 	    }
 		.product-item.top-row {
-			border-top:1px solid $rating-border-color;
+			border-top:1px solid $gainsboro;
 		}
 	    .product-item.one {
-	        border-left:1px solid $rating-border-color;
+	        border-left:1px solid $gainsboro;
 	        
 	    }
 	    .product-item {
