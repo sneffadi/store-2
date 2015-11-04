@@ -7,23 +7,18 @@
 		@media #{$small-only}{
 		padding-left: 0;
   		padding-right: 0;
-  	}
+  		}
 	}
 	#vigorexin-head{
 		background:url(http://www.male-enhancements.com/wp-content/uploads/2014/06/vigorexin-head2.png) no-repeat;
 		height: 448px;
-		padding-top: rem-calc();
+		padding-top: rem-calc(55);
 		@media #{$small-only} { 
 			background: #EEEAE9;
 			height: auto;
 			padding-top: rem-calc(22);
 		}
-		.vigorexin-header{
-			margin-top: rem-calc(35);
-			margin-left: rem-calc(25);
-			@media #{$small-only}{
-				margin: rem-calc(15) 0 0;
-			}
+
 			h1{
 			    font-weight: 900;
 			    font-size: rem-calc(36);
@@ -42,15 +37,15 @@
 			line-height: rem-calc(28);
 			color: #1f1d20;
 			text-align: center;
-			@media #{$small-only}{
-				text-align: left;
-				margin-bottom: 
-			}
-			br{
 				@media #{$small-only}{
-					display: none;
+					text-align: left;
+					margin-bottom: 
 				}
-			}
+				br{
+					@media #{$small-only}{
+						display: none;
+					}
+				}
 			}
 			ul{
 				@media #{$small-only}{
@@ -70,38 +65,24 @@
 			.disclaimer{
 			font-size: rem-calc(12);
 			background: none;
-		}
-		}
+			}
 	}
-	#vigorexin-wrapper{
-		margin: 0 auto;
-		padding: rem-calc(30);
-		@media #{$small-only}{
-			padding: rem-calc(30) rem-calc(15);
-		}
-		h2{
-		font-weight: 900;
-		font-size: rem-calc(30);
-		line-height: rem-calc(30);
-		color: #1f1d20;
-		text-align: center;
-		margin-bottom: rem-calc(15);
-		}
-	}
+
 	.black-bg {
-  width: 100%;
-  height: auto;
-  @media #{$small-only}{
-  	display: inline-block;
-  }
-	}
-	h3{
-	font-weight: 900;
-	font-size: 30px;
-	line-height: 30px;
-	color: #fff;
-	text-align: center;
-	margin-bottom: 15px;
+		width: 100%;
+		height: auto;
+		background: #000;
+		color: #fff;
+			@media #{$small-only}{
+				display: inline-block;
+			}
+		h3 {
+			font-weight: 900;
+			font-size: 30px;
+			line-height: 30px;
+			color: #fff;
+			text-align: center;
+			margin-bottom: 15px;
 		}
 		p{
 			font-weight: normal;
@@ -117,12 +98,13 @@
 		height: 271px;
 		margin: 0 auto;
 		margin-bottom: 40px;
-		@media #{$small-only}{
-			height: 0;
-			background-size: 100%;
-  			padding-bottom: 38%;
-		}
+			@media #{$small-only}{
+				height: 0;
+				background-size: 100%;
+	  			padding-bottom: 38%;
+			}
 	}
+
 	#graph {
 		background: url(http://www.male-enhancements.com/wp-content/uploads/2015/09/penis.png) no-repeat;
 		width: 100%;
@@ -137,94 +119,9 @@
 			width: 100%;
 		}
 	}
-
 	.q{
-		font-weight: bold; margin-bottom: 5px;
+		font-weight: bold; 
+		margin-bottom: 5pxfont-weight: bold !important;
+		margin-bottom: rem-calc(5) !important;		
 	}
-
-
-	.guarantee{
-		width: 100%;
-		border-radius: 10px;
-		height: 234px;
-		background: #f9f9f9;
-		padding: 0 20px 0 0;
-		border-top-left-radius: 20em;
-		border-bottom-left-radius: 20em;
-		border-top-right-radius: 20em;
-		border-bottom-right-radius: 20em;
-		box-shadow: inset 0px 0px 6px #ccc;
-		margin: 30px 0 30px 0;
-		@media #{$small-only}{
-			height: auto;
-			background: $white;
-			border-top-left-radius:0;
-			border-top-right-radius:0;
-			border-bottom-left-radius:0;
-			border-bottom-right-radius:0;
-			text-align: center;
-			padding: 0;
-			margin: 0px 0 0px 0;
-  			padding: 0px 15px 15px;
-  			box-shadow: none;
-
-		}
-		img{
-			float: left;
-			margin: rem-calc(16) rem-calc(10) 0 0;
-			@media #{$small-only}{
-				float: none;
-				margin-top:rem-calc(20);
-			}
-		}
-		h3{
-			padding-top: 12px;
-			margin-bottom: 6px;
-			font-weight: bold;
-			letter-spacing: -1px;
-			@media #{$small-only}{
-				text-align: center
-			}
-		}
-		p{
-			line-height: 1.3em;
-			margin-bottom: 10px;
-			padding-right: 30px;
-			@media #{$small-only}{
-				text-align: left;
-			}
-		}
-	}
-	.bonus{
-		border: 1px solid #E4E4E4 !important;
-  		box-shadow: 0.375rem 0 1.6875rem 0.0625rem #E4E4E4;
-  		margin-bottom: rem-calc(30);
-  		margin-right: rem-calc(0) !important;
-		margin-top: rem-calc(22);
-		width: 95%;
-		padding-top: rem-calc(15);
-		@media #{$small-only}{
-			text-align: center;
-			width: 100%;
-			margin-left:0 !important;
-			border: none !important;
-			box-shadow: none;
-			padding-top: 0;
-			margin-top: 0;
-		}
-		p{
-			@media #{$small-only}
-			{
-				text-align: left;
-			}
-		}
-		img{
-			margin-bottom: rem-calc(20);
-		}
-	}
-	.q{
-		font-weight: bold !important;
-		margin-bottom: rem-calc(5) !important;
-	}
-	
 }
