@@ -235,8 +235,14 @@
 			margin-left:0 !important;
 			border: none !important;
 			box-shadow: none;
+			padding-top: 0;
 		}
-
+		p{
+			@media #{$small-only}
+			{
+				text-align: center;
+			}
+		}
 		img{
 			margin-bottom: rem-calc(20);
 		}
