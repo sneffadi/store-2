@@ -134,7 +134,7 @@
 		img{
 			max-height: 190px;
 			@media #{$small-only}{
-				margin-bottom: rem-clac(20);
+				margin-bottom: rem-calc(20);
 			}
 		}
 	}
