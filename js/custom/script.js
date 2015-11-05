@@ -18,7 +18,19 @@ $(window).load(function() {
         $('#buytable .buy-image').height(maxHeight);
     };
 });
-
+/* Out of stock for buytable */
+! function(e) {
+    e(function() {
+        "use strict";
+        if (e("body").hasClass('out-of-stock')) {
+            e("#buytable").find(".button").addClass('gray').text("Out of Stock");
+            jQuery('#content').on('click', 'a.add-to-cart', function() { 
+              event.preventDefault(); 
+              alert('Out of Stock');
+            });
+        }
+    })
+}(jQuery, this);
 
       /*<![CDATA[*/
       window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){

@@ -28,6 +28,7 @@ jQuery(document).ready(function($) {
         html += '<label>Column Sub Title:</label><input type="text" name="sub_title_c'+i+'" value="">';
         html += '<label>Retail:</label><input type="text" name="retail_c'+i+'" value="">';
         html += '<label>Price:</label><input type="text" name="price_c'+i+'" value="">';
+        html += '<label>Quantity:</label><input type="number" name="qty_c'+i+'" value="">';
         html += '<label>Bonus:</label><input type="text" name="bonus_c'+i+'" value="">';
         html += '<label>Shipping:</label><input type="text" name="shipping_c'+i+'" value="">';
         html += '<label>Item ID:</label><input type="text" name="itemId_c' + i + '" value="">';
@@ -69,16 +70,3 @@ jQuery(document).ready(function($) {
     });
 });
 
-/* Out of stock for buytable */
-! function(e) {
-    e(function() {
-        "use strict";
-        if (e("body").hasClass('out-of-stock')) {
-            e("#buytable").find(".button").addClass('gray').text("Out of Stock");
-            jQuery('#content').on('click', 'a.add-to-cart', function() { 
-              event.preventDefault(); 
-              alert('Out of Stock');
-            });
-        }
-    })
-}(jQuery, this);
