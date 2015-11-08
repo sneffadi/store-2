@@ -38,7 +38,7 @@ module.exports = function(grunt) {
         src: ['**', '!**/less/**', '!**/css/**', '!bower.json'],
         dest: 'assets/fontawesome/'
       },
-      
+
     },
 
      'string-replace': {
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
           // 'bower_components/foundation/js/foundation/foundation.clearing.js',
           // 'bower_components/foundation/js/foundation/foundation.dropdown.js',
           // 'bower_components/foundation/js/foundation/foundation.equalizer.js',
-          // 'bower_components/foundation/js/foundation/foundation.interchange.js',
+          'bower_components/foundation/js/foundation/foundation.interchange.js',
           // 'bower_components/foundation/js/foundation/foundation.joyride.js',
           // 'bower_components/foundation/js/foundation/foundation.magellan.js',
           'bower_components/foundation/js/foundation/foundation.offcanvas.js',
