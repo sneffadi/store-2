@@ -1,4 +1,4 @@
-/* 
+/*
  Global styles for FoundationPress
  Demo: http://foundationpress.olefredrik.com
 */
@@ -38,6 +38,10 @@ figcaption {
     margin-right: auto;
 }
 
+.center {
+    text-align: center;
+}
+
 blockquote.alignleft,
 img.alignleft {
     margin: rem-calc(7) rem-calc(24) rem-calc(7) 0;
@@ -51,42 +55,62 @@ blockquote.alignright,
 img.alignright {
     margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
 }
-.row{
+
+.row {
     @media #{$large-only} {
-        border:1px solid $body-border-color;
-        border-top:none;
-        border-bottom:none;
+        border: 1px solid $body-border-color;
+        border-top: none;
+        border-bottom: none;
     }
-    background:$white;   
+
+    background: $white;
 }
+
 .row.noBorder {
-    border:none;
-    background:none;
+    border: none;
+    background: none;
 }
+
 .row.border {
-    border:1px solid $body-border-color;
+    border: 1px solid $body-border-color;
     border-width: 0 rem-calc(1) 0 rem-calc(1);
 }
+
 .padding {
-    padding:0 rem-calc(10);
+    padding: 0 rem-calc(10);
 }
+
 .noPadding {
-    padding:0;
+    padding: 0;
 }
+
 .row.product-page .row {
-    border:none;
+    border: none;
 }
+
 .row.criteria {
-    border:none;
-    background:none;
+    border: none;
+    background: none;
+
     .row {
-        border:none;
-        margin:0;
+        border: none;
+        margin: 0;
     }
 }
+
 #product_list {
     .row {
-        border:none;
-        background:none;
+        border: none;
+        background: none;
+    }
+}
+
+.extra-padd {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media #{$small} {
+        padding-left: 0;
+        padding-right: 0;
     }
 }

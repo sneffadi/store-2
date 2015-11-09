@@ -1,0 +1,106 @@
+.zytenz {
+    h3, #buytable h2 {
+        color: #D6383C;
+        font-size: 33px;
+        text-transform: uppercase;
+        line-height: 1.1;
+        margin: 0 0 20px 0;
+        text-align: center;
+    }
+
+    .see-pricing {
+        width: 250px;
+        font-size: 18px;
+    }
+
+    .mid-copy {
+        width: 300px;
+
+        @media #{$small-only} {
+            width: 100%;
+        }
+    }
+
+    .banner {
+        background-position-x: center;
+        background-position-y: 0;
+        background-repeat: no-repeat;
+        height: rem-calc(390);
+        background-size: contain;
+        padding: rem-calc(265) 0 0 rem-calc(40);
+        margin: 0 0 0 0;
+
+        @media #{$small-only} {
+            padding: rem-calc(260) 0 0 rem-calc(5);
+            margin-bottom: rem-calc(-10);
+        }
+    }
+
+    p.q {
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    .blue-bg {
+        background: #003d85;
+        color: #fff;
+        margin: 0 0 25px 0 !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .blue-bg h1, .blue-bg h2, .blue-bg h3 {
+        color: #fff !important;
+    }
+
+    .zyt-bonus {
+        padding: 25px 0 0 0;
+    }
+
+    .zyt-guarantee {
+        padding: 25px 0 20px 0;
+    }
+
+    .zyt-guarantee .column {
+        @media #{$small-only} {
+            padding: 0;
+        }
+    }
+
+    .zyt-bonus h3, .zyt-guarantee h3 {
+        text-align: left;
+        margin: 0 0 10px 0;
+    }
+
+    .see-pricing {
+        width: 250px;
+    }
+
+    .image {
+        margin-bottom: 30px;
+    }
+
+    img.bonus-bottle {
+        max-height: rem-calc(190);
+        float: left;
+        margin: 0 rem-calc(30) 0 0;
+
+        @media #{$small-only} {
+            margin-bottom: rem-calc(20);
+        }
+    }
+
+    img.intro {
+        border: solid 4px rgba(255, 255, 255, 0.07);
+
+        @media #{$small-only} {
+            border: none;
+            margin: 0 rem-calc(20) 0 0;
+            width: rem-calc(90);
+        }
+    }
+
+    img.guarantee-seal {
+        float: left;
+    }
+}

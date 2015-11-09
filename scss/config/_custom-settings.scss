@@ -1,4 +1,4 @@
-/* 
+/*
     My custom settings. These variables are copied from _settings.css
     This file will only contain uncommented settings that are actually used in the theme.
 */
@@ -11,7 +11,7 @@ $total-columns: 24;
 
 // Typography
 $font-family-sans-serif: "Source Sans Pro", sans-serif;
-$font-family-sans-serif-heading: "Source Sans Pro", sans-serif;
+$font-family-sans-serif-heading: "proxima-nova-condensed", sans-serif;
 $font-family-serif: "merriweather", serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
@@ -22,7 +22,6 @@ $h4-font-size: rem-calc(21);
 $h5-font-size: rem-calc(18);
 $h6-font-size: 1rem;
 
-
 $h2-font-reduction: rem-calc(3);
 $font-weight-normal: normal !default;
 $font-weight-semibold: 600 !default;
@@ -31,7 +30,7 @@ $font-weight-bold: bold !default;
 $header-line-height: 1.1;
 $subheader-line-height: 1.2;
 $paragraph-line-height: 1.45;
-$paragraph-font-size:rem-calc(16);
+$paragraph-font-size: rem-calc(16);
 
 // Foundation color naming conventions
 $white: #FFFFFF;
@@ -113,7 +112,7 @@ $off-canvas-link-color: $monsoon;
 $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -10%);
 $off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, 0.2), 4px 0 4px rgba($black, 0.2);
 
-$logo-height: rem-calc(81); 
+$logo-height: rem-calc(81);
 $logo-width: rem-calc(438);
 $logo-max-width: none;
 $logo-section-height: auto;
