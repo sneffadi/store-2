@@ -4,154 +4,192 @@
         margin: 0;
     }
 }
+
 .product-page {
-	.banner {
-    width:100%;
-    margin-bottom:rem-calc(30);
-    background-size:cover;
-	    h1 {
-	      text-transform:uppercase;  
-	      line-height:1;
-	      margin-bottom:0;
-	    }
-	}
-	.prod-banner {
-   margin-bottom:rem-calc(30)!important; 
-}
-	.prod-wrap {
-		padding:0 rem-calc(10);
-	    h2 {
-	        font-weight:300;
-	        text-align:center;
-	        font-size:rem-calc(35);
-	        margin-bottom:rem-calc(20);
-	    }
-	    img {
-	        display:block;
-	        margin:0 auto rem-calc(20);
-	    }
-	    p.q {
-	        font-weight:700;
-	        margin-bottom:0;
-	    }
-	    p.a {
-	        margin-left:rem-calc(20);
-	        margin-top:0;
-	    }
-	    .img-center {
-	        display:block;
-	        margin:0 auto;
-	    }
-	    .ingredients {
-	        margin-bottom:rem-calc(30);
-	        h2 {
-	            margin-bottom:rem-calc(20);
-	        }
-	        .row {
-	            margin-bottom:rem-calc(40);
-	        }
-	    }
-	    ul {
-	        li {
-	         margin-bottom:rem-calc(20);   
-	        }
-	    }
-	    .top-seller {
-	        margin-bottom:rem-calc(30);
-	    }
-	    .border-right {
-	        border-right:2px solid #E7E7E7;
-	        &:last-child {
-	            border:none;
-	        }
-	    }
-	    .prod-guarantee {
-	        @media #{$small-only}{
-	            margin-bottom:rem-calc(30);
-	        }
-	        h3 {
-	            text-align:center;
-	            font-weight:300;
-	            font-size:rem-calc(36);
-	            line-height:1;
-	        }
-	        .button {
-	            display:block;
-	            margin:0 auto;
-	            width:90%;
-	        }
-	    }
-	}
-	/* Guarantee Styles */
-	.row.guarantee {
-	    border:1px solid $nevada;
-	    background:$amour;
-	    margin:rem-calc(20) 0 rem-calc(30);
-	    padding:rem-calc(10) 0;
-	    p {
-	        font-size:rem-calc(16);
-	        margin-top:rem-calc(30);
-	    }
-	}
+    h1, h2, h3, h4, h4 {
+        text-transform: uppercase;
+        line-height: 1;
+    }
+
+    .banner {
+        width: 100%;
+        margin-bottom: rem-calc(30);
+        background-size: cover;
+
+        h1 {
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 0;
+        }
+    }
+
+    .prod-banner {
+        margin-bottom: rem-calc(30) !important;
+    }
+
+    .prod-wrap {
+        padding: 0 rem-calc(10);
+
+        h2 {
+            font-weight: 300;
+            text-align: center;
+            font-size: rem-calc(35);
+            margin-bottom: rem-calc(20);
+        }
+
+        img {
+            display: block;
+            margin: 0 auto rem-calc(20);
+        }
+
+        p.q {
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+
+        p.a {
+            margin-left: rem-calc(20);
+            margin-top: 0;
+        }
+
+        .img-center {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .ingredients {
+            margin-bottom: rem-calc(30);
+
+            h2 {
+                margin-bottom: rem-calc(20);
+            }
+
+            .row {
+                margin-bottom: rem-calc(40);
+            }
+        }
+
+        ul {
+            li {
+                margin-bottom: rem-calc(20);
+            }
+        }
+
+        .top-seller {
+            margin-bottom: rem-calc(30);
+        }
+
+        .border-right {
+            border-right: 2px solid #E7E7E7;
+
+            &:last-child {
+                border: none;
+            }
+        }
+
+        .prod-guarantee {
+            @media #{$small-only} {
+                margin-bottom: rem-calc(30);
+            }
+
+            h3 {
+                text-align: center;
+                font-weight: 300;
+                font-size: rem-calc(36);
+                line-height: 1;
+            }
+
+            .button {
+                display: block;
+                margin: 0 auto;
+                width: 90%;
+            }
+        }
+    }
+
+    /* Guarantee Styles */
+    .row.guarantee {
+        border: 1px solid $nevada;
+        background: $amour;
+        margin: rem-calc(20) 0 rem-calc(30);
+        padding: rem-calc(10) 0;
+
+        p {
+            font-size: rem-calc(16);
+            margin-top: rem-calc(30);
+        }
+    }
 }
 
 /* Styles for All Products Page */
 .post-type-archive-products {
-	.archive-page {
-		padding:rem-calc(30) 0;
-		h1 {
-			text-align:center;
-		}
-	    #product_list {
-	        text-align:center;
-	    }
-	    .product-item {
-	        padding:rem-calc(16);
-	        border-right:1px solid $gainsboro;
-	        border-bottom:1px solid $gainsboro;
-	    }
-		.product-item.top-row {
-			border-top:1px solid $gainsboro;
-		}
-	    .product-item.one {
-	        border-left:1px solid $gainsboro;
-	        
-	    }
-	    .product-item {
-	        .product-name {
-	            font-size:rem-calc(18);
-	            font-weight:900;
-	            a {
-	                color:inherit;
-	                text-decoration:none;
-	            }
-	        }
-	        .our-price {
-	            margin:0 0 rem-calc(10) 0;
-	        }
-	        .button.radius {
-	            margin:0;
-	        }
-	    }
-	    figure {
-	        height:rem-calc(112);
-	        padding:rem-calc(16) 0;
-	        img {
-	            width:auto;
-	            max-height:100%;
-	            display:block;
-	            margin:0 auto;
-	        }
-	    }
-	    .star-positioner {
-	        .stars {
-	            background:$all-prods-ratings-bg;
-	            .star_holder {
-	                .star {
-	                    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAYAAAAeYmHpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAADHUlEQVRo3uWb73naMBDG3+vTAdwN6ARxJyidoGQDugEjpBOQTIAzQbIBZIKYCaATwAZvP1gGPwTQP+sE4f1iEtvS/XQnnXUYIUncmL7kNuCWoLcA7m8N+klEXgGsbwm6Mse/twJdicjafH5FE+qfHvq5/SAiWwBP2gaIcsqqReRH9x8kBwBWmtDanv7gVRPqlaYRmp7eisi3YydIDgHMtaA1PX1y7orIAkD9GaEry3m1BU0rvCsR+WO7iOQGQJHaGC1PPztep+JtDU8vROSXy4Va6UvD065eVktfqT29FpHvPjdopK/Unnb2ciuTvhbXDP0YeJ/3YF0KdGU2FN4SkQoJ99opoWPTTzJvf+2pnS32j5E1gH8iUge21erRHO+wf2AZ9mGsbfVedKCWHagtsFt01EWyAFCaP8vOoPw0x+75o9AvAN7Q8VToXLxEkewOyhDAb5DckBzlNk5pAKYkCe41zm1UYuBZC9qFJslpbuMSwBYk37uQh9AkOcttaI/Ag0PgU9AkOTcr5NWKZGnWK7pC04zQVYKTHJ4CtkHT3FjmhvAEHluYrNBXBU7ywYHHCbrVODeUBXjmCuIDTZKT3HBHYAuSLz4QvtDkBaU0HsnBqaBpRrbIDFySXIUYHwpNZkxpPJODU0O34KUysDUl2RRbOSmh8I3Ege5iG+ijXFQrQy9jG4iFzlFwWGSHVgZuvwVZ54R+04Y2qnNCR3UeoajBjoHe9lDmDVVUvzHQuYCjS88x0Lnmc6tg8Bjo4E57Uq0OHRpibHZGD2w2C6MI6PBIC33mDuxrxI87ozmb1y582xqEPnuHQnvVx42Bc1ub9Ny1MXBrGRreTs+/NKGM5uWZoeXyCYAV/cpSdZD1gZ4eOLQ7Zvied06HLSvJSUjjIdAbiyEl7aHsqinPhDyb+rYK9MsJAwpjZN/a8ExBMqTBkDm9PNLxGM28nfg25qACwJRNlWZ45PzCt8EQ6F0nJrzeAcyQvoJSApizqW93+/LP197zAbtQniUIZe+QZ5P7k4Z3bTpbARgn9uw5FWhCPug9Uu3fcFyEbvJnh/8BLKkYWB0pa80AAAAASUVORK5CYII=");
-	                }
-	            }
-	        }
-	    }
-	}
+    .archive-page {
+        padding: rem-calc(30) 0;
+
+        h1 {
+            text-align: center;
+        }
+
+        #product_list {
+            text-align: center;
+        }
+
+        .product-item {
+            padding: rem-calc(16);
+            border-right: 1px solid $gainsboro;
+            border-bottom: 1px solid $gainsboro;
+        }
+
+        .product-item.top-row {
+            border-top: 1px solid $gainsboro;
+        }
+
+        .product-item.one {
+            border-left: 1px solid $gainsboro;
+        }
+
+        .product-item {
+            .product-name {
+                font-size: rem-calc(18);
+                font-weight: 900;
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                }
+            }
+
+            .our-price {
+                margin: 0 0 rem-calc(10) 0;
+            }
+
+            .button.radius {
+                margin: 0;
+            }
+        }
+
+        figure {
+            height: rem-calc(112);
+            padding: rem-calc(16) 0;
+
+            img {
+                width: auto;
+                max-height: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .star-positioner {
+            .stars {
+                background: $all-prods-ratings-bg;
+
+                .star_holder {
+                    .star {
+                        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAYAAAAeYmHpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAADHUlEQVRo3uWb73naMBDG3+vTAdwN6ARxJyidoGQDugEjpBOQTIAzQbIBZIKYCaATwAZvP1gGPwTQP+sE4f1iEtvS/XQnnXUYIUncmL7kNuCWoLcA7m8N+klEXgGsbwm6Mse/twJdicjafH5FE+qfHvq5/SAiWwBP2gaIcsqqReRH9x8kBwBWmtDanv7gVRPqlaYRmp7eisi3YydIDgHMtaA1PX1y7orIAkD9GaEry3m1BU0rvCsR+WO7iOQGQJHaGC1PPztep+JtDU8vROSXy4Va6UvD065eVktfqT29FpHvPjdopK/Unnb2ciuTvhbXDP0YeJ/3YF0KdGU2FN4SkQoJ99opoWPTTzJvf+2pnS32j5E1gH8iUge21erRHO+wf2AZ9mGsbfVedKCWHagtsFt01EWyAFCaP8vOoPw0x+75o9AvAN7Q8VToXLxEkewOyhDAb5DckBzlNk5pAKYkCe41zm1UYuBZC9qFJslpbuMSwBYk37uQh9AkOcttaI/Ag0PgU9AkOTcr5NWKZGnWK7pC04zQVYKTHJ4CtkHT3FjmhvAEHluYrNBXBU7ywYHHCbrVODeUBXjmCuIDTZKT3HBHYAuSLz4QvtDkBaU0HsnBqaBpRrbIDFySXIUYHwpNZkxpPJODU0O34KUysDUl2RRbOSmh8I3Ege5iG+ijXFQrQy9jG4iFzlFwWGSHVgZuvwVZ54R+04Y2qnNCR3UeoajBjoHe9lDmDVVUvzHQuYCjS88x0Lnmc6tg8Bjo4E57Uq0OHRpibHZGD2w2C6MI6PBIC33mDuxrxI87ozmb1y582xqEPnuHQnvVx42Bc1ub9Ny1MXBrGRreTs+/NKGM5uWZoeXyCYAV/cpSdZD1gZ4eOLQ7Zvied06HLSvJSUjjIdAbiyEl7aHsqinPhDyb+rYK9MsJAwpjZN/a8ExBMqTBkDm9PNLxGM28nfg25qACwJRNlWZ45PzCt8EQ6F0nJrzeAcyQvoJSApizqW93+/LP197zAbtQniUIZe+QZ5P7k4Z3bTpbARgn9uw5FWhCPug9Uu3fcFyEbvJnh/8BLKkYWB0pa80AAAAASUVORK5CYII=");
+                    }
+                }
+            }
+        }
+    }
 }

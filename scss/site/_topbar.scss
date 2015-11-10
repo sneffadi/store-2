@@ -4,7 +4,8 @@
     height: $tip-top-height;
     line-height: $tip-top-height;
     font-size: $tip-top-font-size;
-    font-family:$font-family-sans-serif;
+    font-family: $font-family-sans-serif;
+
     .chat {
         margin: 0 rem-calc(10) 0 0;
     }
@@ -57,14 +58,16 @@
 .top-bar-section ul li {
     background: none;
     color: inherit;
-    padding:0 rem-calc(20);
+    padding: 0 rem-calc(20);
+
     &:hover {
-        background:#707070;
-        color:$white;
+        background: #707070;
+        color: $white;
     }
 }
+
 .top-bar-section ul li.divider {
-    display:none;
+    display: none;
 }
 
 .top-bar-section li.active:not(.has-form) a:not(.button) {
@@ -82,6 +85,10 @@
 }
 
 .top-bar {
+    .logo {
+        padding: $padding-for-logo-div;
+    }
+
     .logo img {
         margin: 0 0;
         width: $logo-width;
@@ -92,23 +99,24 @@
 
 .top-bar.nav {
     @media #{$large-only} {
-        overflow:hidden;
-       border-width: rem-calc(1) rem-calc(1); 
-       background-image: linear-gradient(white, $porcelain);
+        overflow: hidden;
+        border-width: rem-calc(1) rem-calc(1);
+        background-image: linear-gradient(white, $porcelain);
     }
+
     border-width: rem-calc(1) 0 rem-calc(1) 0;
     border-color: $body-border-color;
     border-style: solid;
-    
 }
-nav.tab-bar {
-    border-bottom:1px solid #E6E6E6;
-}
-.tab-bar {
 
+nav.tab-bar {
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.tab-bar {
     .logo img {
         margin: $tabbar-margin-top auto 0 auto;
-        max-height:rem-calc(44);
+        max-height: rem-calc(30);
     }
 }
 
@@ -155,11 +163,12 @@ nav.tab-bar {
 .top-bar-section li:not(.has-form) a:not(.button):hover {
     background: $topbar-bg-hover;
 }
-.top-bar-section ul li>a {
-    font-family:$font-family-sans-serif;
-    text-transform:uppercase;
-    font-weight:600;
-    font-size:rem-calc(14);
+
+.top-bar-section ul li > a {
+    font-family: $font-family-sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: rem-calc(14);
 }
 
 // Add some whitespace between top bar and content

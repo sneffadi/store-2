@@ -82,6 +82,7 @@ $mine-shaft: #363636;
 $concrete: #F2F2F2;
 $endeavour: #014F9C;
 $seashell: #F1F1F1;
+$blue: rgb(6, 104, 192);
 
 /*=============================================
 =     Background Color and Font Color       =
@@ -112,11 +113,13 @@ $off-canvas-link-color: $monsoon;
 $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -10%);
 $off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, 0.2), 4px 0 4px rgba($black, 0.2);
 
-$logo-height: rem-calc(81);
-$logo-width: rem-calc(438);
+$logo-height: rem-calc(57);
+$logo-width: rem-calc(400);
 $logo-max-width: none;
 $logo-section-height: auto;
-$logo-section-padding: rem-calc(0) 0;
+
+$logo-section-padding: 0 0;
+$padding-for-logo-div: rem-calc(5) rem-calc(15);
 
 $rating-bg-color: $fun-green; //backgorund of rating bar
 $rating-border-color: $silver; //border of rating bar
@@ -146,7 +149,7 @@ $topbar-title-weight: $font-weight-normal;
 $topbar-title-font-size: rem-calc(16);
 $topbar-link-weight: $font-weight-normal;
 $topbar-link-font-size: rem-calc(14);
-$tabbar-margin-top: rem-calc(0); // vertically center logo
+$tabbar-margin-top: rem-calc(10); // vertically center logo
 
 $tip-top-bg-color: $white;
 $tip-top-color: $mine-shaft;

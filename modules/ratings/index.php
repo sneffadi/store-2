@@ -55,12 +55,23 @@ function rating_meta_callback( $post ) {
             <label for="ratings-guarantee">Guarantee</label>
             <input type="text" name="ratings-guarantee" value="<?php if ( isset ( $cf['ratings-guarantee'] ) ) echo $cf['ratings-guarantee'][0]; ?>" />
         </p>
+        <?php
+        $check = isset( $cf[ 'top-seller-kit' ] ) ? esc_attr( $cf[ 'top-seller-kit' ][0] ) : false;
+        $html .= '<p>';
+        $html .= '<label for="'.'top-seller-kit' . '">Top Seller Kit</label>';
+        $html .= '<input type="checkbox" name='.'"top-seller-kit" '. checked( $check, true, false ) .' /></p>';
+        echo $html;
+        ?>
+        <p>
+            <label for="ratings-tagline">Tagline</label>
+            <input type="text" name="ratings-tagline" value="<?php if ( isset ( $cf['ratings-tagline'] ) ) echo $cf['ratings-tagline'][0]; ?>" />
+        </p>
         <p>
             <label for="review-blurb">Blurb - Wrap links in [a][/a]</label>
             <textarea type="text" name="review-blurb"><?php if ( isset ( $cf['review-blurb'] ) ) echo $cf['review-blurb'][0]; ?></textarea>
         </p>
-            
-        
+
+
     </div><!--/#ratings-->
     <?php
 }
@@ -70,17 +81,20 @@ function rating_meta_callback( $post ) {
 =============================================*/
 
 function rating_meta_save( $post_id ) {
- 
+
     // Checks save status
     $is_autosave = wp_is_post_autosave( $post_id );
     $is_revision = wp_is_post_revision( $post_id );
     $is_valid_nonce = ( isset( $_POST[ 'rating_nonce' ] ) && wp_verify_nonce( $_POST[ 'rating_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
- 
+
     // Exits script depending on save status
     if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
         return;
     }
- 
+
+    $chk = isset( $_POST['top-seller-kit' ] ) && $_POST['top-seller-kit' ] ? true : false;
+    update_post_meta( $post_id, 'top-seller-kit', $chk );
+
     // Checks for input and sanitizes/saves if needed
     if( isset( $_POST[ 'ratings-overall-value' ] ) ) {
         update_post_meta( $post_id, 'ratings-overall-value', sanitize_text_field( $_POST[ 'ratings-overall-value' ] ) );
@@ -105,6 +119,9 @@ function rating_meta_save( $post_id ) {
     }
     if( isset( $_POST[ 'ratings-guarantee' ] ) ) {
         update_post_meta( $post_id, 'ratings-guarantee', sanitize_text_field( $_POST[ 'ratings-guarantee' ] ) );
+    }
+    if( isset( $_POST[ 'ratings-tagline' ] ) ) {
+        update_post_meta( $post_id, 'ratings-tagline', sanitize_text_field( $_POST[ 'ratings-tagline' ] ) );
     }
     if( isset( $_POST[ 'review-blurb' ] ) ) {
         update_post_meta( $post_id, 'review-blurb', $_POST[ 'review-blurb' ] );
@@ -132,7 +149,7 @@ function rating_image_enqueue() {
     global $typenow;
     if( $typenow == 'products' ) {
         wp_enqueue_media();
- 
+
         // Registers and enqueues the required javascript.
         wp_register_script( 'ratings-script', MODULE_PATH . 'ratings/' . 'script.js', array( 'jquery' ) );
         wp_enqueue_script( 'ratings-script' );

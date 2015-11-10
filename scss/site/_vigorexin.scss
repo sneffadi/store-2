@@ -1,147 +1,165 @@
 .vigorexin {
-	p, ul, li, a{
-		font-family: $font-family-sans-serif-heading;
-		font-size: rem-calc(16);
-	}
-	.button{
-		@media #{$small-only}{
-			width: 100%;
-		}
-	}
-	h4{
-		font-weight: 900;
-		font-size: rem-calc(28);
-		line-height: rem-calc(28);
-		color: #1f1d20;
-		text-align: center;
-			@media #{$small-only}{
-				text-align: left;
-				font-size: rem-calc(25);
-				line-height: rem-calc(25);
-			}
-			br{
-				@media #{$small-only}{
-					display: none;
-				}
-			}
-	}
-	#content{
-		@media #{$small-only}{
-		padding-left: 0;
-  		padding-right: 0;
-  		}
-	}
-	#vigorexin-head{
-		background:url(http://www.male-enhancements.com/wp-content/uploads/2014/06/vigorexin-head2.png) no-repeat;
-		height: 448px;
-		padding-top: rem-calc(35);
-		@media #{$small-only} { 
-			background: #EEEAE9;
-			height: auto;
-			padding-top: rem-calc(22);
-			padding-left: rem-calc(15);
-			padding-right: rem-calc(15);
-		}
-			h1{
-			    font-weight: 900;
-			    font-size: rem-calc(36);
-			    line-height: rem-calc(36);
-			    color: #efb415;
-			    text-align: center;
-			    @media #{$small-only}{
-			    	text-align: left;
-			    	font-size: rem-calc(25);
-			    	margin-bottom: 0;
-			    	line-height: rem-calc(25);
-			    }
-			}
-			ul{
-				@media #{$small-only}{
-				}
-				li{
-					background: url(http://www.male-enhancements.com/wp-content/uploads/2014/06/vigorexin-check.png) no-repeat 0px 9px;
-					padding-left: rem-calc(30);
-					font-weight: bold;
-					font-size: rem-calc(22);
-					line-height: rem-calc(30);
-					color: #2c2a2b;
-					list-style-type: none;
-					@media #{$small-only} {
-					}
-				}
-			}
-			.disclaimer{
-			font-size: rem-calc(12);
-			background: none;
-			}
-	}
+    p, ul, li, a {
+        font-size: rem-calc(16);
+    }
 
-	.black-bg {
-		width: 100%;
-		height: auto;
-		background: #000;
-		color: #fff;
-		padding-top: rem-calc(20);
-			@media #{$small-only}{
-				display: inline-block;
-			}
-		h3 {
-			font-weight: 900;
-			font-size: 30px;
-			line-height: 30px;
-			color: #fff;
-			text-align: center;
-			margin-bottom: 15px;
-		}
-		p{
-			font-weight: normal;
-			font-size: rem-calc(16);
-			line-height: rem-calc(24);
-			color: #fff;
-			margin-bottom: rem-calc(40);
-		}
-	}
-	#couple {
-		background: url(http://www.male-enhancements.com/wp-content/uploads/2014/06/vigorexin-couple.png) no-repeat;
-		width: 100%;
-		height: 271px;
-		margin: 0 auto;
-		margin-bottom: 40px;
-			@media #{$small-only}{
-				height: 0;
-				background-size: 100%;
-	  			padding-bottom: 38%;
-			}
-	}
+    .button {
+        @media #{$small-only} {
+            width: 100%;
+        }
+    }
 
-	#graph {
-		background: url(http://www.male-enhancements.com/wp-content/uploads/2015/09/penis.png) no-repeat;
-		width: 100%;
-		height: 265px;
-		float: left;
-		margin: 7px 30px 30px 0px;
-		background-size: contain;
-		@media #{$small-only}{
-			height: 0;
-			background-size: 100%;
-			padding-bottom: 71%;
-			width: 100%;
-		}
-	}
-	.white-bg{
-		padding-top: rem-calc(20);
-		padding-bottom: rem-calc(20);
-		img{
-			max-height: 190px;
-			@media #{$small-only}{
-				margin-bottom: rem-calc(20);
-			}
-		}
-	}
-	.q{
-		font-weight: bold; 
-		margin-bottom: 5px;
-		font-weight: bold !important;
-		margin-bottom: rem-calc(5) !important;		
-	}
+    h4 {
+        font-size: rem-calc(28);
+        line-height: rem-calc(28);
+        color: #1f1d20;
+        text-align: center;
+
+        @media #{$small-only} {
+            text-align: left;
+            font-size: rem-calc(25);
+            line-height: rem-calc(25);
+        }
+
+        br {
+            @media #{$small-only} {
+                display: none;
+            }
+        }
+    }
+
+    #content {
+        @media #{$small-only} {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    #vigorexin-head {
+        background: url(http://www.male-enhancements.com/wp-content/uploads/2014/06/vigorexin-head2.png) no-repeat;
+        height: 448px;
+        padding-top: rem-calc(35);
+
+        @media #{$small-only} {
+            background: #EEEAE9;
+            height: auto;
+            padding-top: rem-calc(22);
+            padding-left: rem-calc(15);
+            padding-right: rem-calc(15);
+        }
+
+        h1 {
+            font-size: rem-calc(36);
+            line-height: rem-calc(36);
+            color: #efb415;
+            text-align: center;
+
+            @media #{$small-only} {
+                text-align: left;
+                font-size: rem-calc(25);
+                margin-bottom: 0;
+                line-height: rem-calc(25);
+            }
+        }
+
+        ul {
+            @media #{$small-only} {}
+
+            li {
+                background: url(http://www.male-enhancements.com/wp-content/uploads/2014/06/vigorexin-check.png) no-repeat 0px 9px;
+                padding-left: rem-calc(30);
+                font-weight: bold;
+                font-size: rem-calc(22);
+                line-height: rem-calc(30);
+                color: #2c2a2b;
+                list-style-type: none;
+
+                @media #{$small-only} {}
+            }
+        }
+
+        .disclaimer {
+            font-size: rem-calc(12);
+            background: none;
+        }
+    }
+
+    .black-bg {
+        width: 100%;
+        height: auto;
+        background: #000;
+        color: #fff;
+        padding-top: rem-calc(20);
+
+        @media #{$small-only} {
+            display: inline-block;
+        }
+
+        h3 {
+            font-weight: 900;
+            font-size: 30px;
+            line-height: 30px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-weight: normal;
+            font-size: rem-calc(16);
+            line-height: rem-calc(24);
+            color: #fff;
+            margin-bottom: rem-calc(40);
+        }
+    }
+
+    #couple {
+        background: url(http://www.male-enhancements.com/wp-content/uploads/2014/06/vigorexin-couple.png) no-repeat;
+        width: 100%;
+        height: 271px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+
+        @media #{$small-only} {
+            height: 0;
+            background-size: 100%;
+            padding-bottom: 38%;
+        }
+    }
+
+    #graph {
+        background: url(http://www.male-enhancements.com/wp-content/uploads/2015/09/penis.png) no-repeat;
+        width: 100%;
+        height: 265px;
+        float: left;
+        margin: 7px 30px 30px 0px;
+        background-size: contain;
+
+        @media #{$small-only} {
+            height: 0;
+            background-size: 100%;
+            padding-bottom: 71%;
+            width: 100%;
+        }
+    }
+
+    .white-bg {
+        padding-top: rem-calc(20);
+        padding-bottom: rem-calc(20);
+
+        img {
+            max-height: 190px;
+
+            @media #{$small-only} {
+                margin-bottom: rem-calc(20);
+            }
+        }
+    }
+
+    .q {
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-weight: bold !important;
+        margin-bottom: rem-calc(5) !important;
+    }
 }
