@@ -102,6 +102,9 @@
         overflow: hidden;
         border-width: rem-calc(1) rem-calc(1);
         background-image: linear-gradient(white, $porcelain);
+        background-image: -webkit-linear-gradient(white, $porcelain);
+        background-image: -o-linear-gradient(white, $porcelain);
+        background-image: -moz-linear-gradient(white, $porcelain);
     }
 
     border-width: rem-calc(1) 0 rem-calc(1) 0;
