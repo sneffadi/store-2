@@ -7,7 +7,7 @@ and the review overviews on recommended products
 =============================================*/
 
 function top_products_cb() {
-    global $post, $sc_id;
+    global $post, $sc_id, $topTwo;
     $options = get_option('theme_options');
     $num = !empty($options['ratings']) ? $options['ratings'] : "5";
     $niche = !empty($options['nichename']) ? $options['nichename'] : "";
@@ -20,7 +20,7 @@ function top_products_cb() {
     $readMore = 'Read More';
     $seePricing = 'See Pricing';
     $i = 1;
-
+    $topTwo = array_slice($ids,0,2);
     if ($is_page && $idsCount > 1) { ?>
         <div class="row upsell collapse noBorder" id="top-rated-list">
             <div class="row collapse noBorder">
@@ -45,28 +45,32 @@ function top_products_cb() {
                         <div class="small-24 medium-16 small-columns">
                             <div class="row collapse noBorder">
                             <div class="upsell-title clearfix">
-                                <h3><a href="<?php echo get_the_permalink($id); ?>" ><?php echo "<span class='circle'>#{$i}</span> " . get_the_title($id); ?></a>
-                                </h3>
-                                <?php
-                                $isTSK = get_post_meta($id, "top-seller-kit", true);
-                                 if ($isTSK == "")  {    ?>
-                                <div class="overall-rating">
-                                    <?php echo number_format ( get_post_meta($id, "ratings-overall-value", true), 1 ). "/" . $num; ?>
-                                </div>
-                                <div class="star-positioner">
-                                    <div class="stars">
-                                        <div class="colorbar" style="width:<?php echo get_post_meta($id, 'ratings-overall-value', true) * 20; ?>%">
-                                        </div> <!-- / .colorbar -->
-                                        <div class="star_holder">
-                                            <div class="star white-bg star-1"></div> <!-- / .star -->
-                                            <div class="star white-bg star-2"></div> <!-- / .star -->
-                                            <div class="star white-bg star-3"></div> <!-- / .star -->
-                                            <div class="star white-bg star-4"></div> <!-- / .star -->
-                                            <div class="star white-bg star-5"></div> <!-- / .star -->
-                                       </div> <!-- / .star_holder -->
-                                    </div> <!-- / .stars -->
-                                </div> <!-- / .star-positioner -->
-                               <?php } ?>
+                                <a href="<?php echo get_the_permalink($id); ?>" >
+                                    <?php echo "<div class=\"circle\">#{$i}</div>"; ?>
+                                    <h3>
+                                        <?php echo get_the_title($id); ?>
+                                    </h3>
+                                    <?php
+                                    $isTSK = get_post_meta($id, "top-seller-kit", true);
+                                    if ($isTSK == "")  {    ?>
+                                    <div class="overall-rating">
+                                        <?php echo number_format ( get_post_meta($id, "ratings-overall-value", true), 1 ). "/" . $num; ?>
+                                    </div>
+                                    <div class="star-positioner">
+                                        <div class="stars">
+                                            <div class="colorbar" style="width:<?php echo get_post_meta($id, 'ratings-overall-value', true) * 20; ?>%">
+                                            </div> <!-- / .colorbar -->
+                                            <div class="star_holder">
+                                                <div class="star white-bg star-1"></div> <!-- / .star -->
+                                                <div class="star white-bg star-2"></div> <!-- / .star -->
+                                                <div class="star white-bg star-3"></div> <!-- / .star -->
+                                                <div class="star white-bg star-4"></div> <!-- / .star -->
+                                                <div class="star white-bg star-5"></div> <!-- / .star -->
+                                           </div> <!-- / .star_holder -->
+                                        </div> <!-- / .stars -->
+                                    </div> <!-- / .star-positioner -->
+                                   <?php } ?>
+                               </a>
                             </div>
                             <?php
                             $tagline = get_post_meta($id, 'ratings-tagline', true);

@@ -1,60 +1,70 @@
-.virmax{
-	#virmax-header{
-		width: 100%;
-		background: url(#{imgPath})/virmax-banner.png) no-repeat;
-		height: 229px;
-		@media #{$small-only}{
-			height: 0;
-			padding-bottom: 30%;
-			background-size: 100%;
-		}
-	}
-	#virmax-wrapper{
-		@media #{$small-only}{
-			padding: 0 rem-calc(0);
-		}
-		h2{
-			font-size: 24px;
-			margin: rem-calc(20) auto rem-calc(11);
-			color: #003471;
-			padding-left: rem-calc(20);
-		}
-		p{
-			padding-left: rem-calc(20);
-		}
-	}
-	.mini-banner{
-		width: 100%;
-		background: url(#{imgPath}/virmax-minibanner.png) no-repeat;
-		height: 190px;
-		margin: rem-calc(83) 0 rem-calc(18) 0;
-		@media #{$small-only}{
-			height: 0;
-			padding-bottom: 30%;
-			background-size: 100%;
-		}
-	}
-	.question{
-		margin-bottom: 0;
-		font-weight: bold;
-	}
-	.answer{
-		margin-left: rem-calc(20);
-		margin-bottom: rem-calc(11);
-	}
-	.playful{
-		background: url(#{imgPath}/playful.png) no-repeat;
-		float: right;
-		width: 280px;
-		height: 280px;
-		margin-right: 0;
-		margin-left: rem-calc(18);
-	}
-	#ingredient-scroll{
-		overflow: auto;
-		height: 336px;
-		float: right;
-		width: 430px;
-		margin-left: rem-calc(24);
-	}
+.virmax {
+    #virmax-header {
+        width: 100%;
+        background: url(#{imgPath}/virmax-banner.png) no-repeat;
+        height: 229px;
+
+        @media #{$small-only} {
+            height: 0;
+            padding-bottom: 30%;
+            background-size: 100%;
+        }
+    }
+
+    #virmax-wrapper {
+        @media #{$small-only} {
+            padding: 0 rem-calc(0);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: rem-calc(20) auto rem-calc(11);
+            color: #003471;
+            padding-left: rem-calc(20);
+        }
+
+        p {
+            padding-left: rem-calc(20);
+        }
+    }
+
+    .mini-banner {
+        width: 100%;
+        background: url(#{imgPath}/virmax-minibanner.png) no-repeat;
+        height: 190px;
+        margin: rem-calc(83) 0 rem-calc(18) 0;
+
+        @media #{$small-only} {
+            height: 0;
+            padding-bottom: 30%;
+            background-size: 100%;
+        }
+    }
+
+    .question {
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+
+    .answer {
+        margin-left: rem-calc(20);
+        margin-bottom: rem-calc(11);
+    }
+
+    .playful {
+        background: url(#{imgPath}/playful.png) no-repeat;
+        float: right;
+        width: 280px;
+        height: 280px;
+        margin-right: 0;
+        margin-left: rem-calc(18);
+    }
+
+    #ingredient-scroll {
+        overflow: auto;
+        height: 336px;
+        float: right;
+        width: 430px;
+        margin-left: rem-calc(24);
+    }
 }

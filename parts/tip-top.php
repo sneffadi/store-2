@@ -19,7 +19,7 @@
             <?php echo $options['phone']; ?>
             </span>
             <?php endif; ?>
-            <a href="http://www.buyhairlosstreatments.com/contact/">
+            <a href="<?php do_shortcode('[url]'); ?>/contact/">
             <i class="fa fa-envelope"></i>
             <span class="email">
                 Email us

@@ -11,6 +11,16 @@
 ?>
 </section>
 <footer>
+	<?php
+		global $topTwo;
+		if (isset($topTwo)) {
+			foreach ($topTwo as $key => $value) {
+				$url = get_the_permalink($value);
+				echo '<link rel="prefetch" href="' . $url . '">';
+				echo '<link rel="prerender" href="'. $url .'">';
+			}
+		}
+	?>
 	<?php do_action( 'foundationpress_before_footer' ); ?>
 	<div class="row collapse">
 		<div class="small-16 medium-8 columns">

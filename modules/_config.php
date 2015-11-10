@@ -132,3 +132,11 @@ function out_of_stock_class( $classes ) {
     }
     return $classes;
 }
+
+function preloadCart () {
+    if ( is_singular('products') ) {
+        echo '<link rel="prefetch" href="' . do_shortcode('[cart_url]') . '">';
+        echo '<link rel="prerender" href="'. do_shortcode('[cart_url]') .'">';
+    }
+}
+add_filter('wp_footer', 'preloadCart');

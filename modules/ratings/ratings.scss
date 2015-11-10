@@ -80,7 +80,7 @@
 
         h3 {
             font-size: rem-calc(24);
-            margin: 0 0 rem-calc(10) 0;
+            margin: rem-calc(7) 0 rem-calc(10) 0;
             text-transform: uppercase;
             float: left;
         }
@@ -89,13 +89,11 @@
             font-size: rem-calc(18);
             float: right;
             font-weight: $font-weight-bold;
-
-            @media #{$small-only} {
-                margin-top: rem-calc(2);
-            }
+            margin-top: rem-calc(5);
         }
 
-        span.circle {
+        .circle {
+            float: left;
             border-radius: 50%;
             background-color: $blue;
             width: rem-calc(36);
@@ -106,6 +104,7 @@
             color: $white;
             margin-right: rem-calc(6);
             font-size: rem-calc(20);
+            font-weight: $font-weight-bold;
         }
 
         a {
@@ -115,10 +114,10 @@
 
         .star-positioner {
             float: right;
-            margin: rem-calc(3) rem-calc(10) 0 0;
+            margin: rem-calc(8) rem-calc(10) 0 0;
 
             @media #{$small-only} {
-                margin-top: rem-calc(8);
+                margin-top: rem-calc(10);
             }
 
             .stars {
