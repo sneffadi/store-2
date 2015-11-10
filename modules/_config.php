@@ -61,6 +61,12 @@ add_action('admin_enqueue_scripts', 'theme_scripts_admin');
 add_image_size('upsell-image', 90, 160);
 add_image_size('review-product-image', 90, 500);
 
+function add_mcafee() {
+    wp_enqueue_script( 'script-name', 'https://cdn.ywxi.net/js/1.js', array(), '1.0.0', true );
+}
+
+add_action( 'wp_enqueue_scripts', 'add_mcafee' );
+
 //create contact page
 function create_front_page() {
     if (!get_page_by_title('Front Page')) {
@@ -91,8 +97,8 @@ add_action('after_switch_theme', 'set_front_page');
 
 // function set_order() {
 //     $fpid = get_option('page_on_front');
-    
-//     if ( get_post_meta($fpid, 'top-products-list', true) != '' ) {    
+
+//     if ( get_post_meta($fpid, 'top-products-list', true) != '' ) {
 //         if (!add_post_meta($fpid, 'top-products-list', '1,2,3,4,5', true)) {
 //             update_post_meta($fpid, 'top-products-list', '1,2,3,4,5');
 //         }
