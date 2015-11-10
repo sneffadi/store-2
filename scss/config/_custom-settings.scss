@@ -10,7 +10,7 @@ $imgPath: "/wp-content/uploads";
 $total-columns: 24;
 
 // Typography
-$font-family-sans-serif: "Source Sans Pro", sans-serif;
+$font-family-sans-serif: "proxima-nova", sans-serif;
 $font-family-sans-serif-heading: "proxima-nova-condensed", sans-serif;
 $font-family-serif: "merriweather", serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
@@ -26,6 +26,7 @@ $h2-font-reduction: rem-calc(3);
 $font-weight-normal: normal !default;
 $font-weight-semibold: 600 !default;
 $font-weight-bold: bold !default;
+$font-weight-x-bold: 800 !default;
 
 $header-line-height: 1.1;
 $subheader-line-height: 1.2;
@@ -164,6 +165,7 @@ $button-med: rem-calc(10.5);
 $button-lrg: rem-calc(18);
 
 // We use these to control button text styles.
+$button-font-family: $font-family-sans-serif-heading;
 $button-font-tny: rem-calc(14);
 $button-font-sml: rem-calc(16);
 $button-font-med: rem-calc(16);

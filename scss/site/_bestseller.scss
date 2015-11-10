@@ -1,4 +1,8 @@
 .best-sellers-pack {
+    .gray-bg {
+        background: $vapor;
+    }
+
     .best-sellers-content {
         margin: 0 rem-calc(22);
 
@@ -64,73 +68,6 @@
 
             .name {
                 float: right;
-            }
-        }
-
-        .question {
-            margin-bottom: 0;
-            font-weight: bold;
-        }
-
-        .answer {
-            margin-left: 20px;
-        }
-    }
-
-    .guarantee {
-        width: 100%;
-        border-radius: 10px;
-        height: 234px;
-        background: #f9f9f9;
-        padding: 0 20px 0 0;
-        border-top-left-radius: 20em;
-        border-bottom-left-radius: 20em;
-        border-top-right-radius: 20em;
-        border-bottom-right-radius: 20em;
-        box-shadow: inset 0px 0px 6px #ccc;
-        margin: 30px 0 30px 0;
-
-        @media #{$small-only} {
-            height: auto;
-            background: $white;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            text-align: center;
-            padding: 0;
-            margin: 0px 0 0px 0;
-            padding: 0px 15px 15px;
-        }
-
-        img {
-            float: left;
-            margin: rem-calc(16) rem-calc(10) 0 0;
-
-            @media #{$small-only} {
-                float: none;
-                margin-top: rem-calc(20);
-            }
-        }
-
-        h3 {
-            padding-top: 12px;
-            margin-bottom: 6px;
-            font-weight: bold;
-            letter-spacing: -1px;
-
-            @media #{$small-only} {
-                text-align: center;
-            }
-        }
-
-        p {
-            line-height: 1.3em;
-            margin-bottom: 10px;
-            padding-right: 30px;
-
-            @media #{$small-only} {
-                text-align: left;
             }
         }
     }

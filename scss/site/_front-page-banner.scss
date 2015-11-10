@@ -29,7 +29,6 @@
     }
 
     h2 {
-        font-family: $font-family-sans-serif;
         font-size: rem-calc(20);
     }
 
@@ -69,9 +68,10 @@
     }
 
     .button {
-        font-size: rem-calc(16);
+        font-size: rem-calc(15);
         display: block;
         width: 100%;
         margin: 0 auto rem-calc(16) auto;
+        padding: rem-calc(11) 0;
     }
 }

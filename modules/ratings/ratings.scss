@@ -69,6 +69,7 @@
 
     .results {
         text-align: right;
+        margin-bottom: 0;
     }
 
     .small-image {
@@ -77,6 +78,8 @@
 
     .upsell-title {
         @include clearfix;
+
+        font-family: $font-family-sans-serif-heading;
 
         h3 {
             font-size: rem-calc(24);
@@ -89,7 +92,7 @@
             font-size: rem-calc(18);
             float: right;
             font-weight: $font-weight-bold;
-            margin-top: rem-calc(5);
+            margin-top: rem-calc(7);
         }
 
         .circle {

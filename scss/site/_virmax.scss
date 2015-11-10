@@ -1,7 +1,7 @@
 .virmax {
     #virmax-header {
         width: 100%;
-        background: url(#{imgPath}/virmax-banner.png) no-repeat;
+        background: url(#{$imgPath}/virmax-banner.png) no-repeat;
         height: 229px;
 
         @media #{$small-only} {
@@ -30,7 +30,7 @@
 
     .mini-banner {
         width: 100%;
-        background: url(#{imgPath}/virmax-minibanner.png) no-repeat;
+        background: url(#{$imgPath}/virmax-minibanner.png) no-repeat;
         height: 190px;
         margin: rem-calc(83) 0 rem-calc(18) 0;
 
@@ -52,7 +52,7 @@
     }
 
     .playful {
-        background: url(#{imgPath}/playful.png) no-repeat;
+        background: url(#{$imgPath}/playful.png) no-repeat;
         float: right;
         width: 280px;
         height: 280px;
