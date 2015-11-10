@@ -98,7 +98,7 @@
 }
 
 .top-bar.nav {
-    @media #{$large-only} {
+    @media #{$medium-up} {
         overflow: hidden;
         border-width: rem-calc(1) rem-calc(1);
         background-image: linear-gradient(white, $porcelain);
