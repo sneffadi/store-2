@@ -1,11 +1,16 @@
 .best-sellers-pack {
     .gray-bg {
         background: $vapor;
+        padding:rem-calc(20);
+        img {
+            display:block;
+            margin:0 auto;
+        }
     }
 
     .best-sellers-content {
         margin: 0 rem-calc(22);
-
+        padding:0 rem-calc(20);
         @media #{$small-only} {
             margin: 0;
         }
@@ -43,7 +48,6 @@
         }
 
         .top-3 {
-            border: 1px solid #D1EDFB;
             clear: both;
             margin: 10px auto;
             padding: 10px 25px;

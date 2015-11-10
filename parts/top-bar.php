@@ -10,7 +10,7 @@
 <div class="top-bar-container contain-to-grid show-for-small-up">
     <nav class="top-bar logo-section">
     <div class="row collapse">
-        <div class="small-9 columns">
+        <div class="small-12 columns">
                     <?php
                     $url = home_url();
                     $options = get_option('theme_options');
@@ -29,6 +29,7 @@
                     ?>
         </div> <!-- / .small-12 -->
         <div class="small-3 columns">
+        <script src="https://cdn.ywxi.net/js/inline.js?w=90"></script>
         </div> <!-- / .small-12 -->
     </div> <!-- / .row -->
     </nav>
