@@ -232,10 +232,10 @@ function top_products_cb() {
                                         <div class="small-12 medium-6 columns">
                                             <?php echo "$" . number_format( get_post_meta($id, "retail_c1", true), 2 ); ?>
                                         </div>
-                                        <div class="small-12 medium-6 columns criterion">
+                                        <div class="small-12 medium-5 columns criterion">
                                             Side Effects:
                                         </div>
-                                        <div class="small-12 medium-6 columns">
+                                        <div class="small-12 medium-7 columns">
                                             <?php echo get_post_meta($id, "ratings-side-effects", true); ?>
                                         </div>
                                         <div class="small-12 medium-6 columns criterion">
@@ -264,11 +264,11 @@ function top_products_cb() {
 
                                             ?>
                                         </div>
-                                        <div class="small-12 medium-6 columns criterion">
-                                            Guarantee:
+                                        <div class="small-12 medium-5 columns criterion">
+                                            Reorder Rate:
                                         </div>
-                                        <div class="small-12 medium-6 columns">
-                                            <?php echo get_post_meta($id, "ratings-guarantee", true); ?>
+                                        <div class="small-12 medium-7 columns">
+                                            <?php echo get_post_meta($id, "ratings-reorder", true); ?> *Results vary
                                         </div>
                                     </div><!-- / .criterion-row -->
                                 </div> <!--/small-12 columns table -->

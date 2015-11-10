@@ -52,8 +52,8 @@ function rating_meta_callback( $post ) {
             <input type="text" name="ratings-side-effects" value="<?php if ( isset ( $cf['ratings-side-effects'] ) ) echo $cf['ratings-side-effects'][0]; ?>" />
         </p>
         <p>
-            <label for="ratings-guarantee">Guarantee</label>
-            <input type="text" name="ratings-guarantee" value="<?php if ( isset ( $cf['ratings-guarantee'] ) ) echo $cf['ratings-guarantee'][0]; ?>" />
+            <label for="ratings-reorder">Reorder Rate (%)</label>
+            <input type="text" name="ratings-reorder" value="<?php if ( isset ( $cf['ratings-reorder'] ) ) echo $cf['ratings-reorder'][0]; ?>" />
         </p>
         <?php
         $check = isset( $cf[ 'top-seller-kit' ] ) ? esc_attr( $cf[ 'top-seller-kit' ][0] ) : false;
@@ -117,8 +117,8 @@ function rating_meta_save( $post_id ) {
     if( isset( $_POST[ 'ratings-side-effects' ] ) ) {
         update_post_meta( $post_id, 'ratings-side-effects', sanitize_text_field( $_POST[ 'ratings-side-effects' ] ) );
     }
-    if( isset( $_POST[ 'ratings-guarantee' ] ) ) {
-        update_post_meta( $post_id, 'ratings-guarantee', sanitize_text_field( $_POST[ 'ratings-guarantee' ] ) );
+    if( isset( $_POST[ 'ratings-reorder' ] ) ) {
+        update_post_meta( $post_id, 'ratings-reorder', sanitize_text_field( $_POST[ 'ratings-reorder' ] ) );
     }
     if( isset( $_POST[ 'ratings-tagline' ] ) ) {
         update_post_meta( $post_id, 'ratings-tagline', sanitize_text_field( $_POST[ 'ratings-tagline' ] ) );
