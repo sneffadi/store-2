@@ -12,9 +12,9 @@
 </section>
 <footer>
 	<?php do_action( 'foundationpress_before_footer' ); ?>
-	<div class="row medium-collapse">
-		<div class="small-16 medium-8 columns">			
-				
+	<div class="row collapse">
+		<div class="small-16 medium-8 columns">
+
 				<?php
 					$options = get_option('theme_options');
 					if (!empty($options['logo'])) {
@@ -24,14 +24,14 @@
 						echo "</a>";
 						echo "</div>";
 					}
-				?>									
-			
+				?>
+
 		</div> <!-- / .small-16 -->
 		<div class="small-8 medium-16 columns">
 		</div><!--/.small-8-->
 	</div> <!-- / .row -->
-	<div class="row medium-collapse">
-		<div class="small-24 medium-14 columns">			
+	<div class="row collapse">
+		<div class="small-24 medium-14 columns">
 			<div class="small-12 medium-8 columns">
 				<h5>Products</h5>
 				<?php wp_nav_menu( array(
@@ -50,25 +50,29 @@
 			</div> <!-- / .small-6 medium 4 -->
 			<div class="small-12 medium-8 end columns">
 				<h5>Company</h5>
-				<?php 
-				wp_nav_menu( 
+				<?php
+				wp_nav_menu(
 				array(
 				'theme_location' => 'Footer Column 3',
 				'menu' => 'Company',
 				)
-				); 
+				);
 				?>
 			</div> <!-- / .small-12 -->
 		</div> <!-- / .small-24 medium 8 -->
 
 		<div class="small-24 medium-10 columns">
-			<form>
-				<div class="offers">
-					Get exclusive offers&nbsp;<span data-tooltip aria-haspopup="true" class="radius" title="We'll send you product updates and discounts. We won't spam you. Scouts honor."><i class="fa fa-info-circle"></i></span>
-				</div>
-				<input type="text" placeholder="Enter email address" class="email radius" />
-				<a class="button tiny radius secondary">Subscribe</a>
-			</form>
+				<form>
+				<div class="small-12 columns">
+					<div class="offers">
+						Get exclusive offers&nbsp;<span data-tooltip aria-haspopup="true" class="radius" title="We'll send you product updates and discounts. We won't spam you. Scouts honor."><i class="fa fa-info-circle"></i></span>
+					</div>
+					<input type="text" placeholder="Enter email address" class="email radius" />
+				</div> <!-- / .small-24 columns -->
+				<div class="small-12 columns">
+					<a class="button tiny radius secondary">Subscribe</a>
+				</form>
+
 		</div> <!-- / .small-4 -->
 	</div> <!-- / .row -->
 	<div class="row">

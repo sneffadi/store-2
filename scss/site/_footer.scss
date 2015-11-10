@@ -33,7 +33,7 @@ footer {
     }
 
     .logo {
-        margin: rem-calc(14) 0 rem-calc(20) 0;
+        margin: rem-calc(14) 0 rem-calc(20) ($column-gutter / 2);
     }
 
     input.email {
@@ -53,6 +53,9 @@ footer {
             text-decoration: underline;
         }
     }
-        .footer-bar li{float: left; margin-left: rem-calc(15);}
 
+    .footer-bar li {
+        float: left;
+        margin-left: rem-calc(15);
+    }
 }

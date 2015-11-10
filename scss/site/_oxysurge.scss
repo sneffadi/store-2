@@ -1,94 +1,111 @@
 .oxysurge-banner {
-	background:url(http://www.male-enhancements.com/wp-content/uploads/2015/11/oxysurge-banner.png);
-	width:100%;
-	min-height:rem-calc(493);
-	margin-bottom:rem-calc(30)!important;
-	@media #{$small-only} {
-		background:#B5D9F0;
-	}
-	.columns {
-		float:right;
-		padding-top:rem-calc(50);
-		h2 {
-			font-size:rem-calc(25);
-			margin:0;
-		}
-		h1 {
-			font-size:rem-calc(39);
-		}
-		h1, h2 {
-			text-transform:uppercase;
-		}
-		ul {
-			margin-top:rem-calc(20);
-			li {
-				font-size:rem-calc(23);
-				font-weight:400;
-			}
-		}
-		.button {
-			background:#6EA822;
-		}
-	}
-}
-.oxysurge-wrap {
-	padding:0 rem-calc(30)!important;
-	.guarantee{
-		width: 100%;
-		border-radius: 10px;
-		height: 195px;
-		background: #f9f9f9;
-		padding: 0 20px 0 0;
-		border-top-left-radius: 20em;
-		border-bottom-left-radius: 20em;
-		border-top-right-radius: 20em;
-		border-bottom-right-radius: 20em;
-		box-shadow: inset 0px 0px 6px #ccc;
-		margin: 30px 0 30px 0;
-		@media #{$small-only}{
-			height: auto;
-			background: $white;
-			border-top-left-radius:0;
-			border-top-right-radius:0;
-			border-bottom-left-radius:0;
-			border-bottom-right-radius:0;
-			text-align: center;
-			padding: 0;
-			margin: 0px 0 0px 0;
-  			padding: 15px 15px 15px;
+    background: url(#{$imgPath}/oxysurge-banner.png);
+    width: 100%;
+    min-height: rem-calc(493);
+    margin-bottom: rem-calc(30) !important;
 
-		}
-		img{
-			float: left;
-			margin: 0 10px 0 0;
-			@media #{$small-only}{
-				float: none;
-				margin:0 auto;
-			}
-		}
-		h3{
-			padding-top: 12px;
-			margin-bottom: 6px;
-			font-weight: bold;
-			letter-spacing: -1px;
-			@media #{$small-only}{
-				text-align: center
-			}
-		}
-		p{
-			font-size: .8em;
-			line-height: 1.3em;
-			margin-bottom: 10px;
-			padding-right: 30px;
-			@media #{$small-only}{
-				text-align: left;
-			}
-		}
-	}
-	.bonus {
-		border:1px solid #E4E4E4!important;
-		box-shadow: rem-calc(6) rem-calc(0) rem-calc(27) rem-calc(1) #E4E4E4;
-		margin-bottom:rem-calc(30);
-		padding:rem-calc(10) 0;
-	}
+    @media #{$small-only} {
+        background: #B5D9F0;
+    }
+
+    .columns {
+        float: right;
+        padding-top: rem-calc(50);
+
+        h2 {
+            font-size: rem-calc(25);
+            margin: 0;
+        }
+
+        h1 {
+            font-size: rem-calc(39);
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+        }
+
+        ul {
+            margin-top: rem-calc(20);
+
+            li {
+                font-size: rem-calc(23);
+                font-weight: 400;
+            }
+        }
+
+        .button {
+            background: #6EA822;
+        }
+    }
+}
+
+.oxysurge-wrap {
+    padding: 0 rem-calc(30) !important;
+
+    .guarantee {
+        width: 100%;
+        border-radius: 10px;
+        height: 195px;
+        background: #f9f9f9;
+        padding: 0 20px 0 0;
+        border-top-left-radius: 20em;
+        border-bottom-left-radius: 20em;
+        border-top-right-radius: 20em;
+        border-bottom-right-radius: 20em;
+        box-shadow: inset 0px 0px 6px #ccc;
+        margin: 30px 0 30px 0;
+
+        @media #{$small-only} {
+            height: auto;
+            background: $white;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            text-align: center;
+            padding: 0;
+            margin: 0px 0 0px 0;
+            padding: 15px 15px 15px;
+        }
+
+        img {
+            float: left;
+            margin: 0 10px 0 0;
+
+            @media #{$small-only} {
+                float: none;
+                margin: 0 auto;
+            }
+        }
+
+        h3 {
+            padding-top: 12px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            letter-spacing: -1px;
+
+            @media #{$small-only} {
+                text-align: center;
+            }
+        }
+
+        p {
+            font-size: .8em;
+            line-height: 1.3em;
+            margin-bottom: 10px;
+            padding-right: 30px;
+
+            @media #{$small-only} {
+                text-align: left;
+            }
+        }
+    }
+
+    .bonus {
+        border: 1px solid #E4E4E4 !important;
+        box-shadow: rem-calc(6) rem-calc(0) rem-calc(27) rem-calc(1) #E4E4E4;
+        margin-bottom: rem-calc(30);
+        padding: rem-calc(10) 0;
+    }
 }
