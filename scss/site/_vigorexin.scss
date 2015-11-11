@@ -4,6 +4,7 @@
     }
 
     .button {
+
         @media #{$small-only} {
             width: 100%;
         }
@@ -77,7 +78,13 @@
                 @media #{$small-only} {}
             }
         }
-
+        .button {
+            @media #{$medium-up}{
+                display:block;
+            margin:0 auto;
+            width:85%;
+            }
+        }
         .disclaimer {
             font-size: rem-calc(12);
             background: none;
@@ -154,6 +161,11 @@
                 margin-bottom: rem-calc(20);
             }
         }
+       img.guarantee-seal {
+        margin-bottom:0;
+        height:rem-calc(150);
+        margin-right:rem-calc(20);
+       } 
     }
 
     .q {
