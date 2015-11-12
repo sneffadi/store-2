@@ -83,16 +83,17 @@ $mine-shaft: #363636;
 $concrete: #F2F2F2;
 $endeavour: #014F9C;
 $seashell: #F1F1F1;
-$blue: rgb(6, 104, 192);
+$blue: #0668c0;
 
 /*=============================================
 =     Background Color and Font Color       =
 =============================================*/
 
 $body-bg: $concrete;
+$row-bg: $white;
 $body-font-color: $bastille;
 $secondary-font-color: $monza;
-$anchor-font-color: blue; //link color
+$anchor-font-color: $blue; //link color
 $success-color: $monza;
 $primary-color: $endeavour; //color for a lot of elements
 $secondary-color: $dusty-gray; //color of read review button

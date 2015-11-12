@@ -15,6 +15,20 @@ figure {
     padding: 0;
 }
 
+.row {
+    background: $row-bg;
+
+    &.border {
+        border-left: 1px solid $body-border-color;
+        border-right: 1px solid $body-border-color;
+
+        @media #{$small-only} {
+            border-radius: none;
+            border-left: none;
+        }
+    }
+}
+
 // Add some basic styling for figcaption element
 figcaption {
     margin-bottom: rem-calc(20);
@@ -56,6 +70,7 @@ img.alignright {
     margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
 }
 
+
 .row {
     @media #{$large-only} {
         border: 1px solid $body-border-color;
@@ -76,41 +91,3 @@ img.alignright {
     // border-width: 0 rem-calc(1) 0 rem-calc(1);
 }
 
-.padding {
-    padding: 0 rem-calc(10);
-}
-
-.noPadding {
-    padding: 0;
-}
-
-.row.product-page .row {
-    border: none;
-}
-
-.row.criteria {
-    border: none;
-    background: none;
-
-    .row {
-        border: none;
-        margin: 0;
-    }
-}
-
-#product_list {
-    .row {
-        border: none;
-        background: none;
-    }
-}
-
-.extra-padd {
-    padding-left: 15px;
-    padding-right: 15px;
-
-    @media #{$small} {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}

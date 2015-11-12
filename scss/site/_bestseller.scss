@@ -1,78 +1,22 @@
 .best-sellers-pack {
-    .gray-bg {
-        background: $vapor;
-        padding:rem-calc(20);
-        img {
-            display:block;
-            margin:0 auto;
-        }
+    .bottle {
+        max-height: rem-calc(200);
+        width: auto;
+        margin: 0 0 rem-calc(20) 0;
     }
 
-    .best-sellers-content {
-        margin: 0 rem-calc(22);
-        padding:0 rem-calc(20);
-        @media #{$small-only} {
-            margin: 0;
-        }
+    .banner-image {
+        margin: 0 0 rem-calc(20) 0;
+    }
+
+    .gray-bg {
+        background: $vapor;
+        padding: rem-calc(20);
+        margin: 0 0 rem-calc(30) 0;
 
         img {
+            display: block;
             margin: 0 auto;
-        }
-
-        h1 {
-            color: #1e1f20;
-            font-size: 22px;
-            margin: 10px 20px 15px 0;
-            border-bottom: 1px #C40E13 solid;
-            line-height: 40px;
-        }
-
-        p {
-            color: #1e1f20;
-            margin-bottom: 15px;
-        }
-
-        h2 {
-            color: #1e1f20;
-            margin: 20px 20px 15px 0;
-            line-height: 22px;
-            text-align: center;
-        }
-
-        h3 {
-            font-size: 18px;
-            text-align: center;
-            color: #1e1f20;
-            margin: 20px 20px 15px 0;
-            line-height: 22px;
-        }
-
-        .top-3 {
-            clear: both;
-            margin: 10px auto;
-            padding: 10px 25px;
-            display: inline-block;
-
-            .small-24 {
-                text-align: center;
-            }
-
-            img {
-                float: left;
-                margin-bottom: rem-calc(43);
-
-                @media #{$small-only} {
-                    float: none;
-                }
-            }
-
-            .bold {
-                font-weight: bold;
-            }
-
-            .name {
-                float: right;
-            }
         }
     }
 }
