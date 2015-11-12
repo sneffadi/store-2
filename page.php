@@ -13,21 +13,21 @@
 
 get_header(); ?>
 
-<div class="row">
+<div class="row border">
 	<div id="content" class="small-24 columns" role="main">
 
 	<?php do_action( 'before_page_content' ); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
-		
+
         <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
-		<?php if ( is_front_page() ) {	
+		<?php if ( is_front_page() ) {
 			do_action( 'homepage_banner' );
 		}
-    	?>			
+    	?>
 
-            <?php do_action( 'page_before_entry_content' ); ?>			
+            <?php do_action( 'page_before_entry_content' ); ?>
 
 			<?php the_content(); ?>
 
@@ -35,7 +35,7 @@ get_header(); ?>
 
 
 		</article>
-	
+
     <?php endwhile;?>
 
 	<?php do_action( 'after_page_content' ); ?>

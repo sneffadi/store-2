@@ -19,7 +19,7 @@
 
 get_header(); ?>
 
-<div class="row archive-page">
+<div class="row archive-page border">
 <!-- Row for main content area -->
 	<div class="small-24 medium-24 columns" role="main">
 

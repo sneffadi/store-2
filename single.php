@@ -8,7 +8,7 @@
  */
 get_header(); ?>
 
-<div class="row medium-collapse">
+<div class="row medium-collapse border">
 	<div class="small-24 columns" role="main">
 
 	<?php do_action( 'foundationpress_before_content' ); ?>

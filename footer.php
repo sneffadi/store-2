@@ -22,7 +22,7 @@
 		}
 	?>
 	<?php do_action( 'foundationpress_before_footer' ); ?>
-	<div class="row collapse">
+	<div class="row collapse border">
 		<div class="small-16 medium-8 columns">
 
 				<?php
@@ -40,7 +40,7 @@
 		<div class="small-8 medium-16 columns">
 		</div><!--/.small-8-->
 	</div> <!-- / .row -->
-	<div class="row collapse">
+	<div class="row collapse border">
 		<div class="small-24 medium-14 columns">
 			<div class="small-12 medium-8 columns">
 				<h5>Products</h5>

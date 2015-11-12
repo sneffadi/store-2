@@ -9,7 +9,7 @@
 ?>
 <div class="top-bar-container contain-to-grid show-for-small-up">
     <nav class="top-bar logo-section">
-    <div class="row collapse">
+    <div class="row collapse border">
         <div class="small-12 columns">
                     <?php
                     $url = home_url();

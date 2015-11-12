@@ -139,14 +139,7 @@
         }
     }
 
-    .star-col {
-        padding: 0;
-        text-align: center;
-    }
-
     .criterion {
-        padding: 0;
-        font-weight: $font-weight-bold;
         font-weight: $font-weight-semibold;
     }
 
@@ -167,7 +160,6 @@
         vertical-align: middle;
         float: left !important;
         width: 100%;
-        padding: 0;
 
         &:last-of-type {
             border-bottom: none;
@@ -229,10 +221,10 @@
     }
 }
 
-.criterion-row.row.ratings-break {
-    margin-top: rem-calc(6);
-    padding-top: rem-calc(8);
-    border-top: 1px solid $ratings-border;
+.ratings-break {
+    margin-top: rem-calc(6) !important;
+    padding-top: rem-calc(8) !important;
+    border-top: 1px solid $ratings-border !important;
 }
 
 #top-rated-list {
