@@ -205,8 +205,9 @@ function buy_table_cb() {
             echo get_post_meta($post->ID, "sub_title_c{$i}", true);
             echo "</div>";
             echo "<div class='description'>" . get_post_meta($post->ID, "description" . "_" . $i, true) . "</div>";
-
+            echo "<a href=\"" . do_shortcode('[cart_url]') . "?add=" . $cf_value["itemId_c{$i}"][0] . "\">";
             echo "<div class=\"buy-image\">" . "<img src=\"" . do_shortcode('[upload_dir]') . get_post_meta($post->ID, "image_c{$i}", true) . "\"  />" . "</div>";
+            echo "</a>";
 
             $shipping = strtolower(get_post_meta($post->ID, "shipping_c{$i}", true));
 
