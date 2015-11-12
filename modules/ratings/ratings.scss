@@ -235,7 +235,9 @@
         width: 99%;
 
         @media #{$small-only} {
-            margin: rem-calc(7.5) 0 rem-calc(7.5) 0;
+            margin: rem-calc(0) 0 rem-calc(10) 0;
+            font-size: rem-calc(16);
+            padding: rem-calc(11) rem-calc(8);
         }
     }
 
@@ -244,7 +246,9 @@
         width: 99%;
 
         @media #{$small-only} {
-            margin: rem-calc(15) 0 0;
+            margin: rem-calc(15) 0 rem-calc(12) 0;
+            font-size: rem-calc(16);
+            padding: rem-calc(11) rem-calc(8);
         }
     }
 
