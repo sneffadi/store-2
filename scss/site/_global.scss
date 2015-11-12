@@ -21,6 +21,11 @@ figure {
     &.border {
         border-left: 1px solid $body-border-color;
         border-right: 1px solid $body-border-color;
+
+        @media #{$small-only} {
+            border-radius: none;
+            border-left: none;
+        }
     }
 }
 
