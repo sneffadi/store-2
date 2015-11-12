@@ -1,13 +1,47 @@
 // Start Rating
 .product-image {
     figure {
-        padding: rem-calc(5) rem-calc(20) 0 0;
+        padding: 0 rem-calc(20);
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        width: 100%;
 
         img {
             max-height: rem-calc(215);
             width: auto;
             margin: 0 auto;
             display: block;
+        }
+    }
+
+    .product-overlay-text {
+        background: rgba($vapor, 0.75);
+        border-radius: rem-calc(5);
+        bottom: 0;
+        color: $blue;
+        left: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 40% rem-calc(30) 0 rem-calc(30);
+        position: absolute;
+        text-align: center;
+        top: 0;
+        right: 0;
+        transition: 600ms;
+        width: 100%;
+
+        &:after {
+            content: "Click Here to Read More";
+            font-weight: 800;
+            font-family: $font-family-sans-serif-heading;
+            font-size: rem-calc(24);
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        &:hover {
+            opacity: 1;
         }
     }
 }
@@ -139,14 +173,7 @@
         }
     }
 
-    .star-col {
-        padding: 0;
-        text-align: center;
-    }
-
     .criterion {
-        padding: 0;
-        font-weight: $font-weight-bold;
         font-weight: $font-weight-semibold;
     }
 
@@ -167,7 +194,6 @@
         vertical-align: middle;
         float: left !important;
         width: 100%;
-        padding: 0;
 
         &:last-of-type {
             border-bottom: none;
@@ -209,7 +235,9 @@
         width: 99%;
 
         @media #{$small-only} {
-            margin: rem-calc(7.5) 0 rem-calc(7.5) 0;
+            margin: rem-calc(0) 0 rem-calc(10) 0;
+            font-size: rem-calc(16);
+            padding: rem-calc(11) rem-calc(8);
         }
     }
 
@@ -218,7 +246,9 @@
         width: 99%;
 
         @media #{$small-only} {
-            margin: rem-calc(15) 0 0;
+            margin: rem-calc(15) 0 rem-calc(5) 0;
+            font-size: rem-calc(16);
+            padding: rem-calc(11) rem-calc(8);
         }
     }
 
@@ -229,10 +259,10 @@
     }
 }
 
-.criterion-row.row.ratings-break {
-    margin-top: rem-calc(6);
-    padding-top: rem-calc(8);
-    border-top: 1px solid $ratings-border;
+.ratings-break {
+    margin-top: rem-calc(6) !important;
+    padding-top: rem-calc(8) !important;
+    border-top: 1px solid $ratings-border !important;
 }
 
 #top-rated-list {

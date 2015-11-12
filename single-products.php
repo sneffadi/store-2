@@ -8,7 +8,7 @@
  */
 get_header(); ?>
 
-<div class="row collapse product-page">
+<div class="row collapse product-page border">
 
     <div id="content" class="small-24 columns" role="main">
 
@@ -16,7 +16,7 @@ get_header(); ?>
         <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
             <?php do_action( 'before_review_content' ); ?>
-        
+
             <div class="row collapse">
                 <div class="small-24 columns">
 
@@ -30,11 +30,11 @@ get_header(); ?>
     <?php endwhile;?>
 
     <?php while ( have_posts() ) : the_post(); ?>
-    
+
     <?php do_action( 'foundationpress_post_before_comments' ); ?>
     <?php comments_template(); ?>
     <?php do_action( 'foundationpress_post_after_comments' ); ?>
-    
+
     <?php endwhile;?>
 
     </div>
