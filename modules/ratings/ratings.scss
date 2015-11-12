@@ -1,13 +1,47 @@
 // Start Rating
 .product-image {
     figure {
-        padding: rem-calc(5) rem-calc(20) 0 0;
+        padding: 0 rem-calc(20);
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        width: 100%;
 
         img {
             max-height: rem-calc(215);
             width: auto;
             margin: 0 auto;
             display: block;
+        }
+    }
+
+    .product-overlay-text {
+        background: rgba($vapor, 0.75);
+        border-radius: rem-calc(5);
+        bottom: 0;
+        color: $blue;
+        left: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 40% rem-calc(30) 0 rem-calc(30);
+        position: absolute;
+        text-align: center;
+        top: 0;
+        right: 0;
+        transition: 600ms;
+        width: 100%;
+
+        &:after {
+            content: "Click Here to Read More";
+            font-weight: 800;
+            font-family: $font-family-sans-serif-heading;
+            font-size: rem-calc(24);
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        &:hover {
+            opacity: 1;
         }
     }
 }
