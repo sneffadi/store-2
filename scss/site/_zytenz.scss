@@ -9,6 +9,12 @@
     .see-pricing {
         width: 250px;
         font-size: 18px;
+
+        @media #{$small-only} {
+            width: 80% !important;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
     }
 
     .mid-copy {
