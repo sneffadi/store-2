@@ -69,25 +69,3 @@ blockquote.alignright,
 img.alignright {
     margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
 }
-
-
-.row {
-    @media #{$large-only} {
-        border: 1px solid $body-border-color;
-        border-top: none;
-        border-bottom: none;
-    }
-
-    background: $white;
-}
-
-.noBorder {
-    // border: none;
-    // background: none;
-}
-
-.row.border {
-    // border: 1px solid $body-border-color;
-    // border-width: 0 rem-calc(1) 0 rem-calc(1);
-}
-

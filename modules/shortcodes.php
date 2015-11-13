@@ -9,7 +9,7 @@ add_shortcode( 'ingredients', 'ingredients' );
 add_shortcode('cart_url', 'cart_url');
 add_shortcode('shipping_cost', 'shipping_cost');
 add_shortcode('guarantee', 'guarantee');
-
+add_shortcode( 'get_featured_image', 'get_featured_image' );
 function niche() {
     $options = get_option('theme_options');
     $niche = $options['nichename'];
@@ -56,7 +56,7 @@ function product_link($atts, $content = null) {
     if (is_singular('reviews') && in_category('recommended' )) {
         $href = get_post_meta($post->ID, 'ratings-affiliate-link' , true);
         $link = "<a href=\"{$href}\" data-name=\"review | in-content | stuff \">{$content}</a>";
-    } elseif (is_page() ) {        
+    } elseif (is_page() ) {
         $href = get_the_permalink($sc_id);
         $link = "<a href=\"{$href}\" data-name=\"top10-upsell-blurb\">{$content}</a>";
     } else {
@@ -83,4 +83,19 @@ function guarantee () {
     $guarantee .= "</div><!-- end .medium-16.columns -->";
     $guarantee .= "</div><!-- end .row.guarantee -->";
     return $guarantee;
+}
+function get_featured_image( $atts ) {
+    extract(
+        shortcode_atts(
+            array(
+                'id' => '',
+                'class' => 'bottle',
+            ),
+            $atts
+        )
+    );
+
+    if ( isset( $id ) ) {
+        return get_the_post_thumbnail( $id, 'large', array( 'class' => $class ) );
+    }
 }
