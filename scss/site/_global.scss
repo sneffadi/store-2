@@ -70,41 +70,24 @@ img.alignright {
     margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
 }
 
-.padding {
-    padding: 0 rem-calc(10);
-}
 
-.noPadding {
-    padding: 0;
-}
-
-.row.product-page .row {
-    border: none;
-}
-
-.row.criteria {
-    border: none;
-    background: none;
-
-    .row {
-        border: none;
-        margin: 0;
+.row {
+    @media #{$large-only} {
+        border: 1px solid $body-border-color;
+        border-top: none;
+        border-bottom: none;
     }
+
+    background: $white;
 }
 
-#product_list {
-    .row {
-        border: none;
-        background: none;
-    }
+.noBorder {
+    // border: none;
+    // background: none;
 }
 
-.extra-padd {
-    padding-left: 15px;
-    padding-right: 15px;
-
-    @media #{$small} {
-        padding-left: 0;
-        padding-right: 0;
-    }
+.row.border {
+    // border: 1px solid $body-border-color;
+    // border-width: 0 rem-calc(1) 0 rem-calc(1);
 }
+
