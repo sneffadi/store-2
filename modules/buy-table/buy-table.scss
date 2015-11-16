@@ -2,30 +2,65 @@
     text-align: center;
     font-weight: $font-weight-bold;
     margin: 0 0 rem-calc(20) 0;
-
+    padding:0 rem-calc(15);
+    img.buy-banner {
+        width:96%;
+        display:block;
+        margin:0 auto rem-calc(15);
+    }
     option {
         font-size: rem-calc(16);
     }
-
+    .noPadding {
+        padding-left:0;
+        padding-right:0;
+    }
     .buy-wrap {
         padding-top: rem-calc(12);
-        border: 1px solid $white-smoke;
-        border-radius: 0 0 rem-calc(3) rem-calc(3);
+        border: 3px solid #E7E7E7;
+        //border-radius: 0 0 rem-calc(3) rem-calc(3);
         margin-bottom: rem-calc(20);
+        border-radius:rem-calc(7);
     }
-
+    .col1 {
+        @media #{$medium-up} {
+            border-right:none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius:0;   
+        }
+    }
+    .col2 {
+        box-shadow: 1px 0px 38px #BDC1C5;
+        padding-bottom:rem-calc(10);
+        border-top-right-radius: 0;
+        border-top-left-radius:0;
+        border-top:none; 
+        @media #{$small-only} {
+            box-shadow:none;
+        }
+    }
+    .col3 {
+        @media #{$medium-up} {
+          border-left:none;
+        border-top-left-radius:0;
+        border-bottom-left-radius:0;  
+        }
+        
+    }
     .title {
         font-weight: 700;
         font-size: rem-calc(24);
         text-align: center;
-        background: $iron;
-        color: $white;
+        background: $white;
+        color: $iron;
         padding: rem-calc(4) 0;
         border-radius: rem-calc(3) rem-calc(3) 0 0;
     }
 
     .even {
         background-color: $primary-color;
+        color:$white;
+        
     }
 
     .quantity {
@@ -55,41 +90,58 @@
         width: 100%;
         font-size: rem-calc(18);
     }
-
-    .savings {
-        margin: 0 0 em-calc(12) 0;
+    .savings-retail {
+        border-top: rem-calc(1) solid $gainsboro;
+        border-bottom: rem-calc(1) solid $gainsboro;
+        text-transform:uppercase;
+        .savings {
         color: $success-color;
+        text-align:right;
+        font-weight:400;
+        font-size:rem-calc(12);
+        padding: rem-calc(5) 0 0;
+            span:nth-child(2) {
+                margin: 0 rem-calc(5) 0 0;
+            }
 
-        span:nth-child(2) {
-            margin: 0 rem-calc(5) 0 0;
+            span:nth-child(3) {
+                margin: 0 0 0 rem-calc(5);
+            }
         }
-
-        span:nth-child(3) {
-            margin: 0 0 0 rem-calc(5);
+        .retail {
+            font-size: rem-calc(12);
+            color: #505050;
+            margin: 0 0 rem-calc(4) 0;
+            text-align:left;
+            font-weight:400;
+            text-decoration:line-through;
+            padding: rem-calc(5) 0 0;
         }
     }
-
-    .retail {
-        font-size: rem-calc(18);
-        color: $jumbo;
-        margin: 0 0 rem-calc(4) 0;
-    }
-
     .price {
-        font-size: rem-calc(28);
+        font-size: rem-calc(45);
         line-height: 1;
         text-transform: uppercase;
         font-family: $font-family-sans-serif-heading;
+        font-weight:900;
+        padding:rem-calc(10) 0 0;
     }
-
+    .supply {
+        padding:rem-calc(5) 0 rem-calc(10);
+        font-weight:400;
+        font-size:rem-calc(14);
+    }
     .shipping {
-        padding: rem-calc(5) 0;
-        border-top: rem-calc(2) solid $white-smoke;
-        border-bottom: rem-calc(2) solid $white-smoke;
-        margin: 0 0 rem-calc(12) 0;
-        font-size:rem-calc(15);
+        padding: rem-calc(5) 0 0;
+        border-top: rem-calc(1) solid $gainsboro;
+        margin: 0;
+        font-size:rem-calc(12);
     }
-
+    .bonus {
+        margin: 0 0 rem-calc(12) 0;
+        font-size:rem-calc(12);
+        min-height:rem-calc(21);
+    }
     .buy-image {
         margin: 0;
         vertical-align: middle;
