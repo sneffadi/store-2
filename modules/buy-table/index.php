@@ -167,6 +167,8 @@ function buy_table_cb() {
         echo "<div id=\"buytable\" data-magellan-destination=\"buytable\"> <a name=\"buytable\"></a>";
         echo "<div class=\"row noBorder\">";
         echo "<h2>Order ".get_the_title()." Today!</h2>";
+        echo "<img src=\"". do_shortcode('[upload_dir]') ."buy-top.png\" class=\"buy-banner hide-for-small\">";
+        echo "<img src=\"". do_shortcode('[upload_dir]') ."buy-top-mobile".$i.".png\" class=\"buy-banner show-for-small-only\">";
         $itemCount = 1;
         while (get_post_meta($post->ID, "title_c{$itemCount}", true) != '') {
             $itemCount++;
@@ -185,11 +187,11 @@ function buy_table_cb() {
             $third = get_post_meta($post->ID, "price_c3", true);
 
             if ($itemCount === 3) {
-                echo "<div class='small-24 medium-8 columns'>";
+                echo "<div class='small-24 medium-8 columns noPadding'>";
             } elseif ($itemCount === 2 && $i % 3 == 1) {
-                echo "<div class='small-24 medium-8 medium-offset-4 columns'>";
+                echo "<div class='small-24 medium-8 medium-offset-4 columns noPadding'>";
             } elseif ($itemCount === 2 && $i % 3 == 2) {
-                echo "<div class='small-24 medium-8 medium-pull-4 columns'>";
+                echo "<div class='small-24 medium-8 medium-pull-4 columns noPadding'>";
             }
             echo "<form action=\"". do_shortcode('[cart_url]') . "\" " . "method=\"get\" id=\"buy{$i}\" class=\"buy-form\">";
 
@@ -199,16 +201,30 @@ function buy_table_cb() {
             else {
                 $class = "";
             }
+            //echo "<img src=\"". do_shortcode('[upload_dir]') ."buy-banner".$i.".png\" class=\"buy-banner\">";
             echo "<div class=\"title {$class}\">" . get_post_meta($post->ID, "title_c{$i}", true) . "</div>";
-            echo "<div class=\"small-24 columns buy-wrap\">";
+            echo "<div class=\"small-24 columns buy-wrap col".$i."\">";
             echo "<div class='quantity'>";
-            echo get_post_meta($post->ID, "sub_title_c{$i}", true);
             echo "</div>";
             echo "<div class='description'>" . get_post_meta($post->ID, "description" . "_" . $i, true) . "</div>";
             echo "<a href=\"" . do_shortcode('[cart_url]') . "?add=" . $cf_value["itemId_c{$i}"][0] . "\">";
             echo "<div class=\"buy-image\">" . "<img src=\"" . do_shortcode('[upload_dir]') . get_post_meta($post->ID, "image_c{$i}", true) . "\"  />" . "</div>";
             echo "</a>";
-
+            echo "<div class=\"row savings-retail collapse\">";
+            echo "<div class=\"small-12 columns\">";
+            echo "<div class='retail'>Retail $" . "<span>" .number_format($retail, 2, '.', '') . "</span>" . "</div>";
+            echo "</div><!-- end .columns -->";
+            echo "<div class=\"small-12 columns\">";
+            if ($savings > 0) {
+                echo "<div class=\"savings\">" . "<strong>$<span>" . number_format($savings, 2, '.', '') . "</span></strong> <span>Savings</span></div>";
+            }
+            else {
+                echo "<div class=\"savings no-savings\"></div>";
+            }
+            echo "</div><!-- end .columns -->";
+            echo "</div><!-- end .row -->";
+            echo "<div class=\"price\">$" . "<span>" . $price . "</span>" . "</div>";
+            echo "<div class=\"supply\">".get_post_meta($post->ID, "sub_title_c{$i}", true)."</div>";
             $shipping = strtolower(get_post_meta($post->ID, "shipping_c{$i}", true));
 
             if ($shipping=='free' || $shipping=='free shipping') {
@@ -220,16 +236,7 @@ function buy_table_cb() {
             else {
                 echo "<div class=\"shipping\" >Flat-Rate Shipping: $" . do_shortcode("[shipping_cost]") . "</div>";
             }
-
-            echo "<div class='retail'>Retail $" . "<span>" .number_format($retail, 2, '.', '') . "</span>" . "</div>";
-
-            echo "<div class=\"price\">Price $" . "<span>" . $price . "</span>" . "</div>";
-            if ($savings > 0) {
-                echo "<div class=\"savings\">" . "<span>Save $</span><span>" . number_format($savings, 2, '.', '') . "</span>" . "<span>" . number_format($percent_off, 3, '.', '') * 100 . "</span><span>% Off</span></div>";
-            }
-            else {
-                echo "<div class=\"savings no-savings\"></div>";
-            }
+            echo "<div class=\"bonus\">".get_post_meta($post->ID, "bonus_c{$i}", true)."</div>";
             echo "<a href=\"" . do_shortcode('[cart_url]') . "?add=" . $cf_value["itemId_c{$i}"][0] . "\" class=\"button add-to-cart\" >" . "Add to Cart" . "</a>";
 
 

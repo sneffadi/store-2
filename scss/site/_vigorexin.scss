@@ -1,10 +1,5 @@
 .vigorexin {
-    p, ul, li, a {
-        font-size: rem-calc(16);
-    }
-
     .button {
-
         @media #{$small-only} {
             width: 100%;
         }
@@ -56,35 +51,35 @@
             text-align: center;
 
             @media #{$small-only} {
-                text-align: left;
-                font-size: rem-calc(25);
-                margin-bottom: 0;
-                line-height: rem-calc(25);
+                text-align: center;
+                font-size: rem-calc(30);
+                line-height: rem-calc(33);
+                margin-bottom: rem-calc(10);
             }
         }
 
         ul {
-            @media #{$small-only} {}
-
             li {
-                background: url(#{$imgPath}/vigorexin-check.png) no-repeat 0px 9px;
                 padding-left: rem-calc(30);
-                font-weight: bold;
+                font-weight: $font-weight-bold;
                 font-size: rem-calc(22);
                 line-height: rem-calc(30);
-                color: #2c2a2b;
                 list-style-type: none;
 
-                @media #{$small-only} {}
+                @media #{$small-only} {
+                    padding-left: 0;
+                }
             }
         }
+
         .button {
-            @media #{$medium-up}{
-                display:block;
-            margin:0 auto;
-            width:85%;
+            @media #{$medium-up} {
+                display: block;
+                margin: 0 auto;
+                width: 85%;
             }
         }
+
         .disclaimer {
             font-size: rem-calc(12);
             background: none;
@@ -161,16 +156,18 @@
                 margin-bottom: rem-calc(20);
             }
         }
+
         img.intro-img {
-            margin-right:rem-calc(20);
-            margin-bottom:0;
-            max-height:rem-calc(220);
+            margin-right: rem-calc(20);
+            margin-bottom: 0;
+            max-height: rem-calc(220);
         }
-       img.guarantee-seal {
-        margin-bottom:0;
-        height:rem-calc(150);
-        margin-right:rem-calc(20);
-       } 
+
+        img.guarantee-seal {
+            margin-bottom: 0;
+            height: rem-calc(150);
+            margin-right: rem-calc(20);
+        }
     }
 
     .q {
