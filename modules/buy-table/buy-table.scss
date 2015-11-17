@@ -58,6 +58,7 @@
         color: $iron;
         padding: rem-calc(4) 0;
         border-radius: rem-calc(3) rem-calc(3) 0 0;
+        text-transform: uppercase;
     }
 
     .even {
@@ -66,6 +67,7 @@
         @media #{$small-only} {
             background-color:$white;
             color:$primary-color;  
+            text-transform:uppercase;
         }
     }
 
