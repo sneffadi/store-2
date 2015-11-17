@@ -71,17 +71,28 @@
 			</div> <!-- / .small-12 -->
 		</div> <!-- / .small-24 medium 8 -->
 
-		<div class="small-24 medium-10 columns">
+		<div class="small-24 medium-8 columns right">
 				<form>
-				<div class="small-12 columns">
-					<div class="offers">
-						Get exclusive offers&nbsp;<span data-tooltip aria-haspopup="true" class="radius" title="We'll send you product updates and discounts. We won't spam you. Scouts honor."><i class="fa fa-info-circle"></i></span>
-					</div>
-					<input type="text" placeholder="Enter email address" class="email radius" />
-				</div> <!-- / .small-24 columns -->
-				<div class="small-12 columns">
-					<a class="button tiny radius secondary">Subscribe</a>
-				</form>
+				<div class="small-18 columns">
+					<form action="http://www.elabs10.com/functions/mailing_list.html" method="post" name="subscriptionForm" id="subscriptionForm">
+    <script type="text/javascript" src="http://email.unkubed.com/foot-subs/subscribe.js"></script>
+    <div class="hidden" style="display: none; position: absolute; top: -29px; left: 0px; z-index: 5; font-size: 17px; color: rgb(97, 187, 37); font-weight: 700;"><img style="width: 16px; height: 15px;" src="http://email.unkubed.com/foot-subs/green_checkmark.png" alt=""> You've successfully subscribed!</div>
+    <div class="hidden" style="display: none; position: absolute; top: -29px; left: 0px; z-index: 5;"><img style="width: 25px; height: 25px;" alt="Processing..." src="http://email.unkubed.com/foot-subs/working.gif"></div>
+
+                <div class="offers">
+                    Get exclusive offers&nbsp;<span title="" aria-describedby="tooltip-ih3t8jno0" data-selector="tooltip-ih3t8jno0" data-tooltip="" aria-haspopup="true" class="radius"><i class="fa fa-info-circle"></i></span>
+                </div>
+                <input name="mlid" value="269544" type="hidden">
+                  <input name="siteid" value="2010001189" type="hidden">
+                  <input name="tagtype" value="q2" type="hidden">
+                  <input name="demographics" value="-1,49975,58189" type="hidden">
+                  <input name="redirection" value="http://www.male-enhancements.com" type="hidden">
+                  <input name="activity" value="submit" type="hidden">
+                  <input name="val_49975" value="footer" type="hidden">
+                  <!-- SBT Goes here --> <input name="val_58189" value="MALE" type="hidden"> <!-- SBT Goes here -->
+                <input placeholder="Enter email address" name="email" class="email radius" required="required" type="email">
+                <input class="button tiny radius secondary" value="Subscribe" type="submit">
+            </form>
 
 		</div> <!-- / .small-4 -->
 	</div> <!-- / .row -->
