@@ -135,11 +135,14 @@
         padding: rem-calc(5) 0 0;
         border-top: rem-calc(1) solid $gainsboro;
         margin: 0;
-        font-size:rem-calc(12);
+        font-size:rem-calc(14);
+    }
+    .shipping.free {
+        color:$salem;
     }
     .bonus {
         margin: 0 0 rem-calc(12) 0;
-        font-size:rem-calc(12);
+        font-size:rem-calc(14);
         min-height:rem-calc(21);
     }
     .buy-image {

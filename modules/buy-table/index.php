@@ -228,7 +228,7 @@ function buy_table_cb() {
             $shipping = strtolower(get_post_meta($post->ID, "shipping_c{$i}", true));
 
             if ($shipping=='free' || $shipping=='free shipping') {
-                echo "<div class=\"shipping\">" . "Free Shipping!" . "</div>";
+                echo "<div class=\"shipping free\">" . "Free Shipping!" . "</div>";
             }
             elseif (is_numeric($shipping)) {
                 echo "<div class=\"shipping\" >Flat-Rate Shipping: $" . $shipping . "</div>";
