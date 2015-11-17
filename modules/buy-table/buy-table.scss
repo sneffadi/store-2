@@ -39,6 +39,7 @@
         }
         @media #{$small-only} {
             box-shadow:none;
+            padding-bottom:0;
         }
     }
     .col3 {
@@ -105,6 +106,9 @@
         font-weight:400;
         font-size:rem-calc(12);
         padding: rem-calc(5) 0 0;
+        @media #{$small-only} {
+            font-size:rem-calc(15);
+        }
             span:nth-child(2) {
                 margin: 0 rem-calc(5) 0 0;
             }
@@ -121,6 +125,9 @@
             font-weight:400;
             text-decoration:line-through;
             padding: rem-calc(5) 0 0;
+            @media #{$small-only} {
+            font-size:rem-calc(15);
+            }
         }
     }
     .price {
@@ -135,12 +142,18 @@
         padding:rem-calc(5) 0 rem-calc(10);
         font-weight:400;
         font-size:rem-calc(14);
+        @media #{$small-only}{
+            font-size:rem-calc(17);
+        }
     }
     .shipping {
-        padding: rem-calc(5) 0 0;
+        padding: rem-calc(10) 0 0;
         border-top: rem-calc(1) solid $gainsboro;
         margin: 0;
         font-size:rem-calc(14);
+        @media #{$small-only}{
+            font-size:rem-calc(17);
+        }
     }
     .shipping.free {
         color:$salem;
@@ -149,6 +162,9 @@
         margin: 0 0 rem-calc(12) 0;
         font-size:rem-calc(14);
         min-height:rem-calc(21);
+        @media #{$small-only} {
+            font-size:rem-calc(17);
+        }
     }
     .buy-image {
         margin: 0;
