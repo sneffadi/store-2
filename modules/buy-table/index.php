@@ -167,8 +167,6 @@ function buy_table_cb() {
         echo "<div id=\"buytable\" data-magellan-destination=\"buytable\"> <a name=\"buytable\"></a>";
         echo "<div class=\"row noBorder\">";
         echo "<h2>Order ".get_the_title()." Today!</h2>";
-        echo "<img src=\"". do_shortcode('[upload_dir]') ."buy-top.png\" class=\"buy-banner hide-for-small\">";
-        echo "<img src=\"". do_shortcode('[upload_dir]') ."buy-top-mobile".$i.".png\" class=\"buy-banner show-for-small-only\">";
         $itemCount = 1;
         while (get_post_meta($post->ID, "title_c{$itemCount}", true) != '') {
             $itemCount++;
@@ -228,15 +226,20 @@ function buy_table_cb() {
             $shipping = strtolower(get_post_meta($post->ID, "shipping_c{$i}", true));
 
             if ($shipping=='free' || $shipping=='free shipping') {
-                echo "<div class=\"shipping free\">" . "Free Shipping!" . "</div>";
+                echo "<div class=\"shipping free\"> " . "Free Shipping!" . "</div>";
             }
             elseif (is_numeric($shipping)) {
-                echo "<div class=\"shipping\" >Flat-Rate Shipping: $" . $shipping . "</div>";
+                echo "<div class=\"shipping\" > Flat-Rate Shipping: $" . $shipping . "</div>";
             }
             else {
-                echo "<div class=\"shipping\" >Flat-Rate Shipping: $" . do_shortcode("[shipping_cost]") . "</div>";
+                echo "<div class=\"shipping\" > Flat-Rate Shipping: $" . do_shortcode("[shipping_cost]") . "</div>";
             }
-            echo "<div class=\"bonus\">".get_post_meta($post->ID, "bonus_c{$i}", true)."</div>";
+            if (get_post_meta($post->ID, "bonus_c{$i}", true) == ""){
+                echo "<div class=\"bonus no-bonus\"> ".get_post_meta($post->ID, "bonus_c{$i}", true)."</div>";
+            }
+            else {
+                echo "<div class=\"bonus\"> ".get_post_meta($post->ID, "bonus_c{$i}", true)."</div>";
+            }
             echo "<a href=\"" . do_shortcode('[cart_url]') . "?add=" . $cf_value["itemId_c{$i}"][0] . "\" class=\"button add-to-cart\" >" . "Add to Cart" . "</a>";
 
 

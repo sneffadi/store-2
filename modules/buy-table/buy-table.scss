@@ -158,8 +158,11 @@
         margin: 0;
         font-size:rem-calc(14);
         @media #{$small-only}{
-            font-size:rem-calc(17);
-            
+            font-size:rem-calc(17);    
+        }
+        &:before {
+            font-family:FontAwesome;
+            content:"\f00c";
         }
     }
     .shipping.free {
@@ -170,8 +173,16 @@
         font-size:rem-calc(14);
         min-height:rem-calc(21);
         @media #{$small-only} {
-            font-size:rem-calc(17);
-            
+            font-size:rem-calc(17);    
+        }
+        &:before {
+            font-family:FontAwesome;
+            content:"\f00c";
+        }
+    }
+    .bonus.no-bonus {
+        &:before {
+            content:"";
         }
     }
     .buy-image {
