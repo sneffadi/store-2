@@ -32,9 +32,11 @@
     .col2 {
         box-shadow: 1px 0px 38px #BDC1C5;
         padding-bottom:rem-calc(10);
-        border-top-right-radius: 0;
-        border-top-left-radius:0;
-        border-top:none; 
+        @media #{$medium-up} {
+            border-top:none;
+            border-top-right-radius: 0;
+            border-top-left-radius:0;
+        }
         @media #{$small-only} {
             box-shadow:none;
         }
@@ -60,7 +62,10 @@
     .even {
         background-color: $primary-color;
         color:$white;
-        
+        @media #{$small-only} {
+            background-color:$white;
+            color:$primary-color;  
+        }
     }
 
     .quantity {
