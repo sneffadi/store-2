@@ -4,6 +4,7 @@
         font-size: 33px;
         margin: 0 0 20px 0;
         text-align: center;
+		text-shadow: 1px 1px 0 #222;
     }
 
     .see-pricing {
@@ -44,10 +45,28 @@
         font-weight: 600;
         margin-bottom: 0;
     }
+	
+	p.a {
+		margin-left:30px;
+	}
+	
+	ul.bullets {
+		list-style: none;
+		font-size: 12px;
+		margin: 15px 0 40px 150px;
+		font-weight: 700;
+	}
+	
+	ul.bullets li {
+		background: url(/wp-content/uploads/check-mark.png) no-repeat;
+		padding-left: 30px;
+		margin-bottom: 12px;
+		line-height: 15px;
+	}
 
-    .blue-bg {
-        background: #003d85;
-        color: #fff;
+    .gray-bg {
+        background: #f9f9f9;
+        color: #000;
         margin: 0 0 25px 0 !important;
         padding-top: 20px;
         padding-bottom: 20px;
