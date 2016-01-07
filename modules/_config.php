@@ -165,7 +165,7 @@ function insert_custom_title() {
     if (have_posts()) : the_post();
       $customTitle = get_post_meta(get_the_ID(), '_custom_title', true);
       if ($customTitle) {
-        echo "<title>$customTitle</title>";
+        echo "<title>" . do_shortcode($customTitle) . "</title>";
       } else {
         echo "<title>";
           if (is_tag()) {
