@@ -35,14 +35,15 @@ function top_products_cb() {
 
                         <div class="small-0 medium-8 small-columns product-image hide-for-small">
                             <?php if (has_post_thumbnail($id)) {
+                                $cf_value= get_post_meta($id);
                                 echo "<figure>";
                                 echo "<a href=\"" . get_the_permalink($id) . "\">";
-                                echo get_the_post_thumbnail($id);
-                                echo "<div class=\"product-overlay-text\">";
-                                echo "</div>";
+                                echo get_the_post_thumbnail($id, 'upsell-img');
+                                echo "<div class=\"product-overlay-text\"></div>";
                                 echo "</a>";
+                                echo "<img src=\"/wp-content/uploads/guarantee1.png\" class=\"guar\">";
                                 echo "</figure>";
-                            }?>
+                            } else echo '&nbsp;'; ?>
                         </div><!--/small-4 medium-2 columns-->
                         <div class="small-24 medium-16 small-columns">
                             <div class="row collapse">
@@ -113,53 +114,6 @@ function top_products_cb() {
                                             <?php echo number_format ( get_post_meta($id, "ratings-overall-value", true), 1 ). "/" . $num; ?>
                                         </div><!--/ small-3 medium-2 columns out-of -->
                                         <div class="small-10 medium-5 columns criterion">
-                                            Value:
-                                        </div>
-                                        <div class="small-9 medium-7 columns">
-                                            <div class="star-positioner">
-                                                <div class="stars">
-                                                    <div class="colorbar" style="width:<?php echo get_post_meta($id, 'ratings-long-term-results', true) * 20; ?>%">
-                                                    </div> <!-- / .colorbar -->
-                                                    <div class="star_holder">
-                                                        <div class="star star-1"></div> <!-- / .star -->
-                                                        <div class="star star-2"></div> <!-- / .star -->
-                                                        <div class="star star-3"></div> <!-- / .star -->
-                                                        <div class="star star-4"></div> <!-- / .star -->
-                                                        <div class="star star-5"></div> <!-- / .star -->
-                                                   </div> <!-- / .star_holder -->
-                                                </div> <!-- / .stars -->
-                                            </div> <!-- / .star-positioner -->
-                                        </div>
-                                        <div class="small-5 medium-12 columns show-for-small">
-                                            <?php echo number_format ( get_post_meta($id, "ratings-long-term-results", true), 1 ). "/" . $num; ?>
-                                        </div><!--/ small-5 columns show-for-small -->
-                                    </div><!--/  row -->
-                                    <div class="row collapse">
-                                        <div class="small-10 medium-5 columns criterion">
-                                            Potency:
-                                        </div>
-                                        <div class="small-9 medium-7 columns">
-                                            <div class="star-positioner">
-                                                <div class="stars">
-                                                    <div class="colorbar" style="width:<?php echo get_post_meta($id, 'ratings-effectiveness', true) * 20; ?>%">
-                                                    </div> <!-- / .colorbar -->
-                                                    <div class="star_holder">
-                                                        <div class="star star-1"></div> <!-- / .star -->
-                                                        <div class="star star-2"></div> <!-- / .star -->
-                                                        <div class="star star-3"></div> <!-- / .star -->
-                                                        <div class="star star-4"></div> <!-- / .star -->
-                                                        <div class="star star-5"></div> <!-- / .star -->
-                                                   </div> <!-- / .star_holder -->
-                                                </div> <!-- / .stars -->
-                                            </div> <!-- / .star-positioner -->
-
-                                            <div class="ratings" style="width:<?php echo get_post_meta($id, 'ratings-effectiveness', true); ?>%">
-                                            </div>
-                                        </div>
-                                        <div class="small-5 columns show-for-small">
-                                            <?php echo number_format ( get_post_meta($id, "ratings-effectiveness", true), 1 ). "/" . $num; ?>
-                                        </div><!--/ small-5 columns show-for-small -->
-                                        <div class="small-10 medium-5 columns criterion">
                                             Ingredients:
                                         </div>
                                         <div class="small-9 medium-7 columns">
@@ -183,6 +137,28 @@ function top_products_cb() {
                                     </div><!--/  row -->
                                     <div class="row collapse">
                                         <div class="small-10 medium-5 columns criterion">
+                                            Effectiveness:
+                                        </div>
+                                        <div class="small-9 medium-7 columns">
+                                            <div class="star-positioner">
+                                                <div class="stars">
+                                                    <div class="colorbar" style="width:<?php echo get_post_meta($id, 'ratings-effectiveness', true) * 20; ?>%">
+                                                    </div> <!-- / .colorbar -->
+                                                    <div class="star_holder">
+                                                        <div class="star star-1"></div> <!-- / .star -->
+                                                        <div class="star star-2"></div> <!-- / .star -->
+                                                        <div class="star star-3"></div> <!-- / .star -->
+                                                        <div class="star star-4"></div> <!-- / .star -->
+                                                        <div class="star star-5"></div> <!-- / .star -->
+                                                   </div> <!-- / .star_holder -->
+                                                </div> <!-- / .stars -->
+                                            </div> <!-- / .star-positioner -->
+                                        </div>
+                                        <div class="small-5 columns show-for-small">
+                                            <?php echo number_format ( get_post_meta($id, "ratings-effectiveness", true), 1 ). "/" . $num; ?>
+                                        </div><!--/ small-5 columns show-for-small -->
+
+                                        <div class="small-10 medium-5 columns criterion">
                                             Safety:
                                         </div>
                                         <div class="small-9 medium-7 columns">
@@ -203,27 +179,6 @@ function top_products_cb() {
                                         <div class="small-5 columns show-for-small">
                                             <?php echo number_format ( get_post_meta($id, "ratings-product-safety", true), 1 ). "/" . $num; ?>
                                         </div><!--/ small-5 columns show-for-small -->
-                                        <div class="small-10 medium-5 columns criterion">
-                                            User Rating:
-                                        </div>
-                                        <div class="small-9 medium-7 columns">
-                                            <div class="star-positioner">
-                                                <div class="stars">
-                                                    <div class="colorbar" style="width:<?php echo get_post_meta($id, 'ratings-speed-of-results', true) * 20; ?>%">
-                                                    </div> <!-- / .colorbar -->
-                                                    <div class="star_holder">
-                                                        <div class="star star-1"></div> <!-- / .star -->
-                                                        <div class="star star-2"></div> <!-- / .star -->
-                                                        <div class="star star-3"></div> <!-- / .star -->
-                                                        <div class="star star-4"></div> <!-- / .star -->
-                                                        <div class="star star-5"></div> <!-- / .star -->
-                                                   </div> <!-- / .star_holder -->
-                                                </div> <!-- / .stars -->
-                                            </div> <!-- / .star-positioner -->
-                                        </div>
-                                        <div class="small-5 columns show-for-small">
-                                            <?php echo number_format ( get_post_meta($id, "ratings-speed-of-results", true), 1 ). "/" . $num; ?>
-                                        </div><!--/ small-5 columns show-for-small -->
                                     </div><!--/  row -->
                                    <?php } ?> <!-- if is not tsk -->
 
@@ -234,30 +189,40 @@ function top_products_cb() {
                                                     MSRP:
                                                 </div>
                                                 <div class="small-14 columns">
-                                                    <?php echo "$" . number_format( get_post_meta($id, "retail_c1", true), 2 ); ?>
+                                                    <?php if(get_post_meta($id, "cf_custom_banner", true)==='yes') {
+                                                        $pricing= get_post_meta($id, "cf_retail_price", true);
+                                                        echo "$" . number_format( $pricing, 2);
+                                                    } else {
+                                                        echo "$" . number_format( get_post_meta($id, "retail_c1", true), 2 );
+                                                    } ?>
                                                 </div>
                                                 <div class="small-10 columns criterion">
                                                     Our Price:
                                                 </div>
                                                 <div class="small-14 columns">
                                                     <?php
-                                                        $pricing = array();
-                                                        $p1 = get_post_meta($id, "price_c1", true) / 1;
-                                                        $p2 = get_post_meta($id, "price_c2", true) / 2;
-                                                        if (get_post_meta($id, "qty_c3", true) > 2) {
-                                                        $p3 = get_post_meta($id, "price_c3", true) / 3;
-                                                        array_push($pricing, $p1, $p2, $p3 );
-                                                        }
-                                                        else {
-                                                           array_push($pricing, $p1, $p2);
-                                                        }
-                                                        $low = min($pricing);
-                                                        $high = max($pricing);
-                                                        $epsilon = 0.00001;
-                                                        if(abs($low-$high) < $epsilon) {
-                                                            echo "<a href=\"" . get_the_permalink($id) . "\">" . "$" . number_format( $low, 2) . "</a>";
+                                                        if(get_post_meta($id, "cf_custom_banner", true)==='yes') {
+                                                            $pricing= get_post_meta($id, "cf_store_price", true);
+                                                            echo "<a href=\"" . get_the_permalink($id) . "\">" . "$" . number_format( $pricing, 2) . "</a>";
                                                         } else {
-                                                            echo "<a href=\"" . get_the_permalink($id) . "\">" . "$" . number_format( $low, 2) . "-" . number_format( $high, 2) .  "</a>";
+                                                            $pricing = array();
+                                                            $p1 = get_post_meta($id, "price_c1", true) / 1;
+                                                            $p2 = get_post_meta($id, "price_c2", true) / 2;
+                                                            if (get_post_meta($id, "qty_c3", true) > 2) {
+                                                            $p3 = get_post_meta($id, "price_c3", true) / 3;
+                                                            array_push($pricing, $p1, $p2, $p3 );
+                                                            }
+                                                            else {
+                                                               array_push($pricing, $p1, $p2);
+                                                            }
+                                                            $low = min($pricing);
+                                                            $high = max($pricing);
+                                                            $epsilon = 0.00001;
+                                                            if(abs($low-$high) < $epsilon) {
+                                                                echo "<a href=\"" . get_the_permalink($id) . "\">" . "$" . number_format( $low, 2) . "</a>";
+                                                            } else {
+                                                                echo "<a href=\"" . get_the_permalink($id) . "\">" . "$" . number_format( $low, 2) . "-" . number_format( $high, 2) .  "</a>";
+                                                            }
                                                         }
 
                                                     ?>
@@ -273,10 +238,10 @@ function top_products_cb() {
                                                     <?php echo get_post_meta($id, "ratings-guarantee", true); ?>
                                                 </div>
                                                 <div class="small-10 columns criterion">
-                                                    Reorder Rate:
+                                                    &nbsp;
                                                 </div>
                                                 <div class="small-14 columns">
-                                                    <?php echo get_post_meta($id, "ratings-reorder", true); ?> *Results vary
+                                                    &nbsp;
                                                 </div>
                                             </div> <!-- / .row collapse -->
                                         </div> <!-- / .small-24 medium-12 columns -->
