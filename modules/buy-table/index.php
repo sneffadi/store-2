@@ -11,7 +11,6 @@ if (!function_exists('underscore')) {
         return strtolower($content);
     }
 }
-
 function product_custom_meta() {
     add_meta_box('product_meta', __('Product Options'), 'product_meta_callback', 'products', 'normal', 'high');
 }
@@ -35,6 +34,7 @@ function product_meta_callback($post) {
         $html.= "<label>Column Sub Title:</label><input type=\"text\" name=\"sub_title_c{$i}\" value=\"" . (isset($cf_value["sub_title_c{$i}"]) ? $cf_value["sub_title_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Retail:</label><input type=\"text\" name=\"retail_c{$i}\" value=\"" . (isset($cf_value["retail_c{$i}"]) ? $cf_value["retail_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Price:</label><input type=\"text\" name=\"price_c{$i}\" value=\"" . (isset($cf_value["price_c{$i}"]) ? $cf_value["price_c{$i}"][0] : '') . "\" />";
+        $html.= "<label>Quantity (include bottles, kits, etc):</label><input type=\"text\" name=\"qty_c{$i}\" value=\"" . (isset($cf_value["qty_c{$i}"]) ? $cf_value["qty_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Bonus:</label><input type=\"text\" name=\"bonus_c{$i}\" value=\"" . (isset($cf_value["bonus_c{$i}"]) ? $cf_value["bonus_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Shipping:</label><input type=\"text\" name=\"shipping_c{$i}\" value=\"" . (isset($cf_value["shipping_c{$i}"]) ? $cf_value["shipping_c{$i}"][0] : '') . "\" />";
         $html.= "<label>Item ID:</label><input type=\"text\" name=\"itemId_c{$i}\" value=\"" . (isset($cf_value["itemId_c{$i}"]) ? $cf_value["itemId_c{$i}"][0] : '') . "\" />";
@@ -92,6 +92,12 @@ function product_meta_save($post_id) {
         }
         else {
             delete_post_meta($post_id, "price_c{$i}");
+        }
+        if (isset($_POST['qty_c' . $i])) {
+            update_post_meta($post_id, 'qty_c' . $i, sanitize_text_field($_POST['qty_c' . $i]));
+        }
+        else {
+            delete_post_meta($post_id, "qty_c{$i}");
         }
         if (isset($_POST['bonus_c' . $i])) {
             update_post_meta($post_id, 'bonus_c' . $i, sanitize_text_field($_POST['bonus_c' . $i]));
@@ -160,13 +166,13 @@ add_action('admin_enqueue_scripts', 'product_image_enqueue');
 =============================================*/
 add_action('after_product_content', 'buy_table_cb');
 function buy_table_cb() {
-    if (is_singular('products')) {
-        global $post;
-        $cf_value = get_post_meta($post->ID);
+    global $post;
+    $cf_value = get_post_meta($post->ID);
+    if (is_singular('products') && (!isset($cf_value['cf_custom_banner']) || $cf_value['cf_custom_banner'] == "no")) {
         echo "<div class=\"row collapse noBorder\">";
-        echo "<div id=\"buytable\" data-magellan-destination=\"buytable\"> <a name=\"buytable\"></a>";
+        echo "<div id=\"buytable\"> <a name=\"buytable\"></a>";
         echo "<div class=\"row noBorder\">";
-        echo "<h2>Order ".get_the_title()." Today!</h2>";
+        echo "<h2>Order ".get_the_title()." Today & Save!</h2>";
         $itemCount = 1;
         while (get_post_meta($post->ID, "title_c{$itemCount}", true) != '') {
             $itemCount++;
@@ -185,11 +191,11 @@ function buy_table_cb() {
             $third = get_post_meta($post->ID, "price_c3", true);
 
             if ($itemCount === 3) {
-                echo "<div class='small-24 medium-8 columns noPadding'>";
+                echo "<div class='small-24 medium-8 columns noPadding hide-for-small-only'>";
             } elseif ($itemCount === 2 && $i % 3 == 1) {
-                echo "<div class='small-24 medium-8 medium-offset-4 columns noPadding'>";
+                echo "<div class='small-24 medium-8 medium-offset-4 columns noPadding hide-for-small-only'>";
             } elseif ($itemCount === 2 && $i % 3 == 2) {
-                echo "<div class='small-24 medium-8 medium-pull-4 columns noPadding'>";
+                echo "<div class='small-24 medium-8 columns noPadding hide-for-small-only'>";
             }
             echo "<form action=\"". do_shortcode('[cart_url]') . "\" " . "method=\"get\" id=\"buy{$i}\" class=\"buy-form\">";
 
@@ -229,16 +235,16 @@ function buy_table_cb() {
                 echo "<div class=\"shipping free\"> " . "Free Shipping!" . "</div>";
             }
             elseif (is_numeric($shipping)) {
-                echo "<div class=\"shipping\" > Flat-Rate Shipping: $" . $shipping . "</div>";
+                echo "<div class=\"shipping\" > Shipping: $" . $shipping . "</div>";
             }
             else {
-                echo "<div class=\"shipping\" > Flat-Rate Shipping: $" . do_shortcode("[shipping_cost]") . "</div>";
+                echo "<div class=\"shipping\" > Shipping: $" . do_shortcode("[shipping_cost]") . "</div>";
             }
             if (get_post_meta($post->ID, "bonus_c{$i}", true) == ""){
-                echo "<div class=\"bonus no-bonus\"> ".get_post_meta($post->ID, "bonus_c{$i}", true)."</div>";
+                echo "<div class=\"bonus-item no-bonus\"> ".get_post_meta($post->ID, "bonus_c{$i}", true)."</div>";
             }
             else {
-                echo "<div class=\"bonus\"> ".get_post_meta($post->ID, "bonus_c{$i}", true)."</div>";
+                echo "<div class=\"bonus-item\"> ".get_post_meta($post->ID, "bonus_c{$i}", true)."</div>";
             }
             echo "<a href=\"" . do_shortcode('[cart_url]') . "?add=" . $cf_value["itemId_c{$i}"][0] . "\" class=\"button add-to-cart\" >" . "Add to Cart" . "</a>";
 
@@ -249,6 +255,31 @@ function buy_table_cb() {
             echo "</form>";
             echo "</div><!--end column -->";
             echo "</div><!--end row -->";
+
+                echo "<div class='row collapse buy-small show-for-small-only'>";
+                echo "<div class='small-9 columns center bottle-images'>";
+                echo "<img src=\"" . do_shortcode('[upload_dir]') . get_post_meta($post->ID, "image_c{$i}", true) . "\"  />";
+                echo "</div>";
+                echo "<div class='small-15 columns product-info'>";
+                echo "<div class=\"supply\">".get_post_meta($post->ID, "sub_title_c{$i}", true)."</div>";
+                echo "<div class=\"price\">$" . "<span>" . $price . "</span>" . "</div>";
+                if (get_post_meta($post->ID, "bonus_c{$i}", true) !== ""){
+                    echo "<div class=\"bonus-item\"> ".get_post_meta($post->ID, "bonus_c{$i}", true)."</div>";
+                }
+                if ($shipping=='free' || $shipping=='free shipping') {
+                    echo "<div class=\"shipping free\"> " . "Free Shipping!" . "</div>";
+                }
+                elseif (is_numeric($shipping)) {
+                    echo "<div class=\"shipping\" > Shipping: $" . $shipping . "</div>";
+                }
+                else {
+                    echo "<div class=\"shipping\" > Shipping: $" . do_shortcode("[shipping_cost]") . "</div>";
+                }
+                echo "<a href=\"" . do_shortcode('[cart_url]') . "?add=" . $cf_value["itemId_c{$i}"][0] . "\" class=\"button add-to-cart\" >" . "Add to Cart" . "</a>";
+
+                echo "</div>";
+                echo "</div>";
+
             $i++;
         }
         echo "</div><!--/.row-->";
