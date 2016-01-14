@@ -244,7 +244,7 @@ function buy_dropdown(){
             }
             $html .= '>';
             $html .= $cf_value["qty_c{$i}"][0] . ' ' . get_the_title();
-            $html .= ' â€“ $';
+            $html .= '$';
             $html .= $cf_value["price_c{$i}"][0];
             $html .= '</option>';
             $i++;
