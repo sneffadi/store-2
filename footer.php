@@ -74,8 +74,8 @@
 		<div class="small-24 medium-8 columns right">
 				<form action="http://www.elabs10.com/functions/mailing_list.html" method="post" name="subscriptionForm" id="subscriptionForm">
                 <script type="text/javascript" src="http://email.unkubed.com/foot-subs/subscribe.js"></script>
-                <div class="hidden" style="display: none; position: absolute; top: -29px; left: 0px; z-index: 5; font-size: 17px; color: rgb(97, 187, 37); font-weight: 700;"><img style="width: 16px; height: 15px;" src="http://email.unkubed.com/foot-subs/green_checkmark.png" alt=""> You've successfully subscribed!</div>
-                <div class="hidden" style="display: none; position: absolute; top: -29px; left: 0px; z-index: 5;"><img style="width: 25px; height: 25px;" alt="Processing..." src="http://email.unkubed.com/foot-subs/working.gif"></div>
+                <div class="hidden" style="display: none; position: absolute; top: -42px; left: 0px; z-index: 5; font-size: 17px; color: rgb(97, 187, 37); font-weight: 700;"><img style="width: 16px; height: 15px;" src="http://email.unkubed.com/foot-subs/green_checkmark.png" alt=""> You've successfully subscribed!</div>
+                <div class="hidden" style="display: none; position: absolute; top: -42px; left: 0px; z-index: 5;"><img style="width: 25px; height: 25px;" alt="Processing..." src="http://email.unkubed.com/foot-subs/working.gif"></div>
                 <div class="offers">
                     Get exclusive offers&nbsp;<span data-tooltip aria-haspopup="true" class="radius" title="We'll send you product updates and discounts. We won't spam you. Scouts honor."><i class="fa fa-info-circle"></i></span>
 
