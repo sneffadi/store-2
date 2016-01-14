@@ -69,3 +69,6 @@ blockquote.alignright,
 img.alignright {
     margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
 }
+h1 span, h2 span, h3 span, h4 span, h5 span{
+        color: $secondary-red;
+}
