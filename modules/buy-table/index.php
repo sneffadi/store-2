@@ -290,6 +290,7 @@ function buy_table_cb() {
         echo "<i class=\"fa fa-cc-mastercard\"></i>";
         echo "<i class=\"fa fa-cc-discover\"></i>";
         echo "<i class=\"fa fa-cc-paypal\"></i>";
+        echo "<script src=\"https://cdn.ywxi.net/js/inline.js?w=70\"></script>";
         echo "</div><!--/.payment-->";
         echo "</div><!--/#buytable-->";
         echo "</div><!--/.row-->";
