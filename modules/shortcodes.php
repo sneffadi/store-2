@@ -399,9 +399,17 @@ function get_product_count () {
 }
 
 function get_featured_image( $atts ) {
-    extract(shortcode_atts(array("class" => ""), $atts));
+    extract(shortcode_atts(array(
+        "class" => null,
+        "id" => null
+        ), $atts));
     global $post;
-    return get_the_post_thumbnail( $post->ID, 'large', array( 'class' => $class ) );
+    if (isset($id)){
+        return get_the_post_thumbnail( $id, 'large', array( 'class' => $class ) );
+    } else {
+        return get_the_post_thumbnail( $post->ID, 'large', array( 'class' => $class ) );
+    }
+    
 }
 
 function criteria (){
