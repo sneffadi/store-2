@@ -237,12 +237,27 @@ function top_products_cb() {
                                                 <div class="small-14 columns">
                                                     <?php echo get_post_meta($id, "ratings-guarantee", true); ?>
                                                 </div>
+                                                <?php if ($isTSK !== "")  { ?>
                                                 <div class="small-10 columns criterion">
-                                                    &nbsp;
+                                                    Your Savings:
                                                 </div>
                                                 <div class="small-14 columns">
-                                                    &nbsp;
+                                                    <span class="savings"><?php echo get_post_meta($id, "tsk-savings", true); ?> OFF!</span>
                                                 </div>
+                                                <?php } else { ?>
+                                                <?php
+                                                $officialSite = get_post_meta( $id, "ratings-official-site", true );
+                                                if ($officialSite !== "") { ?>
+                                                <div class="small-10 columns criterion official-site">
+                                                    Official Site:
+                                                </div>
+                                                <div class="small-14 columns official-site">
+                                                    <a href="http://www.<?php echo strtolower($officialSite); ?>/"><?php echo ucfirst($officialSite); ?></a>
+                                                </div>
+
+                                                <?php } ?>
+
+                                                <?php } ?>
                                             </div> <!-- / .row collapse -->
                                         </div> <!-- / .small-24 medium-12 columns -->
                                     </div><!-- / .row -->

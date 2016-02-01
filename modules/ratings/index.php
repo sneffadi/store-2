@@ -52,16 +52,30 @@ function rating_meta_callback( $post ) {
             <input type="text" name="ratings-side-effects" value="<?php if ( isset ( $cf['ratings-side-effects'] ) ) echo $cf['ratings-side-effects'][0]; ?>" />
         </p>
         <p>
-            <label for="ratings-reorder">Reorder Rate (%)</label>
-            <input type="text" name="ratings-reorder" value="<?php if ( isset ( $cf['ratings-reorder'] ) ) echo $cf['ratings-reorder'][0]; ?>" />
+            <label for="ratings-guarantee">Guarantee</label>
+            <input type="text" name="ratings-guarantee" value="<?php if ( isset ( $cf['ratings-guarantee'] ) ) echo $cf['ratings-guarantee'][0]; ?>" />
+        </p>
+        <p>
+            <label for="ratings-official-site">Official Site (domain.com)</label>
+            <input type="text" name="ratings-official-site" value="<?php if ( isset ( $cf['ratings-official-site'] ) ) echo $cf['ratings-official-site'][0]; ?>" />
         </p>
         <?php
         $check = isset( $cf[ 'top-seller-kit' ] ) ? esc_attr( $cf[ 'top-seller-kit' ][0] ) : false;
         $html .= '<p>';
         $html .= '<label for="'.'top-seller-kit' . '">Top Seller Kit</label>';
-        $html .= '<input type="checkbox" name='.'"top-seller-kit" '. checked( $check, true, false ) .' /></p>';
+        $html .= '<input type="checkbox" name='.'"top-seller-kit" '. checked( $check, true, false ) .'  class="toggle-div" data-toggle-div="tsk-fields"/></p>';
         echo $html;
         ?>
+        <?php $showTSK = 0;
+        if ($check == 1) {
+            $showTSK = 1;
+            } ?>
+        <div class="tsk-fields" <?php echo $showTSK ? '' : 'style="display:none;"';?>>
+            <p>
+                <label for="tsk-prod-list">Your Savings(%)</label>
+                <input type="text" name="tsk-savings" value="<?php if ( isset ( $cf['tsk-savings'] ) ) echo $cf['tsk-savings'][0]; ?>" />
+            </p>
+        </div> <!-- / .tsk-fields -->
         <p>
             <label for="ratings-tagline">Tagline</label>
             <input type="text" name="ratings-tagline" value="<?php if ( isset ( $cf['ratings-tagline'] ) ) echo $cf['ratings-tagline'][0]; ?>" />
@@ -119,6 +133,15 @@ function rating_meta_save( $post_id ) {
     }
     if( isset( $_POST[ 'ratings-reorder' ] ) ) {
         update_post_meta( $post_id, 'ratings-reorder', sanitize_text_field( $_POST[ 'ratings-reorder' ] ) );
+    }
+    if( isset( $_POST[ 'ratings-guarantee' ] ) ) {
+        update_post_meta( $post_id, 'ratings-guarantee', sanitize_text_field( $_POST[ 'ratings-guarantee' ] ) );
+    }
+    if( isset( $_POST[ 'ratings-official-site' ] ) ) {
+        update_post_meta( $post_id, 'ratings-official-site', sanitize_text_field( $_POST[ 'ratings-official-site' ] ) );
+    }
+    if( isset( $_POST[ 'tsk-savings' ] ) ) {
+        update_post_meta( $post_id, 'tsk-savings', sanitize_text_field( $_POST[ 'tsk-savings' ] ) );
     }
     if( isset( $_POST[ 'ratings-tagline' ] ) ) {
         update_post_meta( $post_id, 'ratings-tagline', sanitize_text_field( $_POST[ 'ratings-tagline' ] ) );

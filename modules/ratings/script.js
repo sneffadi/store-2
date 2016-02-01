@@ -40,3 +40,13 @@ jQuery(document).ready(function($) {
         meta_image_frame.open();
     });
 });
+(function($jq) {
+        $jq(document).ready(function() {
+            /* Toggle the custom data visibility */
+            $jq('.toggle-div').on('click', function() {
+                var toggleDiv = $jq(this).attr('data-toggle-div');
+                if($jq(this).is(':checked')) $jq('.' + toggleDiv).show(300);
+                else $jq('.' + toggleDiv).hide(300);
+                });
+            });
+        })(jQuery.noConflict());

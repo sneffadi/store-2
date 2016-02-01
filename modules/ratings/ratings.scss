@@ -294,6 +294,11 @@
 .ratings-box .row {
     border: none;
     background: none;
+
+    span.savings {
+        font-weight: $font-weight-bold;
+        color: #ba0909;
+    }
 }
 
 .our-price {
