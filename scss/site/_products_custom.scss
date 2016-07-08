@@ -67,10 +67,13 @@
                 &:before{
                     content:"\f14a";
                     color:#2877E6;  
+                    font-family:FontAwesome;
+                    margin-right:rem-calc(15);
                 }
                 font-size:rem-calc(18);
                 font-weight:$font-weight-bold;
                 margin-bottom:rem-calc(5);
+                list-style-type:none;
             }
         }
         
@@ -104,7 +107,7 @@
         }
     }
     .guarantee {
-        background:#2877E6;
+        background:#2877E6!important;
         margin-top:rem-calc(2);
         padding:rem-calc(20) 0;
         h2 {
@@ -143,8 +146,12 @@
             }
         }
     }
+    .suppfacts-button {
+    	margin:rem-calc(15) auto;
+    }
     .testimonial {
         border-bottom:rem-calc(1) solid #444;
+        margin-bottom:rem-calc(20);
         h4 {
             font-size: rem-calc(18);
             font-weight: $font-weight-x-bold;
