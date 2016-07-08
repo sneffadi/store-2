@@ -4,3 +4,178 @@
 		width:auto;
 	}
 }
+.eightformen {
+    h2 {
+        color:#444;
+        text-transform: uppercase;
+        font-size:rem-calc(36);
+        text-align:center;
+        br {
+            @media #{$small-only} {
+                display:none;
+            }
+        }
+        @media #{$small-only} {
+            font-size:rem-calc(32);
+        }
+    }
+    .button {
+        background:#EE3511;
+        font-size:rem-calc(20);
+        @media #{$medium-up} {
+            width:rem-calc(315);
+            display:block;
+            margin:0 auto;
+        }
+    }
+    .banner {
+        background:url(#{$imgPath}/8formen-banner.png)no-repeat;
+        background-size:100%;
+        padding-top:rem-calc(20);
+        min-height:rem-calc(390);
+        @media #{$small-only} {
+            background:url(#{$imgPath}/8formen-mobile-banner.png)no-repeat;   
+            min-height:auto;
+            background-size:100%;
+        }
+        h1 {
+            text-align:center;
+            color:#2877E6;
+            font-size:rem-calc(54);
+            font-weight: $font-weight-x-bold;
+            line-height:0.8;
+            margin-bottom:rem-calc(10);
+            @media #{$small-only} {
+                font-size:rem-calc(48);
+                text-shadow:rem-calc(1) rem-calc(1) #FFFFFF;
+            }
+        }
+        h2 {
+            
+            font-size:rem-calc(24);
+            font-weight: $font-weight-x-bold;
+            
+            margin-bottom:rem-calc(12);
+            @media #{$small-only} {
+                font-size:rem-calc(26);
+                text-shadow:rem-calc(1) rem-calc(1) #FFFFFF;
+            }
+        }
+        ul {
+            margin-bottom:rem-calc(20);
+            li {
+                &:before{
+                    content:"\f14a";
+                    color:#2877E6;  
+                }
+                font-size:rem-calc(18);
+                font-weight:$font-weight-bold;
+                margin-bottom:rem-calc(5);
+            }
+        }
+        
+    }
+    .intro {
+        img {
+            display:block;
+            margin:0 auto rem-calc(20);
+        }
+    }
+    .dark-bg {
+        background:#252525;
+        padding:rem-calc(20) 0;
+        h2 {
+            color:$white;
+        }
+        p {
+            color:$white;
+        }
+        a {
+            color:#0783e3;
+            text-decoration:underline;
+        }
+        img.midbanner {
+            width:100%;
+            height:auto;
+        }
+        .button {
+            text-decoration:none;
+            color:$white;
+        }
+    }
+    .guarantee {
+        background:#2877E6;
+        margin-top:rem-calc(2);
+        padding:rem-calc(20) 0;
+        h2 {
+            color:$white;
+            @media #{$medium-up} {
+                margin-top:rem-calc(20);
+            }
+        }
+        p {
+            color:$white;
+        }
+    }
+    .ingredient {
+        h3 {
+            text-align:left;
+            font-size: rem-calc(16);
+            text-transform: uppercase;
+            margin-bottom: rem-calc(5);
+            font-weight: 700;
+        }
+
+        img.mobile-ing {
+            width: rem-calc(125);
+            height: auto;
+            margin-top: rem-calc(10);
+            margin-right: rem-calc(20);
+            margin-bottom: rem-calc(15);
+        }
+
+        img.graph {
+            max-width: none;
+
+            @media #{$small-only} {
+                width: 100%;
+                margin: rem-calc(10) 0;
+            }
+        }
+    }
+    .testimonial {
+        border-bottom:rem-calc(1) solid #444;
+        h4 {
+            font-size: rem-calc(18);
+            font-weight: $font-weight-x-bold;
+            font-family: $font-family-sans-serif-heading;
+
+            @media #{$small-only} {
+                text-align: left;
+            }
+        }
+
+        img {
+            margin: rem-calc(5) rem-calc(25) rem-calc(15) 0;
+
+            @media #{$small-only} {
+                width: rem-calc(125);
+                height: auto;
+            }
+        }
+    }
+    .testimonial.dark-bg {
+        padding-top:0;
+        padding-bottom:0;
+    }
+    
+    .bonus {
+        padding-bottom:rem-calc(20);
+        h2 {
+            @media #{$medium-up} {
+                text-align:left;
+                margin-top:rem-calc(40);
+            }
+        } 
+    }
+}
